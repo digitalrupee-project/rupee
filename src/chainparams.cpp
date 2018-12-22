@@ -29,7 +29,7 @@ struct SeedSpec6 {
 /**
  * Main network
  */
-static bool regenerate = false;
+static bool regenerate = true;
 
 //! Convert the pnSeeds6 array into usable address objects.
 static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data, unsigned int count)
@@ -161,7 +161,7 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1545485400;
+        genesis.nTime = 1545497468;
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 126323;
         hashGenesisBlock = genesis.GetHash();
@@ -381,7 +381,7 @@ public:
         nTargetTimespan = 24 * 60 * 60; // DigitalRupees: 1 day
         nTargetSpacing = 1 * 60;        // DigitalRupees: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1545485400;
+        genesis.nTime = 1545497468;
         genesis.nBits = 0x207fffff;
         genesis.nNonce = 12345;
         nMaturity = 0;
@@ -390,8 +390,41 @@ public:
         nZerocoinStartHeight = 100;
 
         hashGenesisBlock = genesis.GetHash();
+
+        if (regenerate) {
+            hashGenesisBlock = uint256S("");
+            if (true && (genesis.GetHash() != hashGenesisBlock)) {
+                uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
+                while (genesis.GetHash() > hashTarget)
+                {
+                    ++genesis.nNonce;
+                    if (genesis.nNonce == 0)
+                    {
+                        ++genesis.nTime;
+                    }
+                }
+                std::cout << "// Regtestnet ---";
+                std::cout << " nonce: " << genesis.nNonce;
+                std::cout << " time: " << genesis.nTime;
+                std::cout << " hash: 0x" << genesis.GetHash().ToString().c_str();
+                std::cout << " merklehash: 0x"  << genesis.hashMerkleRoot.ToString().c_str() <<  "\n";
+
+            }
+        } else {
+            LogPrintf("Regtestnet ---\n");
+            LogPrintf(" nonce: %u\n", genesis.nNonce);
+            LogPrintf(" time: %u\n", genesis.nTime);
+            LogPrintf(" hash: 0x%s\n", genesis.GetHash().ToString().c_str());
+            LogPrintf(" merklehash: 0x%s\n", genesis.hashMerkleRoot.ToString().c_str());
+            assert(hashGenesisBlock == uint256("0x73abf6904e8a758c31d715d0c2bf8b36b86403a35bda369ec2fbcac8c2469c4d"));
+            assert(genesis.hashMerkleRoot == uint256("0xedee755717c4de66ce52056e36ae0f6e9f0269667fd8a06e3c5367588cbfadbd"));
+        }
+        // Regtestnet --- nonce: 3 time: 1535104494 hash: 0x73abf6904e8a758c31d715d0c2bf8b36b86403a35bda369ec2fbcac8c2469c4d merklehash: 0xedee755717c4de66ce52056e36ae0f6e9f0269667fd8a06e3c5367588cbfadbd
+
+        if (regenerate)
+            exit(0);
+
         nDefaultPort = 32000;
-        assert(hashGenesisBlock == uint256("0x000003901c6a9d860bec1c1ce742acd94b6bffbbdedd9c6093e0772e9f9b12ae"));
 
         bech32_hrp = "rst";
 
