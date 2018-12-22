@@ -298,9 +298,9 @@ void PrivacyDialog::on_pushButtonZDrsControl_clicked()
 {
     if (!walletModel || !walletModel->getOptionsModel())
         return;
-    ZDrsControlDialog* zPhrControl = new ZDrsControlDialog(this);
-    zPhrControl->setModel(walletModel);
-    zPhrControl->exec();
+    ZDrsControlDialog* zDrsControl = new ZDrsControlDialog(this);
+    zDrsControl->setModel(walletModel);
+    zDrsControl->exec();
 }
 
 void PrivacyDialog::setZDrsControlLabels(int64_t nAmount, int nQuantity)

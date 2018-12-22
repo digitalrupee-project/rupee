@@ -2076,7 +2076,7 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Информацията на вашия екран може би е стара. Вашия портфейла синхронизира автоматично с DigitalRupees мрежата след като има успешна свръзка, но процеса отнема време и не е завършил все още.</translation>
     </message>
     <message>
-        <source>Enter an amount of Phr to convert to zPhr</source>
+        <source>Enter an amount of Phr to convert to zDrs</source>
         <translation>Въведете колко DRS  да се конвертират в zDRS</translation>
     </message>
     <message>
@@ -2132,11 +2132,11 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Състояния и/или Съобщения от последните действия по сечене на монети.</translation>
     </message>
     <message>
-        <source>zPhr Control</source>
+        <source>zDrs Control</source>
         <translation>zDRS Контрол</translation>
     </message>
     <message>
-        <source>zPhr Selected:</source>
+        <source>zDrs Selected:</source>
         <translation>Избрани zDRS:</translation>
     </message>
     <message>
@@ -2474,7 +2474,7 @@ Please be patient...</source>
         <translation>Харченето на Zerocoin се провали със статус =</translation>
     </message>
     <message>
-        <source>zPhr Spend #: </source>
+        <source>zDrs Spend #: </source>
         <translation>zDRS Похарчени #:</translation>
     </message>
     <message>
@@ -2498,7 +2498,7 @@ Please be patient...</source>
         <translation>адрес:</translation>
     </message>
     <message>
-        <source>zPhr Mint</source>
+        <source>zDrs Mint</source>
         <translation>Сечене на zDRS</translation>
     </message>
     <message>
@@ -3955,23 +3955,23 @@ Please be patient...</source>
         <translation>Обфускирани</translation>
     </message>
     <message>
-        <source>Converted Phr to zPhr</source>
+        <source>Converted Phr to zDrs</source>
         <translation>Конвертиран DRS във zDRS</translation>
     </message>
     <message>
-        <source>Spent zPhr</source>
+        <source>Spent zDrs</source>
         <translation>Похарчени zDRS</translation>
     </message>
     <message>
-        <source>Received Phr from zPhr</source>
+        <source>Received Phr from zDrs</source>
         <translation>Получен DRS от zDRS</translation>
     </message>
     <message>
-        <source>Minted Change as zPhr from zPhr Spend</source>
+        <source>Minted Change as zDrs from zDrs Spend</source>
         <translation>Исечено ресто като zDRS от похарчените zDRS</translation>
     </message>
     <message>
-        <source>Converted zPhr to Phr</source>
+        <source>Converted zDrs to Phr</source>
         <translation>Конвертирани zDRS в DRS</translation>
     </message>
     <message>
@@ -3979,7 +3979,7 @@ Please be patient...</source>
         <translation>наблюдение само</translation>
     </message>
     <message>
-        <source>zPhr Accumulator</source>
+        <source>zDrs Accumulator</source>
         <translation>zDRS Акумулатор</translation>
     </message>
     <message>
@@ -4086,7 +4086,7 @@ Please be patient...</source>
         <translation>Мастърноуд възнаграждение</translation>
     </message>
     <message>
-        <source>Received Phr from zPhr</source>
+        <source>Received Phr from zDrs</source>
         <translation>Получен DRS от zDRS</translation>
     </message>
     <message>
@@ -4098,7 +4098,7 @@ Please be patient...</source>
         <translation>Харчене на Zerocoin</translation>
     </message>
     <message>
-        <source>Zerocoin Spend, Change in zPhr</source>
+        <source>Zerocoin Spend, Change in zDrs</source>
         <translation>Харчене на Zerocoin, Ресто в zDRS</translation>
     </message>
     <message>
@@ -4261,7 +4261,7 @@ Please be patient...</source>
 <context>
     <name>ZDrsControlDialog</name>
     <message>
-        <source>Select zPhr to Spend</source>
+        <source>Select zDrs to Spend</source>
         <translation>Изберете zDRS за Изпращане</translation>
     </message>
     <message>
@@ -4273,7 +4273,7 @@ Please be patient...</source>
         <translation>0</translation>
     </message>
     <message>
-        <source>zPhr</source>
+        <source>zDrs</source>
         <translation>zDRS</translation>
     </message>
     <message>

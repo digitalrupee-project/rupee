@@ -2032,8 +2032,8 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Возможно отображаемая информация устарела. Ваш кошелек автоматически синхронизируется с сетью DigitalRupees после установки соединения, но этот процесс еще не завершен. </translation>
     </message>
     <message>
-        <source>Enter an amount of Phr to convert to zPhr</source>
-        <translation>Введите сумму в Phr для  конвертации в zPhr</translation>
+        <source>Enter an amount of Phr to convert to zDrs</source>
+        <translation>Введите сумму в Phr для  конвертации в zDrs</translation>
     </message>
     <message>
         <source>Mint Zerocoin</source>
