@@ -13,7 +13,7 @@ Phore can be sent easily through the Internet, without having to trust middlemen
 .SH OPTIONS
 .TP
 \fB\-conf=\fR<file>
-Specify configuration file (default: phore.conf)
+Specify configuration file (default: digitalrupees.conf)
 .TP
 \fB\-gen\fR
 Generate coins
@@ -70,14 +70,14 @@ This help message
 \fBbackupwallet 'destination'\fR
 Safely copies *wallet.dat* to 'destination', which can be a directory or a path with filename.
 .TP
-\fBgetaccount 'phoreaddress'\fR
+\fBgetaccount 'digitalrupeesaddress'\fR
 Returns the account associated with the given address.
 .TP
-\fBsetaccount 'phoreaddress' ['account']\fR
+\fBsetaccount 'digitalrupeesaddress' ['account']\fR
 Sets the ['account'] associated with the given address. ['account'] may be omitted to remove an address from ['account'].
 .TP
 \fBgetaccountaddress 'account'\fR
-Returns a new phore address for 'account'.
+Returns a new digitalrupees address for 'account'.
 .TP
 \fBgetaddressesbyaccount 'account'\fR
 Returns the list of addresses associated with the given 'account'.
@@ -110,13 +110,13 @@ Returns a recent hashes per second performance measurement while generating.
 Returns an object containing server information.
 .TP
 \fBgetnewaddress 'account'\fR
-Returns a new phore address for receiving payments. If 'account' is specified (recommended), it is added to the address book so payments received with the address will be credited to 'account'.
+Returns a new digitalrupees address for receiving payments. If 'account' is specified (recommended), it is added to the address book so payments received with the address will be credited to 'account'.
 .TP
 \fBgetreceivedbyaccount 'account' ['minconf=1']\fR
 Returns the total amount received by addresses associated with 'account' in transactions with at least ['minconf'] confirmations.
 .TP
-\fBgetreceivedbyaddress 'phoreaddress' ['minconf=1']\fR
-Returns the total amount received by 'phoreaddress' in transactions with at least ['minconf'] confirmations.
+\fBgetreceivedbyaddress 'digitalrupeesaddress' ['minconf=1']\fR
+Returns the total amount received by 'digitalrupeesaddress' in transactions with at least ['minconf'] confirmations.
 .TP
 \fBgettransaction 'txid'\fR
 Returns information about a specific transaction, given hexadecimal transaction ID.
@@ -134,7 +134,7 @@ List commands, or get help for a command.
 .TP
 \fBlistaccounts ['minconf=1']\fR
 List accounts and their current balances.
-     *note: requires phore 1.0.2.1 or later.
+     *note: requires digitalrupees 1.0.2.1 or later.
 .TP
 \fBlistreceivedbyaccount ['minconf=1'] ['includeempty=false']\fR
 ['minconf'] is the minimum number of confirmations before payments are included. ['includeempty'] whether to include addresses that haven't received any payments. Returns an array of objects containing:
@@ -163,31 +163,31 @@ Returns a list of the last ['count'] transactions for 'account' \- for all accou
     "message"       : message associated with transaction (only for send).
     "to"            : message-to associated with transaction (only for send).
 
-    *note: requires phore 1.0.2.1 or later.
+    *note: requires digitalrupees 1.0.2.1 or later.
 .TP
 \fBmove <'fromaccount'> <'toaccount'> <'amount'> ['minconf=1'] ['comment']\fR
 Moves funds between accounts.
 .TP
-\fBsendfrom* <'account'> <'phoreaddress'> <'amount'> ['minconf=1'] ['comment'] ['comment-to']\fR
-Sends amount from account's balance to 'phoreaddress'. This method will fail if there is less than amount PHR with ['minconf'] confirmations in the account's balance (unless account is the empty-string-named default account; it behaves like the *sendtoaddress* method). Returns transaction ID on success.
+\fBsendfrom* <'account'> <'digitalrupeesaddress'> <'amount'> ['minconf=1'] ['comment'] ['comment-to']\fR
+Sends amount from account's balance to 'digitalrupeesaddress'. This method will fail if there is less than amount PHR with ['minconf'] confirmations in the account's balance (unless account is the empty-string-named default account; it behaves like the *sendtoaddress* method). Returns transaction ID on success.
 .TP
-\fBsendtoaddress 'phoreaddress' 'amount' ['comment'] ['comment-to']\fR
-Sends amount from the server's available balance to 'phoreaddress'. amount is a real and is rounded to the nearest 0.01. Returns transaction id on success.
+\fBsendtoaddress 'digitalrupeesaddress' 'amount' ['comment'] ['comment-to']\fR
+Sends amount from the server's available balance to 'digitalrupeesaddress'. amount is a real and is rounded to the nearest 0.01. Returns transaction id on success.
 .TP
 \fBstop\fR
-Stops the phore server.
+Stops the digitalrupees server.
 .TP
-\fBvalidateaddress 'phoreaddress'\fR
-Checks that 'phoreaddress' looks like a proper Phore address. Returns an object containing:
+\fBvalidateaddress 'digitalrupeesaddress'\fR
+Checks that 'digitalrupeesaddress' looks like a proper Phore address. Returns an object containing:
 
     "isvalid" : true or false.
     "ismine"  : true if the address is in the server's wallet.
-    "address" : phoreaddress.
+    "address" : digitalrupeesaddress.
 
     *note: ismine and address are only returned if the address is valid.
 
 .SH "SEE ALSO"
-phore.conf(5)
+digitalrupees.conf(5)
 .SH AUTHOR
 This manual page was written by Micah Anderson <micah@debian.org> for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 3 or any later version published by the Free Software Foundation.
 

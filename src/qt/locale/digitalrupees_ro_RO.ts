@@ -186,6 +186,6 @@
     <name>ZPhrControlDialog</name>
     </context>
 <context>
-    <name>phore-core</name>
+    <name>digitalrupees-core</name>
     </context>
 </TS>

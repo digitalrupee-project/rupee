@@ -790,7 +790,7 @@
     </message>
     </context>
 <context>
-    <name>phore-core</name>
+    <name>digitalrupees-core</name>
     <message>
         <source>Error</source>
         <translation>Greška</translation>

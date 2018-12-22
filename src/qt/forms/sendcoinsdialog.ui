@@ -1691,7 +1691,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../phore.qrc"/>
+  <include location="../digitalrupees.qrc"/>
  </resources>
  <connections/>
  <buttongroups>

@@ -1,6 +1,6 @@
 [Protocol]
 exec=digitalrupees-qt '%u'
-protocol=phore
+protocol=digitalrupees
 input=none
 output=none
 helper=true

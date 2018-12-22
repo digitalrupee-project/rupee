@@ -906,7 +906,7 @@
     <name>ZPhrControlDialog</name>
     </context>
 <context>
-    <name>phore-core</name>
+    <name>digitalrupees-core</name>
     <message>
         <source>Delete all wallet transactions and only recover those parts of the blockchain through -rescan on startup</source>
         <translation>Deletar todas as transações da carteira e somente recuperar aquelas partes do blockchain através de -rescan na inicialização</translation>

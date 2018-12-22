@@ -618,8 +618,8 @@
         <translation>Phoreアドレスへ送金する</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and phore: URIs)</source>
-        <translation>支払いを作成する (QRコード または phore: URIを作成)</translation>
+        <source>Request payments (generates QR codes and digitalrupees: URIs)</source>
+        <translation>支払いを作成する (QRコード または digitalrupees: URIを作成)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -907,8 +907,8 @@ Address: %4
         <translation>テキスト</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (phore.conf).</source>
-        <translation>すべてのトランザクションが確認できるわけではありません。全て確認したい場合、txindex=1 とウォレット設定ファイルへ追加してください (phore.conf)。</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (digitalrupees.conf).</source>
+        <translation>すべてのトランザクションが確認できるわけではありません。全て確認したい場合、txindex=1 とウォレット設定ファイルへ追加してください (digitalrupees.conf)。</translation>
     </message>
 </context>
 <context>
@@ -1814,9 +1814,9 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/phore-project/phore-project-translations</source>
+https://www.transifex.com/digitalrupees-project/digitalrupees-project-translations</source>
         <translation>不完全なところがございましたか？ぜひこちらよりご協力ください。:
-https://www.transifex.com/phore-project/phore-project-translations</translation>
+https://www.transifex.com/digitalrupees-project/digitalrupees-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -2129,8 +2129,8 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
         <translation>支払いアドレスが間違えています。 %1</translation>
     </message>
     <message>
-        <source>Cannot start phore: click-to-pay handler</source>
-        <translation>phore: クリックトゥペイに失敗</translation>
+        <source>Cannot start digitalrupees: click-to-pay handler</source>
+        <translation>digitalrupees: クリックトゥペイに失敗</translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid Phore address or malformed URI parameters.</source>
@@ -4136,7 +4136,7 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
     </message>
 </context>
 <context>
-    <name>phore-core</name>
+    <name>digitalrupees-core</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = トランザクションメタデータを保持, 2 = メタデータを再ダウンロード)</translation>
@@ -4338,7 +4338,7 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
 To use digitalrupeesd, or the -server option to digitalrupees-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=phorerpc
+rpcuser=digitalrupeesrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -4349,12 +4349,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Phore Alert&quot; admin@foo.co
         <translation>
         digitalrupeesd, digitalrupees-qt にserverオプションを付ける場合、以下の設定が必要になります。:
         %s
-        phore.confにRPCユーザー名,パスワードを入力してください。:
-        rpcuser=phorerpc
+        digitalrupees.confにRPCユーザー名,パスワードを入力してください。:
+        rpcuser=digitalrupeesrpc
         rpcpassword=%s
-        (覚える必要はなく、phore.confに記載すれば大丈夫です。)
+        (覚える必要はなく、digitalrupees.confに記載すれば大丈夫です。)
         ユーザーネームとパスワードは同じにしてはいけません。
-        phore.confが存在しなければ作成します。
+        digitalrupees.confが存在しなければ作成します。
         It is also recommended to set alertnotify so you are notified of problems;
         for example: alertnotify=echo %%s | mail -s &quot;Phore Alert&quot; admin@foo.com
 </translation>
@@ -5457,7 +5457,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Phore Alert&quot; admin@foo.co
         <source>To use digitalrupeesd, or the -server option to digitalrupees-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=phorerpc
+rpcuser=digitalrupeesrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -5468,7 +5468,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Phore Alert&quot; admin@foo.co
         <translation>digitalrupeesd, digitalrupees-qt -server を利用する場合rpcの設定が必要です。:
 %s
 ランダムなパスワードの利用を推奨します。
-rpcuser=phorerpc
+rpcuser=digitalrupeesrpc
 rpcpassword=%s
 パスワードを覚える必要はありませんが、
 ユーザー名と同じパスワードは禁止されます。
@@ -5931,8 +5931,8 @@ Immature: confirmed, but less than 2 mints of the same denomination after it was
         <source>Show the current status of automatic zPHR minting.
 
 To change the status (restart required):
-- enable: add &apos;enablezeromint=1&apos; to phore.conf
-- disable: add &apos;enablezeromint=0&apos; to phore.conf
+- enable: add &apos;enablezeromint=1&apos; to digitalrupees.conf
+- disable: add &apos;enablezeromint=0&apos; to digitalrupees.conf
 
 To change the percentage (no restart required):
 - menu Settings-&gt;Options-&gt;Percentage of autominted zPHR
@@ -5940,8 +5940,8 @@ To change the percentage (no restart required):
 </source>
         <translation>現在の自動zPHRミント設定について表しています。
 再起動が必要ですが、設定を変更するには:
-- 有効化: &apos;enablezeromint=1&apos; を phore.conf へ追記
-- 無効化: &apos;enablezeromint=0&apos; を phore.conf へ追記
+- 有効化: &apos;enablezeromint=1&apos; を digitalrupees.conf へ追記
+- 無効化: &apos;enablezeromint=0&apos; を digitalrupees.conf へ追記
 変換する割合を変更するには(再起動は必要ありません):
 - メニューの設定-&gt;オプション-&gt;zPHRの自動ミントの割合 より変更</translation>
     </message>

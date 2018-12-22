@@ -1,7 +1,7 @@
 Phore Core integration/staging repository
 =====================================
 
-[![Build Status](https://travis-ci.org/phoreproject/Phore.svg?branch=master)](https://travis-ci.org/phoreproject/Phore)
+[![Build Status](https://travis-ci.org/digitalrupeesproject/Phore.svg?branch=master)](https://travis-ci.org/digitalrupeesproject/Phore)
 
 Phore is a cutting edge cryptocurrency, with many features not available in most other cryptocurrencies.
 - Anonymized transactions using zerocoin technology
@@ -10,7 +10,7 @@ Phore is a cutting edge cryptocurrency, with many features not available in most
   with collateral of 10K PHR
 - Decentralized blockchain voting utilizing Masternode technology to form a DAO. The blockchain will distribute monthly treasury funds based on successful proposals submitted by the community and voted on by the DAO.
 
-17.6M phore was produced for swapping. 500k were mined 1-200 blocks to bring that amount to 18.1M PHR, the amount needed for the swap.
+17.6M digitalrupees was produced for swapping. 500k were mined 1-200 blocks to bring that amount to 18.1M PHR, the amount needed for the swap.
 
 Since then, the Phore repository has been rebaselined to show the fork relationship properly.
 

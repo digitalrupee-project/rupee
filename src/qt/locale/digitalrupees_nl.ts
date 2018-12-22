@@ -615,7 +615,7 @@
         <translation>Verstuur munten naar een Phore adres</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and phore: URIs)</source>
+        <source>Request payments (generates QR codes and digitalrupees: URIs)</source>
         <translation>Vraag betaling aan (genereert QR-codes en Phore: URI's)</translation>
     </message>
     <message>
@@ -914,8 +914,8 @@ MultiSend: %1</translation>
         <translation>TextLabel</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (phore.conf).</source>
-        <translation>Niet alle transacties worden getoond. Om alle transacties te bekijken moet u txindex=1 instellen in het configuratie bestand (phore.conf).</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (digitalrupees.conf).</source>
+        <translation>Niet alle transacties worden getoond. Om alle transacties te bekijken moet u txindex=1 instellen in het configuratie bestand (digitalrupees.conf).</translation>
     </message>
 </context>
 <context>
@@ -1815,9 +1815,9 @@ Controleer het adres alsjeblieft en probeer het opnieuw.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/phore-project/phore-project-translations</source>
+https://www.transifex.com/digitalrupees-project/digitalrupees-project-translations</source>
         <translation>Taal ontbreekt of vertaling onvolledig? Help om bij te dragen aan vertalingen:
-https://www.transifex.com/phore-project/phore-project-translations</translation>
+https://www.transifex.com/digitalrupees-project/digitalrupees-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -2102,8 +2102,8 @@ https://www.transifex.com/phore-project/phore-project-translations</translation>
         <translation>Ongeldig betalingsadres %1</translation>
     </message>
     <message>
-        <source>Cannot start phore: click-to-pay handler</source>
-        <translation>Kan phore niet starten: click-to-pay handler</translation>
+        <source>Cannot start digitalrupees: click-to-pay handler</source>
+        <translation>Kan digitalrupees niet starten: click-to-pay handler</translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid Phore address or malformed URI parameters.</source>
@@ -4538,7 +4538,7 @@ Wees alsjeblieft geduldig...</translation>
     </message>
 </context>
 <context>
-    <name>phore-core</name>
+    <name>digitalrupees-core</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = houd tx meta data, bijvoorbeeld account eigenaar en betalingsverzoek informatie, 2 = drop tx meta data)</translation>
@@ -5833,7 +5833,7 @@ Wees alsjeblieft geduldig...</translation>
         <source>To use digitalrupeesd, or the -server option to digitalrupees-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=phorerpc
+rpcuser=digitalrupeesrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
@@ -5844,7 +5844,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Phore Alert&quot; admin@foo.co
         <translation>Om digitalrupeesd of de -server optie om digitalrupees-qt te gebruiken, moet je een rpcpassword instellen in het configuratiebestand:
 %s
 Het is aan te raden het volgende willekeurige wachtwoord te gebruiken:
-rpcuser=phorerpc
+rpcuser=digitalrupeesrpc
 rpcpassword=%s
 (je hoeft dit wachtwoord niet te onthouden)
 De gebruikersnaam en het wachtwoord MOETEN NIET hetzelfde zijn.
@@ -6309,8 +6309,8 @@ Immature: confirmed, but less than 2 mints of the same denomination after it was
         <source>Show the current status of automatic zPHR minting.
 
 To change the status (restart required):
-- enable: add &apos;enablezeromint=1&apos; to phore.conf
-- disable: add &apos;enablezeromint=0&apos; to phore.conf
+- enable: add &apos;enablezeromint=1&apos; to digitalrupees.conf
+- disable: add &apos;enablezeromint=0&apos; to digitalrupees.conf
 
 To change the percentage (no restart required):
 - menu Settings-&gt;Options-&gt;Percentage of autominted zPHR
@@ -6319,8 +6319,8 @@ To change the percentage (no restart required):
         <translation>Toon de huidige status van automatische zPHR munting.
 
 Om de status te wijzigen (opnieuw starten vereist):
-- inschakelen: voeg &apos;enablezeromint=1&apos; toe aan phore.conf
-- uitschakelen: voeg &apos;enablezeromint=0&apos; toe aan phore.conf
+- inschakelen: voeg &apos;enablezeromint=1&apos; toe aan digitalrupees.conf
+- uitschakelen: voeg &apos;enablezeromint=0&apos; toe aan digitalrupees.conf
 
 Om het percentage te wijzigen (geen herstart vereist):
 - menu Instellingen-&gt;Opties-&gt;Percentage van automatische munting zPHR

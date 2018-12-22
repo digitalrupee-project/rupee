@@ -599,8 +599,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Lähetä kolikkoja Phore osoitteeseen</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and phore: URIs)</source>
-        <translation>Pyydä maksuja (Generoi QR koodeja ja phore: URIja)</translation>
+        <source>Request payments (generates QR codes and digitalrupees: URIs)</source>
+        <translation>Pyydä maksuja (Generoi QR koodeja ja digitalrupees: URIja)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -2541,7 +2541,7 @@ Please check the address and try again.</source>
     </message>
     </context>
 <context>
-    <name>phore-core</name>
+    <name>digitalrupees-core</name>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
         <translation>Varoitus: Verkko ei näytä olevan samaa mieltä! Jotkin mainaajat saattavat kokea ongelmia.</translation>

@@ -46,7 +46,7 @@ related to the DNS seed operation.
 If these expectations cannot be satisfied the operator should
 discontinue providing services and contact the active Phore
 Core development team as well as posting on the
-[Phore Forum](https://forum.phore.org).
+[Phore Forum](https://forum.digitalrupees.org).
 
 Behavior outside of these expectations may be reasonable in some
 situations but should be discussed in public in advance.

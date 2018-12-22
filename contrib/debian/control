@@ -1,8 +1,8 @@
-Source: phore
+Source: digitalrupees
 Section: utils
 Priority: optional
-Maintainer: Julian Meyer <julian@phore.io>
-Uploaders: Julian Meyer <julian@phore.io>
+Maintainer: Julian Meyer <julian@digitalrupees.io>
+Uploaders: Julian Meyer <julian@digitalrupees.io>
 Build-Depends: debhelper,
  devscripts,
  automake,
@@ -22,9 +22,9 @@ Build-Depends: debhelper,
  libqrencode-dev,
  libprotobuf-dev, protobuf-compiler
 Standards-Version: 3.9.2
-Homepage: http://www.phore.org
-Vcs-Git: git://github.com/phoreproject/Phore.git
-Vcs-Browser: http://github.com/phoreproject/Phore
+Homepage: http://www.digitalrupees.org
+Vcs-Git: git://github.com/digitalrupeesproject/Phore.git
+Vcs-Browser: http://github.com/digitalrupeesproject/Phore
 
 Package: digitalrupeesd
 Architecture: any
@@ -40,7 +40,7 @@ Description: peer-to-peer network based digital currency - daemon
  requires 1+ GB of space, slowly growing.
  .
  This package provides the daemon, digitalrupeesd, and the CLI tool
- phore-cli to interact with the daemon.
+ digitalrupees-cli to interact with the daemon.
 
 Package: digitalrupees-qt
 Architecture: any

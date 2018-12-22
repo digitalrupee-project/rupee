@@ -472,7 +472,7 @@ void BlockExplorer::showEvent(QShowEvent*)
         updateNavButtons();
 
         if (!GetBoolArg("-txindex", true)) {
-            QString Warning = tr("Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (phore.conf).");
+            QString Warning = tr("Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (digitalrupees.conf).");
             QMessageBox::warning(this, "Phore Core Blockchain Explorer", Warning, QMessageBox::Ok);
         }
     }

@@ -5,11 +5,11 @@
 
 Phore Core version 1.2.2 is now available from:
 
-  https://phore.io/
+  https://digitalrupees.io/
 
 Please report bugs using the issue tracker at github:
 
-  https://github.com/phoreproject/phore/issues
+  https://github.com/digitalrupeesproject/digitalrupees/issues
 
 
 How to Upgrade
@@ -24,7 +24,7 @@ digitalrupeesd/digitalrupees-qt (on Linux).
 1.2.2 changelog
 ----------------
 
-- Updated chain parameters in response to [this governance proposal](https://forum.phore.io/t/block-reward-extension/81).
+- Updated chain parameters in response to [this governance proposal](https://forum.digitalrupees.io/t/block-reward-extension/81).
   - Updated development rewards to a constant 1 PHR per block.
   - Updated block reward schedule
 - Fixed bug with mempoolnotify important for marketplace launch

@@ -1,7 +1,7 @@
 # /etc/conf.d/digitalrupeesd: config file for /etc/init.d/digitalrupeesd
 
 # Config file location
-#BITCOIND_CONFIGFILE="/etc/phore/phore.conf"
+#BITCOIND_CONFIGFILE="/etc/digitalrupees/digitalrupees.conf"
 
 # What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
 #BITCOIND_PIDDIR="/var/run/digitalrupeesd"
@@ -13,8 +13,8 @@
 #BITCOIND_DATADIR="/var/lib/digitalrupeesd"
 
 # User and group to own digitalrupeesd process
-#BITCOIND_USER="phore"
-#BITCOIND_GROUP="phore"
+#BITCOIND_USER="digitalrupees"
+#BITCOIND_GROUP="digitalrupees"
 
 # Path to digitalrupeesd executable
 #BITCOIND_BIN="/usr/bin/digitalrupeesd"

@@ -46,7 +46,7 @@ Instructions: Homebrew
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone https://github.com/phoreproject/Phore.git
+        git clone https://github.com/digitalrupeesproject/Phore.git
         cd Phore
 
 2.  Make the Homebrew OpenSSL headers visible to the configure script  (do ```brew info openssl``` to find out why this is necessary, or if you use Homebrew with installation folders different from the default).
@@ -90,7 +90,7 @@ Creating a release build
 ------------------------
 You can ignore this section if you are building `digitalrupeesd` for your own use.
 
-digitalrupeesd/phore-cli binaries are not included in the phore-Qt.app bundle.
+digitalrupeesd/digitalrupees-cli binaries are not included in the digitalrupees-Qt.app bundle.
 
 If you are building `digitalrupeesd` or `digitalrupees-qt` for others, your build machine should be set up
 as follows for maximum compatibility:
@@ -113,8 +113,8 @@ directory. We have to first create the RPC configuration file, though.
 Run `./digitalrupeesd` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=phorerpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Phore/phore.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/Phore/phore.conf"
+    echo -e "rpcuser=digitalrupeesrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Phore/digitalrupees.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/Phore/digitalrupees.conf"
 
 The next time you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours;
@@ -125,9 +125,9 @@ you can monitor its process by looking at the debug.log file, like this:
 Other commands:
 -------
 
-    ./digitalrupeesd -daemon # to start the phore daemon.
-    ./phore-cli --help  # for a list of command-line options.
-    ./phore-cli help    # When the daemon is running, to get a list of RPC commands
+    ./digitalrupeesd -daemon # to start the digitalrupees daemon.
+    ./digitalrupees-cli --help  # for a list of command-line options.
+    ./digitalrupees-cli help    # When the daemon is running, to get a list of RPC commands
     
 Troubleshooting:<a name="trouble"></a>
 ---------
@@ -180,7 +180,7 @@ Next, switch into your Downloads folder:
 
 The next step is to download the current version of the wallet from Github and go into that directory:
 
-```git clone https://github.com/phoreproject/phore.git```
+```git clone https://github.com/digitalrupeesproject/digitalrupees.git```
 ```cd Phore```
 
 Now set some configuration flags:

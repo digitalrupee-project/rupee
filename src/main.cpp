@@ -2603,7 +2603,7 @@ static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck()
 {
-    RenameThread("phore-scriptch");
+    RenameThread("digitalrupees-scriptch");
     scriptcheckqueue.Thread();
 }
 

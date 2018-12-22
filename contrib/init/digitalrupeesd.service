@@ -3,16 +3,16 @@ Description=Phore's distributed currency daemon
 After=network.target
 
 [Service]
-User=phore
-Group=phore
+User=digitalrupees
+Group=digitalrupees
 
 Type=forking
 PIDFile=/var/lib/digitalrupeesd/digitalrupeesd.pid
 
 ExecStart=/usr/bin/digitalrupeesd -daemon -pid=/var/lib/digitalrupeesd/digitalrupeesd.pid \
-          -conf=/etc/phore/phore.conf -datadir=/var/lib/digitalrupeesd
+          -conf=/etc/digitalrupees/digitalrupees.conf -datadir=/var/lib/digitalrupeesd
 
-ExecStop=-/usr/bin/phore-cli -conf=/etc/phore/phore.conf \
+ExecStop=-/usr/bin/digitalrupees-cli -conf=/etc/digitalrupees/digitalrupees.conf \
          -datadir=/var/lib/digitalrupeesd stop
 
 Restart=always

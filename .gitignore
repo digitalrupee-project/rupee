@@ -7,11 +7,11 @@ reset-files.bash
 *.tar.gz
 
 *.exe
-src/phore
+src/digitalrupees
 src/digitalrupeesd
-src/phore-cli
+src/digitalrupees-cli
 src/digitalrupees-tx
-src/test/test_phore
+src/test/test_digitalrupees
 src/qt/test/test_digitalrupees-qt
 
 # autoreconf
@@ -38,8 +38,8 @@ confdefs.h
 conftest.cpp
 conftest.err
 libtool
-src/config/phore-config.h
-src/config/phore-config.h.in
+src/config/digitalrupees-config.h
+src/config/digitalrupees-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
@@ -64,7 +64,7 @@ src/leveldb/build_config.mk
 *.pyc
 *.o
 *.o-*
-.phore
+.digitalrupees
 *.a
 *.pb.cc
 *.pb.h
@@ -85,7 +85,7 @@ src/leveldb/build_config.mk
 *.qm
 Makefile
 digitalrupees-qt
-phore-Qt.app
+digitalrupees-Qt.app
 
 # Unit-tests
 Makefile.test
@@ -105,7 +105,7 @@ build
 #lcov
 *.gcno
 /*.info
-test_phore.coverage/
+test_digitalrupees.coverage/
 total.coverage/
 coverage_percent.txt
 

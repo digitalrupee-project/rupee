@@ -590,8 +590,8 @@
         <translation>送出錢幣到 Phore 地址</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and phore: URIs)</source>
-        <translation>請求付款 (會產生 QR Code跟 phore 位址)</translation>
+        <source>Request payments (generates QR codes and digitalrupees: URIs)</source>
+        <translation>請求付款 (會產生 QR Code跟 digitalrupees 位址)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -974,6 +974,6 @@
     <name>ZPhrControlDialog</name>
     </context>
 <context>
-    <name>phore-core</name>
+    <name>digitalrupees-core</name>
     </context>
 </TS>

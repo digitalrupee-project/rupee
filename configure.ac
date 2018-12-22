@@ -6,15 +6,15 @@ define(_CLIENT_VERSION_REVISION, 1)
 define(_CLIENT_VERSION_BUILD, 0)
 define(_CLIENT_VERSION_IS_RELEASE, true)
 define(_COPYRIGHT_YEAR, 2018)
-AC_INIT([Phore Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[www.phore.io],[phore])
+AC_INIT([Phore Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[www.digitalrupees.io],[digitalrupees])
 AC_CONFIG_SRCDIR([src/main.cpp])
-AC_CONFIG_HEADERS([src/config/phore-config.h])
+AC_CONFIG_HEADERS([src/config/digitalrupees-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
 BITCOIN_DAEMON_NAME=digitalrupeesd
 BITCOIN_GUI_NAME=digitalrupees-qt
-BITCOIN_CLI_NAME=phore-cli
+BITCOIN_CLI_NAME=digitalrupees-cli
 BITCOIN_TX_NAME=digitalrupees-tx
 
 dnl Unless the user specified ARFLAGS, force it to be cr
@@ -237,7 +237,7 @@ CPPFLAGS="$CPPFLAGS -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS"
 
 AC_ARG_WITH([utils],
   [AS_HELP_STRING([--with-utils],
-  [build phore-cli digitalrupees-tx (default=yes)])],
+  [build digitalrupees-cli digitalrupees-tx (default=yes)])],
   [build_bitcoin_utils=$withval],
   [build_bitcoin_utils=yes])
 
@@ -441,7 +441,7 @@ AC_C_BIGENDIAN([AC_MSG_ERROR("Big Endian not supported")])
 dnl Check for pthread compile/link requirements
 AX_PTHREAD
 
-# The following macro will add the necessary defines to phore-config.h, but
+# The following macro will add the necessary defines to digitalrupees-config.h, but
 # they also need to be passed down to any subprojects. Pull the results out of
 # the cache and add them to CPPFLAGS.
 AC_SYS_LARGEFILE
@@ -955,7 +955,7 @@ AC_MSG_CHECKING([whether to build digitalrupeesd])
 AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_bitcoind = xyes])
 AC_MSG_RESULT($build_bitcoind)
 
-AC_MSG_CHECKING([whether to build utils (phore-cli digitalrupees-tx)])
+AC_MSG_CHECKING([whether to build utils (digitalrupees-cli digitalrupees-tx)])
 AM_CONDITIONAL([BUILD_BITCOIN_UTILS], [test x$build_bitcoin_utils = xyes])
 AC_MSG_RESULT($build_bitcoin_utils)
 
@@ -1066,7 +1066,7 @@ fi
 
 AM_CONDITIONAL([ENABLE_ZMQ], [test "x$use_zmq" = "xyes"])
 
-AC_MSG_CHECKING([whether to build test_phore])
+AC_MSG_CHECKING([whether to build test_digitalrupees])
 if test x$use_tests = xyes; then
   AC_MSG_RESULT([yes])
   BUILD_TEST="test"

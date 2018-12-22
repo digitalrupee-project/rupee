@@ -37,8 +37,8 @@ Sample initialization flow from _digitalrupees-qt_ console (this needs to be don
  - Open console
  - Type "_keepass init_" in digitalrupees-qt console
  - Keepass pops up and asks for an association id, fill that in, for example, "_mydrkwallet_"
- - You should get a response like this "_Association successful. Id: mydrkwalletphore - Key: AgQkcs6cI7v9tlSYKjG/+s8wJrGALHl3jLosJpPLzUE=_"
- - Edit _phore.conf_ and fill in these values
+ - You should get a response like this "_Association successful. Id: mydrkwalletdigitalrupees - Key: AgQkcs6cI7v9tlSYKjG/+s8wJrGALHl3jLosJpPLzUE=_"
+ - Edit _digitalrupees.conf_ and fill in these values
 ```
 keepass=1
 keepasskey=AgQkcs6cI7v9tlSYKjG/+s8wJrGALHl3jLosJpPLzUE=

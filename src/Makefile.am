@@ -84,11 +84,11 @@ if BUILD_BITCOIND
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += phore-cli digitalrupees-tx
+  bin_PROGRAMS += digitalrupees-cli digitalrupees-tx
 endif
 
 .PHONY: FORCE
-# phore core #
+# digitalrupees core #
 BITCOIN_CORE_H = \
   activemasternode.h \
   accumulators.h \
@@ -414,7 +414,7 @@ if GLIBC_BACK_COMPAT
 libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
-# cli: shared between phore-cli and digitalrupees-qt
+# cli: shared between digitalrupees-cli and digitalrupees-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -448,36 +448,36 @@ digitalrupeesd_LDADD = \
 
 digitalrupeesd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# phore-cli binary #
-phore_cli_SOURCES = phore-cli.cpp
-phore_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-phore_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-phore_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# digitalrupees-cli binary #
+digitalrupees_cli_SOURCES = digitalrupees-cli.cpp
+digitalrupees_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+digitalrupees_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+digitalrupees_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-phore_cli_SOURCES += phore-cli-res.rc
+digitalrupees_cli_SOURCES += digitalrupees-cli-res.rc
 endif
 
-phore_cli_LDADD = \
+digitalrupees_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-phore_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+digitalrupees_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
 # digitalrupees-tx binary #
-phore_tx_SOURCES = digitalrupees-tx.cpp
-phore_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-phore_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-phore_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+digitalrupees_tx_SOURCES = digitalrupees-tx.cpp
+digitalrupees_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+digitalrupees_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+digitalrupees_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-phore_tx_SOURCES += digitalrupees-tx-res.rc
+digitalrupees_tx_SOURCES += digitalrupees-tx-res.rc
 endif
 
-phore_tx_LDADD = \
+digitalrupees_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_ZEROCOIN) \
@@ -485,7 +485,7 @@ phore_tx_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-phore_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+digitalrupees_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #

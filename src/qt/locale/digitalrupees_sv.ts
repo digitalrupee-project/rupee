@@ -591,8 +591,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Skicka mynt till en Phore adress</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and phore: URIs)</source>
-        <translation>Begär betalning (genererar QR kod och phore: URls)</translation>
+        <source>Request payments (generates QR codes and digitalrupees: URIs)</source>
+        <translation>Begär betalning (genererar QR kod och digitalrupees: URls)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -1419,7 +1419,7 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
     <name>ZPhrControlDialog</name>
     </context>
 <context>
-    <name>phore-core</name>
+    <name>digitalrupees-core</name>
     <message>
         <source>Error</source>
         <translation>Fel</translation>

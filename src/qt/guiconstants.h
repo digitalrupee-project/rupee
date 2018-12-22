@@ -51,7 +51,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 35
 
 #define QAPP_ORG_NAME "Phore"
-#define QAPP_ORG_DOMAIN "phore.org"
+#define QAPP_ORG_DOMAIN "digitalrupees.org"
 #define QAPP_APP_NAME_DEFAULT "Phore-Qt"
 #define QAPP_APP_NAME_TESTNET "Phore-Qt-testnet"
 

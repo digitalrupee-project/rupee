@@ -34,7 +34,7 @@ std::string HelpMessageCli()
     string strUsage;
     strUsage += HelpMessageGroup(_("Options:"));
     strUsage += HelpMessageOpt("-?", _("This help message"));
-    strUsage += HelpMessageOpt("-conf=<file>", strprintf(_("Specify configuration file (default: %s)"), "phore.conf"));
+    strUsage += HelpMessageOpt("-conf=<file>", strprintf(_("Specify configuration file (default: %s)"), "digitalrupees.conf"));
     strUsage += HelpMessageOpt("-datadir=<dir>", _("Specify data directory"));
     strUsage += HelpMessageOpt("-testnet", _("Use the test network"));
     strUsage += HelpMessageOpt("-regtest", _("Enter regression test mode, which uses a special chain in which blocks can be "
@@ -76,9 +76,9 @@ static bool AppInitRPC(int argc, char* argv[])
         std::string strUsage = _("Phore Core RPC client version") + " " + FormatFullVersion() + "\n";
         if (!mapArgs.count("-version")) {
             strUsage += "\n" + _("Usage:") + "\n" +
-                        "  phore-cli [options] <command> [params]  " + _("Send command to Phore Core") + "\n" +
-                        "  phore-cli [options] help                " + _("List commands") + "\n" +
-                        "  phore-cli [options] help <command>      " + _("Get help for a command") + "\n";
+                        "  digitalrupees-cli [options] <command> [params]  " + _("Send command to Phore Core") + "\n" +
+                        "  digitalrupees-cli [options] help                " + _("List commands") + "\n" +
+                        "  digitalrupees-cli [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessageCli();
         }

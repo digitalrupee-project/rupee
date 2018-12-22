@@ -3,11 +3,11 @@
 
 Phore Core version 1.3.1 is now available from:
 
-  https://phore.io/
+  https://digitalrupees.io/
 
 Please report bugs using the issue tracker at github:
 
-  https://github.com/phoreproject/phore/issues
+  https://github.com/digitalrupeesproject/digitalrupees/issues
 
 
 How to Upgrade

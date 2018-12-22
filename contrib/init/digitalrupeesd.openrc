@@ -2,18 +2,18 @@
 
 # backward compatibility for existing gentoo layout
 #
-if [ -d "/var/lib/phore/.phore" ]; then
-	BITCOIND_DEFAULT_DATADIR="/var/lib/phore/.phore"
+if [ -d "/var/lib/digitalrupees/.digitalrupees" ]; then
+	BITCOIND_DEFAULT_DATADIR="/var/lib/digitalrupees/.digitalrupees"
 else
 	BITCOIND_DEFAULT_DATADIR="/var/lib/digitalrupeesd"
 fi
 
-BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/phore/phore.conf}
+BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/digitalrupees/digitalrupees.conf}
 BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/digitalrupeesd}
 BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/digitalrupeesd.pid}
 BITCOIND_DATADIR=${BITCOIND_DATADIR:-${BITCOIND_DEFAULT_DATADIR}}
-BITCOIND_USER=${BITCOIND_USER:-phore}
-BITCOIND_GROUP=${BITCOIND_GROUP:-phore}
+BITCOIND_USER=${BITCOIND_USER:-digitalrupees}
+BITCOIND_GROUP=${BITCOIND_GROUP:-digitalrupees}
 BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/digitalrupeesd}
 
 name="Phore Core Daemon"
