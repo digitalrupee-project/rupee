@@ -4420,8 +4420,8 @@ for example: alertnotify=echo %%s | mail -s &quot;DigitalRupees Alert&quot; admi
         <translation>設定ファイルにおいて masternodeprivkey を設定してください。詳しくはガイドを確認ください。</translation>
     </message>
     <message>
-        <source>(11771 could be used only on mainnet)</source>
-        <translation>(メインネットでは11771のみを用いてください)</translation>
+        <source>(37025 could be used only on mainnet)</source>
+        <translation>(メインネットでは37025のみを用いてください)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4432,8 +4432,8 @@ for example: alertnotify=echo %%s | mail -s &quot;DigitalRupees Alert&quot; admi
         <translation>(デフォルト: 1)</translation>
     </message>
     <message>
-        <source>(must be 11771 for mainnet)</source>
-        <translation>(メインネットでは11771のみ)</translation>
+        <source>(must be 37025 for mainnet)</source>
+        <translation>(メインネットでは37025のみ)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>
