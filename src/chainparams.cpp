@@ -163,7 +163,7 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1545497468;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 126323;
+        genesis.nNonce = 601453;
         hashGenesisBlock = genesis.GetHash();
         if (regenerate) {
             hashGenesisBlock = uint256S("");
