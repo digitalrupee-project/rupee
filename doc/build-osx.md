@@ -78,7 +78,7 @@ Download Qt Creator from http://www.qt.io/download/. Download the "community edi
 1. Make sure you installed everything through homebrew mentioned above
 2. Do a proper ./configure --with-gui=qt5 --enable-debug
 3. In Qt Creator do "New Project" -> Import Project -> Import Existing Project
-4. Enter "phore-qt" as project name, enter src/qt as location
+4. Enter "digitalrupees-qt" as project name, enter src/qt as location
 5. Leave the file selection as it is
 6. Confirm the "summary page"
 7. In the "Projects" tab select "Manage Kits..."
@@ -92,7 +92,7 @@ You can ignore this section if you are building `digitalrupeesd` for your own us
 
 digitalrupeesd/phore-cli binaries are not included in the phore-Qt.app bundle.
 
-If you are building `digitalrupeesd` or `phore-qt` for others, your build machine should be set up
+If you are building `digitalrupeesd` or `digitalrupees-qt` for others, your build machine should be set up
 as follows for maximum compatibility:
 
 All dependencies should be compiled with these flags:
@@ -211,8 +211,8 @@ Once the build is complete, switch into the src/qt subdirectory:
 
 And there you have your wallet – you can start it by running:
 
-```./phore-qt```
+```./digitalrupees-qt```
 
 You can move the wallet app to another more permanent location. If you have not moved it and want to start your wallet in the future, open Terminal and run this command:
 
-~/Downloads/Phore/src/qt/phore-qt
+~/Downloads/Phore/src/qt/digitalrupees-qt

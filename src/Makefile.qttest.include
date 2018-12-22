@@ -1,8 +1,8 @@
 # Copyright (c) 2013-2016 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-bin_PROGRAMS += qt/test/test_phore-qt
-TESTS += qt/test/test_phore-qt
+bin_PROGRAMS += qt/test/test_digitalrupees-qt
+TESTS += qt/test/test_digitalrupees-qt
 
 TEST_QT_MOC_CPP = qt/test/moc_uritests.cpp
 
@@ -47,9 +47,9 @@ CLEAN_BITCOIN_QT_TEST = $(TEST_QT_MOC_CPP) qt/test/*.gcda qt/test/*.gcno
 
 CLEANFILES += $(CLEAN_BITCOIN_QT_TEST)
 
-test_phore_qt : qt/test/test_phore-qt$(EXEEXT)
+test_phore_qt : qt/test/test_digitalrupees-qt$(EXEEXT)
 
-test_phore_qt_check : qt/test/test_phore-qt$(EXEEXT) FORCE
+test_phore_qt_check : qt/test/test_digitalrupees-qt$(EXEEXT) FORCE
 	$(MAKE) check-TESTS TESTS=$^
 
 test_phore_qt_clean: FORCE

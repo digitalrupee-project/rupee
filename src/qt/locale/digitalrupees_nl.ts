@@ -5830,7 +5830,7 @@ Wees alsjeblieft geduldig...</translation>
         <translation>SwiftTX vereist invoeren moet minstens 6 bevestigingen, u moet mogelijks een paar minuten wachten en opnieuw proberen.</translation>
     </message>
 	<message>
-        <source>To use digitalrupeesd, or the -server option to phore-qt, you must set an rpcpassword in the configuration file:
+        <source>To use digitalrupeesd, or the -server option to digitalrupees-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
 rpcuser=phorerpc
@@ -5841,7 +5841,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s &quot;Phore Alert&quot; admin@foo.com
 </source>
-        <translation>Om digitalrupeesd of de -server optie om phore-qt te gebruiken, moet je een rpcpassword instellen in het configuratiebestand:
+        <translation>Om digitalrupeesd of de -server optie om digitalrupees-qt te gebruiken, moet je een rpcpassword instellen in het configuratiebestand:
 %s
 Het is aan te raden het volgende willekeurige wachtwoord te gebruiken:
 rpcuser=phorerpc

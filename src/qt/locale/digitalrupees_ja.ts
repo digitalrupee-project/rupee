@@ -1762,7 +1762,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>Automatically start Phore after logging in to the system.</source>
-        <translation>ログイン後、phore-qtが自動的に起動します。</translation>
+        <translation>ログイン後、digitalrupees-qtが自動的に起動します。</translation>
     </message>
     <message>
         <source>&amp;Start Phore on system login</source>
@@ -4335,7 +4335,7 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
     </message>
     <message>
         <source>
-To use digitalrupeesd, or the -server option to phore-qt, you must set an rpcpassword in the configuration file:
+To use digitalrupeesd, or the -server option to digitalrupees-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
 rpcuser=phorerpc
@@ -4347,7 +4347,7 @@ It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s &quot;Phore Alert&quot; admin@foo.com
 </source>
         <translation>
-        digitalrupeesd, phore-qt にserverオプションを付ける場合、以下の設定が必要になります。:
+        digitalrupeesd, digitalrupees-qt にserverオプションを付ける場合、以下の設定が必要になります。:
         %s
         phore.confにRPCユーザー名,パスワードを入力してください。:
         rpcuser=phorerpc
@@ -5454,7 +5454,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Phore Alert&quot; admin@foo.co
         <translation>SwiftTX は6確認を必要とします。数分お待ちの上、再度お試しください。</translation>
     </message>
     <message>
-        <source>To use digitalrupeesd, or the -server option to phore-qt, you must set an rpcpassword in the configuration file:
+        <source>To use digitalrupeesd, or the -server option to digitalrupees-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
 rpcuser=phorerpc
@@ -5465,7 +5465,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s &quot;Phore Alert&quot; admin@foo.com
 </source>
-        <translation>digitalrupeesd, phore-qt -server を利用する場合rpcの設定が必要です。:
+        <translation>digitalrupeesd, digitalrupees-qt -server を利用する場合rpcの設定が必要です。:
 %s
 ランダムなパスワードの利用を推奨します。
 rpcuser=phorerpc

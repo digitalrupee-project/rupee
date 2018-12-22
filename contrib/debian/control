@@ -42,7 +42,7 @@ Description: peer-to-peer network based digital currency - daemon
  This package provides the daemon, digitalrupeesd, and the CLI tool
  phore-cli to interact with the daemon.
 
-Package: phore-qt
+Package: digitalrupees-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI

@@ -22,7 +22,7 @@ make
 make install # optional
 ```
 
-This will build phore-qt as well if the dependencies are met.
+This will build digitalrupees-qt as well if the dependencies are met.
 
 Dependencies
 ---------------------
@@ -98,7 +98,7 @@ libqrencode (optional) can be installed with:
 
     sudo apt-get install libqrencode-dev
 
-Once these are installed, they will be found by configure and a phore-qt executable will be
+Once these are installed, they will be found by configure and a digitalrupees-qt executable will be
 built by default.
 
 Notes

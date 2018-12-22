@@ -1,5 +1,5 @@
 [Protocol]
-exec=phore-qt '%u'
+exec=digitalrupees-qt '%u'
 protocol=phore
 input=none
 output=none

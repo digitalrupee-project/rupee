@@ -12,7 +12,7 @@ src/digitalrupeesd
 src/phore-cli
 src/digitalrupees-tx
 src/test/test_phore
-src/qt/test/test_phore-qt
+src/qt/test/test_digitalrupees-qt
 
 # autoreconf
 Makefile.in
@@ -84,12 +84,12 @@ src/leveldb/build_config.mk
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-phore-qt
+digitalrupees-qt
 phore-Qt.app
 
 # Unit-tests
 Makefile.test
-phore-qt_test
+digitalrupees-qt_test
 src/test/buildenv.py
 
 # Resources cpp
