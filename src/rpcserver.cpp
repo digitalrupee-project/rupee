@@ -265,10 +265,10 @@ UniValue stop(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop Phore server.");
+            "\nStop DigitalRupees server.");
     // Shutdown will take long enough that the response should get back
     StartShutdown();
-    return "Phore server stopping";
+    return "DigitalRupees server stopping";
 }
 
 
@@ -352,38 +352,38 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "reconsiderblock", &reconsiderblock, true, true, false},
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
-        /* Phore features */
-        {"phore", "masternode", &masternode, true, true, false},
-        {"phore", "listmasternodes", &listmasternodes, true, true, false},
-        {"phore", "createmasternodebroadcast", &createmasternodebroadcast, true, true, false},
-        {"phore", "decodemasternodebroadcast", &decodemasternodebroadcast, true, true, false},
-        {"phore", "relaymasternodebroadcast", &relaymasternodebroadcast, true, true, false},
-        {"phore", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"phore", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"phore", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"phore", "masternodedebug", &masternodedebug, true, true, false},
-        {"phore", "startmasternode", &startmasternode, true, true, false},
-        {"phore", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"phore", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"phore", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"phore", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"phore", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"phore", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"phore", "mnbudget", &mnbudget, true, true, false},
-        {"phore", "preparebudget", &preparebudget, true, true, false},
-        {"phore", "submitbudget", &submitbudget, true, true, false},
-        {"phore", "mnbudgetvote", &mnbudgetvote, true, true, false},
-        {"phore", "getbudgetvotes", &getbudgetvotes, true, true, false},
-        {"phore", "getnextsuperblock", &getnextsuperblock, true, true, false},
-        {"phore", "getbudgetprojection", &getbudgetprojection, true, true, false},
-        {"phore", "getbudgetinfo", &getbudgetinfo, true, true, false},
-        {"phore", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
-        {"phore", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"phore", "checkbudgets", &checkbudgets, true, true, false},
-        {"phore", "mnsync", &mnsync, true, true, false},
-        {"phore", "spork", &spork, true, true, false},
-        {"phore", "getpoolinfo", &getpoolinfo, true, true, false},
-        {"phore", "makekeypair", &makekeypair, true, true, false},
+        /* DigitalRupees features */
+        {"digitalrupees", "masternode", &masternode, true, true, false},
+        {"digitalrupees", "listmasternodes", &listmasternodes, true, true, false},
+        {"digitalrupees", "createmasternodebroadcast", &createmasternodebroadcast, true, true, false},
+        {"digitalrupees", "decodemasternodebroadcast", &decodemasternodebroadcast, true, true, false},
+        {"digitalrupees", "relaymasternodebroadcast", &relaymasternodebroadcast, true, true, false},
+        {"digitalrupees", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"digitalrupees", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"digitalrupees", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"digitalrupees", "masternodedebug", &masternodedebug, true, true, false},
+        {"digitalrupees", "startmasternode", &startmasternode, true, true, false},
+        {"digitalrupees", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"digitalrupees", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"digitalrupees", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"digitalrupees", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"digitalrupees", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"digitalrupees", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"digitalrupees", "mnbudget", &mnbudget, true, true, false},
+        {"digitalrupees", "preparebudget", &preparebudget, true, true, false},
+        {"digitalrupees", "submitbudget", &submitbudget, true, true, false},
+        {"digitalrupees", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"digitalrupees", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"digitalrupees", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"digitalrupees", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"digitalrupees", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"digitalrupees", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
+        {"digitalrupees", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"digitalrupees", "checkbudgets", &checkbudgets, true, true, false},
+        {"digitalrupees", "mnsync", &mnsync, true, true, false},
+        {"digitalrupees", "spork", &spork, true, true, false},
+        {"digitalrupees", "getpoolinfo", &getpoolinfo, true, true, false},
+        {"digitalrupees", "makekeypair", &makekeypair, true, true, false},
 #ifdef ENABLE_WALLET
         /* Wallet */
         {"wallet", "addmultisigaddress", &addmultisigaddress, true, false, true},
@@ -450,8 +450,8 @@ static const CRPCCommand vRPCCommands[] =
         {"zerocoin", "exportzerocoins", &exportzerocoins, false, false, true},
         {"zerocoin", "reconsiderzerocoins", &reconsiderzerocoins, false, false, true},
         {"zerocoin", "getspentzerocoinamount", &getspentzerocoinamount, false, false, false},
-        {"zerocoin", "getzphrseed", &getzphrseed, false, false, true},
-        {"zerocoin", "setzphrseed", &setzphrseed, false, false, true}
+        {"zerocoin", "getzdrsseed", &getzdrsseed, false, false, true},
+        {"zerocoin", "setzdrsseed", &setzdrsseed, false, false, true}
 
 #endif // ENABLE_WALLET
 };
@@ -615,14 +615,14 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> phore-cli " + methodname + " " + args + "\n";
+    return "> digitalrupees-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)
 {
     return "> curl --user myusername --data-binary '{\"jsonrpc\": \"1.0\", \"id\":\"curltest\", "
            "\"method\": \"" +
-           methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:11772/\n";
+           methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:37026/\n";
 }
 
 void RPCRegisterTimerInterface(RPCTimerInterface *iface)
