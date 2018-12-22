@@ -161,7 +161,7 @@
                         <item>
                          <widget class="QLabel" name="labelzPHRSyncStatus">
                           <property name="toolTip">
-                           <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Phore network after a connection is established, but this process has not completed yet.</string>
+                           <string>The displayed information may be out of date. Your wallet automatically synchronizes with the DigitalRupees network after a connection is established, but this process has not completed yet.</string>
                           </property>
                           <property name="styleSheet">
                            <string notr="true">QLabel { color: red; }</string>
@@ -765,10 +765,10 @@ zPHR are mature when they have more than 20 confirmations AND more than 1 mint o
                              </size>
                             </property>
                             <property name="toolTip">
-                             <string>The Phore address to send the payment to. Creates local payment to yourself when empty.</string>
+                             <string>The DigitalRupees address to send the payment to. Creates local payment to yourself when empty.</string>
                             </property>
                             <property name="placeholderText">
-                             <string>Enter a Phore address (e.g. PCYiHgGJJ6xGHqivmdZrYjRnhaYf6AJ2Mp)</string>
+                             <string>Enter a DigitalRupees address (e.g. PCYiHgGJJ6xGHqivmdZrYjRnhaYf6AJ2Mp)</string>
                             </property>
                            </widget>
                           </item>

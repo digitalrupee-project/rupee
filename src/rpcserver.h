@@ -126,7 +126,7 @@ public:
 };
 
 /**
- * Phore RPC command dispatcher.
+ * DigitalRupees RPC command dispatcher.
  */
 class CRPCTable
 {

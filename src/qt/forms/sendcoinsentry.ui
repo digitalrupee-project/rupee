@@ -54,13 +54,13 @@
       <item>
        <widget class="QValidatedLineEdit" name="payTo">
         <property name="toolTip">
-         <string>The Phore address to send the payment to</string>
+         <string>The DigitalRupees address to send the payment to</string>
         </property>
         <property name="inputMask">
          <string/>
         </property>
         <property name="placeholderText">
-         <string>Enter a Phore address (e.g. PCYiHgGJJ6xGHqivmdZrYjRnhaYf6AJ2Mp)</string>
+         <string>Enter a DigitalRupees address (e.g. PCYiHgGJJ6xGHqivmdZrYjRnhaYf6AJ2Mp)</string>
         </property>
        </widget>
       </item>
@@ -175,7 +175,7 @@
     <item row="3" column="1">
      <widget class="QLabel" name="messageTextLabel">
       <property name="toolTip">
-       <string>A message that was attached to the Phore: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Phore network.</string>
+       <string>A message that was attached to the DigitalRupees: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the DigitalRupees network.</string>
       </property>
       <property name="textFormat">
        <enum>Qt::PlainText</enum>

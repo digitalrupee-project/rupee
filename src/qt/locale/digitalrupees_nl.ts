@@ -63,12 +63,12 @@
         <translation>Ontvangstadressen</translation>
     </message>
     <message>
-        <source>These are your Phore addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw Phoreadressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden.</translation>
+        <source>These are your DigitalRupees addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dit zijn uw DigitalRupeesadressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden.</translation>
     </message>
     <message>
-        <source>These are your Phore addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dit zijn uw Phoreadressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
+        <source>These are your DigitalRupees addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dit zijn uw DigitalRupeesadressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -181,8 +181,8 @@
         <translation>Bevestig versleuteling van de portemonnee</translation>
     </message>
     <message>
-        <source>Phore will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PHRs from being stolen by malware infecting your computer.</source>
-        <translation>Phore zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw PHRs stelen.</translation>
+        <source>DigitalRupees will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PHRs from being stolen by malware infecting your computer.</source>
+        <translation>DigitalRupees zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw PHRs stelen.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -244,16 +244,16 @@
         <translation>&amp;BIP 38 Versleuteling</translation>
     </message>
     <message>
-        <source>Enter a Phore Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Voer een Phore adres in dat u wilt versleutelen met BIP 38. Voer een wachtwoord in, in het middelste veld. Druk op versleutelen om de versleutelde geheime sleutel te berekenen.</translation>
+        <source>Enter a DigitalRupees Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Voer een DigitalRupees adres in dat u wilt versleutelen met BIP 38. Voer een wachtwoord in, in het middelste veld. Druk op versleutelen om de versleutelde geheime sleutel te berekenen.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adres:</translation>
     </message>
     <message>
-        <source>The Phore address to sign the message with</source>
-        <translation>Het Phore adres om het bericht met te ondertekenen</translation>
+        <source>The DigitalRupees address to sign the message with</source>
+        <translation>Het DigitalRupees adres om het bericht met te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -284,8 +284,8 @@
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Phore address</source>
-        <translation>Onderteken het bericht om te bewijzen dat u het Phore adres bezit</translation>
+        <source>Sign the message to prove you own this DigitalRupees address</source>
+        <translation>Onderteken het bericht om te bewijzen dat u het DigitalRupees adres bezit</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -308,12 +308,12 @@
         <translation>Voer de BIP 38 versleutelde geheime sleutel in. Voer het wachtwoord in, in het middelste veld. Druk op Ontsleutelen Sleutel om de geheime sleutel te berekenen.  Nadat de geheime sleutel is ontsleuteld, zal het klikken op &apos;Adres Importerens&apos; de geheime sleutel toevoegen aan de portemonnee.</translation>
     </message>
     <message>
-        <source>The Phore address the message was signed with</source>
-        <translation>Het Phore adres waarmee het bericht was ondertekend</translation>
+        <source>The DigitalRupees address the message was signed with</source>
+        <translation>Het DigitalRupees adres waarmee het bericht was ondertekend</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Phore address</source>
-        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde Phore adres</translation>
+        <source>Verify the message to ensure it was signed with the specified DigitalRupees address</source>
+        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde DigitalRupees adres</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -607,16 +607,16 @@
         <translation>Tabblad werkbalk</translation>
     </message>
     <message>
-        <source>Phore Core</source>
-        <translation>Phore Kern</translation>
+        <source>DigitalRupees Core</source>
+        <translation>DigitalRupees Kern</translation>
     </message>
     <message>
-        <source>Send coins to a Phore address</source>
-        <translation>Verstuur munten naar een Phore adres</translation>
+        <source>Send coins to a DigitalRupees address</source>
+        <translation>Verstuur munten naar een DigitalRupees adres</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and digitalrupees: URIs)</source>
-        <translation>Vraag betaling aan (genereert QR-codes en Phore: URI's)</translation>
+        <translation>Vraag betaling aan (genereert QR-codes en DigitalRupees: URI's)</translation>
     </message>
     <message>
         <source>&amp;Privacy</source>
@@ -635,24 +635,24 @@
         <translation>Bekijk masternodes</translation>
     </message>
     <message>
-        <source>&amp;About Phore Core</source>
-        <translation>&amp;Over Phore Kern</translation>
+        <source>&amp;About DigitalRupees Core</source>
+        <translation>&amp;Over DigitalRupees Kern</translation>
     </message>
     <message>
-        <source>Show information about Phore Core</source>
-        <translation>Toon informatie over Phore Kern</translation>
+        <source>Show information about DigitalRupees Core</source>
+        <translation>Toon informatie over DigitalRupees Kern</translation>
     </message>
     <message>
-        <source>Modify configuration options for Phore</source>
-        <translation>Wijzig Phore configuratie opties</translation>
+        <source>Modify configuration options for DigitalRupees</source>
+        <translation>Wijzig DigitalRupees configuratie opties</translation>
     </message>
     <message>
-        <source>Sign messages with your Phore addresses to prove you own them</source>
-        <translation>Onderteken berichten met uw Phore adressen om te bewijzen dat u deze adressen bezit</translation>
+        <source>Sign messages with your DigitalRupees addresses to prove you own them</source>
+        <translation>Onderteken berichten met uw DigitalRupees adressen om te bewijzen dat u deze adressen bezit</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Phore addresses</source>
-        <translation>Controleer berichten om te verifiëren dat deze ondertekend zijn met de gespecificeerde Phore adressen</translation>
+        <source>Verify messages to ensure they were signed with specified DigitalRupees addresses</source>
+        <translation>Controleer berichten om te verifiëren dat deze ondertekend zijn met de gespecificeerde DigitalRupees adressen</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -683,8 +683,8 @@
         <translation>Open Masternode configuratiebestand</translation>
     </message>
     <message>
-        <source>Open a Phore: URI or payment request</source>
-        <translation>Open een Phore: URI of betaalverzoek</translation>
+        <source>Open a DigitalRupees: URI or payment request</source>
+        <translation>Open een DigitalRupees: URI of betaalverzoek</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -695,16 +695,16 @@
         <translation>Block verkenner venster</translation>
     </message>
     <message>
-        <source>Show the Phore Core help message to get a list with possible Phore command-line options</source>
-        <translation>Toon het Phore Core help bericht om een ​​lijst te krijgen met mogelijke Phore command line opties</translation>
+        <source>Show the DigitalRupees Core help message to get a list with possible DigitalRupees command-line options</source>
+        <translation>Toon het DigitalRupees Core help bericht om een ​​lijst te krijgen met mogelijke DigitalRupees command line opties</translation>
     </message>
     <message>
-        <source>Phore Core client</source>
-        <translation>Phore Core client</translation>
+        <source>DigitalRupees Core client</source>
+        <translation>DigitalRupees Core client</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Phore network</source>
-        <translation><numerusform>%n actieve verbinding naar het Phore netwerk</numerusform><numerusform>%n actieve verbinding(en) naar het Phore netwerk</numerusform></translation>
+        <source>%n active connection(s) to DigitalRupees network</source>
+        <translation><numerusform>%n actieve verbinding naar het DigitalRupees netwerk</numerusform><numerusform>%n actieve verbinding(en) naar het DigitalRupees netwerk</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -879,8 +879,8 @@ MultiSend: %1</translation>
         <translation>%1 achterop. Scannen van blok %2</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Phore can no longer continue safely and will quit.</source>
-        <translation>Er is een fatale fout opgetreden. Phore kan niet langer veilig uitgevoerd worden en zal afsluiten.</translation>
+        <source>A fatal error occurred. DigitalRupees can no longer continue safely and will quit.</source>
+        <translation>Er is een fatale fout opgetreden. DigitalRupees kan niet langer veilig uitgevoerd worden en zal afsluiten.</translation>
     </message>
     <message>
         <source>High Sierra not supported with this build</source>
@@ -1223,8 +1223,8 @@ MultiSend: %1</translation>
         <translation>Wijzig verzendadres</translation>
     </message>
     <message>
-        <source>The entered address &quot;%1&quot; is not a valid Phore address.</source>
-        <translation>Het ingevoerde adres: &quot;%1&quot; is geen geldig Phore adres.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid DigitalRupees address.</source>
+        <translation>Het ingevoerde adres: &quot;%1&quot; is geen geldig DigitalRupees adres.</translation>
     </message>
     <message>
         <source>The entered address &quot;%1&quot; is already in the address book.</source>
@@ -1269,16 +1269,16 @@ MultiSend: %1</translation>
         <translation>versie</translation>
     </message>
     <message>
-        <source>Phore Core</source>
-        <translation>Phore Kern</translation>
+        <source>DigitalRupees Core</source>
+        <translation>DigitalRupees Kern</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About Phore Core</source>
-        <translation>Over Phore Core</translation>
+        <source>About DigitalRupees Core</source>
+        <translation>Over DigitalRupees Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1324,16 +1324,16 @@ MultiSend: %1</translation>
         <translation>Welkom</translation>
     </message>
     <message>
-        <source>Welcome to Phore Core.</source>
-        <translation>Welkom bij Phore Core</translation>
+        <source>Welcome to DigitalRupees Core.</source>
+        <translation>Welkom bij DigitalRupees Core</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Phore Core will store its data.</source>
-        <translation>Aangezien dit de eerste keer is dat het programma is gestart, kun je kiezen waar Phore Core zijn gegevens opslaat.</translation>
+        <source>As this is the first time the program is launched, you can choose where DigitalRupees Core will store its data.</source>
+        <translation>Aangezien dit de eerste keer is dat het programma is gestart, kun je kiezen waar DigitalRupees Core zijn gegevens opslaat.</translation>
     </message>
     <message>
-        <source>Phore Core will download and store a copy of the Phore block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Phore Core zal een kopie van de Phore blockchain downloaden en opslaan. Tenminste %1GB aan data zal worden opgeslagen in deze map en het zal over de tijd groeien. De portemonnee wordt ook in deze map opgeslagen.</translation>
+        <source>DigitalRupees Core will download and store a copy of the DigitalRupees block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>DigitalRupees Core zal een kopie van de DigitalRupees blockchain downloaden en opslaan. Tenminste %1GB aan data zal worden opgeslagen in deze map en het zal over de tijd groeien. De portemonnee wordt ook in deze map opgeslagen.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1344,8 +1344,8 @@ MultiSend: %1</translation>
         <translation>Gebruik een aangepaste datafolder:</translation>
     </message>
     <message>
-        <source>Phore Core</source>
-        <translation>Phore Kern</translation>
+        <source>DigitalRupees Core</source>
+        <translation>DigitalRupees Kern</translation>
     </message>
     <message>
         <source>Error: Specified data directory &quot;%1&quot; cannot be created.</source>
@@ -1486,12 +1486,12 @@ MultiSend: %1</translation>
         <translation>Vul het verzendadres in</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other Phore addresses after it matures.
-To Add: enter percentage to give and Phore address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other DigitalRupees addresses after it matures.
+To Add: enter percentage to give and DigitalRupees address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
-        <translation>MultiSend stelt je in staat om automatisch 100% van uw inzet of masternode-beloning automatisch te verzenden naar een lijst van andere Phore adressen nadat het volwassen is. 
-Toevoegen: voer percentage in om te geven en Phore adres om toe te voegen aan de MultiSend vector.
+        <translation>MultiSend stelt je in staat om automatisch 100% van uw inzet of masternode-beloning automatisch te verzenden naar een lijst van andere DigitalRupees adressen nadat het volwassen is. 
+Toevoegen: voer percentage in om te geven en DigitalRupees adres om toe te voegen aan de MultiSend vector.
 Verwijderen: Voer adres in om te verwijderen en druk op delete.
 MultiSend wordt niet geactiveerd, tenzij je op Activeer hebt geklikt</translation>
     </message>
@@ -1668,16 +1668,16 @@ Controleer het adres alsjeblieft en probeer het opnieuw.</translation>
         <translation>Verduistering configuratie</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Phore&apos;s configuration screen.</source>
-        <translation>Verduistering is succesvol ingesteld op basic (%1 en 2 rondes). Je kunt dit op elk gewenst moment wijzigen door het configuratiescherm van Phore te openen.</translation>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening DigitalRupees&apos;s configuration screen.</source>
+        <translation>Verduistering is succesvol ingesteld op basic (%1 en 2 rondes). Je kunt dit op elk gewenst moment wijzigen door het configuratiescherm van DigitalRupees te openen.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Phore&apos;s configuration screen.</source>
-        <translation>Verduistering is succesvol ingesteld op hoog (%1 en 8 rondes). U kunt dit op elk gewenst moment wijzigen door het configuratiescherm van Phore te openen.</translation>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening DigitalRupees&apos;s configuration screen.</source>
+        <translation>Verduistering is succesvol ingesteld op hoog (%1 en 8 rondes). U kunt dit op elk gewenst moment wijzigen door het configuratiescherm van DigitalRupees te openen.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Phore&apos;s configuration screen.</source>
-        <translation>Verduistering is succesvol ingesteld op hoog (%1 en 16 rondes). U kunt dit op elk gewenst moment wijzigen door het configuratiescherm van Phore te openen.</translation>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening DigitalRupees&apos;s configuration screen.</source>
+        <translation>Verduistering is succesvol ingesteld op hoog (%1 en 16 rondes). U kunt dit op elk gewenst moment wijzigen door het configuratiescherm van DigitalRupees te openen.</translation>
     </message>
 </context>
 <context>
@@ -1742,8 +1742,8 @@ Controleer het adres alsjeblieft en probeer het opnieuw.</translation>
         <translation>Als je de uitgaven van onbevestigde wijzigingen uitschakelt, de wijziging van een transactie&lt;br/&gt;kan niet worden gebruikt tot die transactie tenminste één bevestiging heeft.&lt;br/&gt;Dit beïnvloedt ook hoe uw saldo is berekend.</translation>
     </message>
     <message>
-        <source>Automatically open the Phore client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Open de Phore client poort automatisch op de router. Dit werkt alleen als je router UPnP ondersteunt en het is ingeschakeld.</translation>
+        <source>Automatically open the DigitalRupees client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Open de DigitalRupees client poort automatisch op de router. Dit werkt alleen als je router UPnP ondersteunt en het is ingeschakeld.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1762,12 +1762,12 @@ Controleer het adres alsjeblieft en probeer het opnieuw.</translation>
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically start Phore after logging in to the system.</source>
-        <translation>Phore automatisch opstarten na inloggen op het systeem.</translation>
+        <source>Automatically start DigitalRupees after logging in to the system.</source>
+        <translation>DigitalRupees automatisch opstarten na inloggen op het systeem.</translation>
     </message>
     <message>
-        <source>&amp;Start Phore on system login</source>
-        <translation>&amp;Phore starten bij systeemlogin</translation>
+        <source>&amp;Start DigitalRupees on system login</source>
+        <translation>&amp;DigitalRupees starten bij systeemlogin</translation>
     </message>
 	<message>
         <source>This setting determines the amount of individual masternodes that an input will be anonymized through.&lt;br/&gt;More rounds of anonymization gives a higher degree of privacy, but also costs more in fees.</source>
@@ -1782,8 +1782,8 @@ Controleer het adres alsjeblieft en probeer het opnieuw.</translation>
         <translation>Deze hoeveelheid fungeert als een drempelwaarde om Verduistering uit te schakelen eenmaal het bereikt is.</translation>
     </message>
     <message>
-        <source>Amount of Phore to keep anonymized</source>
-        <translation>Amount of Phore to keep anonymized</translation>
+        <source>Amount of DigitalRupees to keep anonymized</source>
+        <translation>Amount of DigitalRupees to keep anonymized</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1810,8 +1810,8 @@ Controleer het adres alsjeblieft en probeer het opnieuw.</translation>
         <translation>&amp;Netwerk</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Phore.</source>
-        <translation>De gebruikersinterface taal kan hier ingesteld worden. Deze instelling zal uitgevoerd na herstart van Phore.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting DigitalRupees.</source>
+        <translation>De gebruikersinterface taal kan hier ingesteld worden. Deze instelling zal uitgevoerd na herstart van DigitalRupees.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
@@ -1824,8 +1824,8 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Map poort gebruikt &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Phore network through a SOCKS5 proxy.</source>
-        <translation>Maak verbinding met het Phore netwerk via een SOCKS5 proxy.</translation>
+        <source>Connect to the DigitalRupees network through a SOCKS5 proxy.</source>
+        <translation>Maak verbinding met het DigitalRupees netwerk via een SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -2015,8 +2015,8 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Staked of masternode beloningen die nog niet volwassen zijn</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Phore network after a connection is established, but this process has not completed yet.</source>
-        <translation>De weergegeven informatie kan verouderd zijn. Je portemonnee synchroniseert automatisch met het Phore netwerk nadat een verbinding is opgezet, maar dit proces is nog niet afgerond.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the DigitalRupees network after a connection is established, but this process has not completed yet.</source>
+        <translation>De weergegeven informatie kan verouderd zijn. Je portemonnee synchroniseert automatisch met het DigitalRupees netwerk nadat een verbinding is opgezet, maar dit proces is nog niet afgerond.</translation>
     </message>
     <message>
         <source>Unconfirmed transactions to watch-only addresses</source>
@@ -2106,8 +2106,8 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Kan digitalrupees niet starten: click-to-pay handler</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Phore address or malformed URI parameters.</source>
-        <translation>URL kan niet ontleed worden! Dit kan worden veroorzaakt door een ongeldig Phore adres of misvormde URL parameters.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid DigitalRupees address or malformed URI parameters.</source>
+        <translation>URL kan niet ontleed worden! Dit kan worden veroorzaakt door een ongeldig DigitalRupees adres of misvormde URL parameters.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2200,8 +2200,8 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Zerocoin Acties:</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Phore network after a connection is established, but this process has not completed yet.</source>
-        <translation>De weergegeven informatie kan verouderd zijn. Je portemonnee synchroniseert automatisch met het Phore netwerk nadat een verbinding is opgezet, maar dit proces is nog niet afgerond.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the DigitalRupees network after a connection is established, but this process has not completed yet.</source>
+        <translation>De weergegeven informatie kan verouderd zijn. Je portemonnee synchroniseert automatisch met het DigitalRupees netwerk nadat een verbinding is opgezet, maar dit proces is nog niet afgerond.</translation>
     </message>
     <message>
         <source>Enter an amount of Phr to convert to zPhr</source>
@@ -2304,8 +2304,8 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Betaal &amp;Naar:</translation>
     </message>
     <message>
-        <source>The Phore address to send the payment to. Creates local payment to yourself when empty.</source>
-        <translation>Het Phore adres om de betaling naar te verzenden. Maakt lokale betaling aan jezelf als je leeg bent.</translation>
+        <source>The DigitalRupees address to send the payment to. Creates local payment to yourself when empty.</source>
+        <translation>Het DigitalRupees adres om de betaling naar te verzenden. Maakt lokale betaling aan jezelf als je leeg bent.</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2504,8 +2504,8 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Kopieer hoeveelheid</translation>
     </message>
     <message>
-        <source>Zerocoin functionality is not enabled on the Phore network yet.</source>
-        <translation>Zerocoin functionaliteit is nog niet ingeschakeld op het Phore netwerk.</translation>
+        <source>Zerocoin functionality is not enabled on the DigitalRupees network yet.</source>
+        <translation>Zerocoin functionaliteit is nog niet ingeschakeld op het DigitalRupees netwerk.</translation>
     </message>
     <message>
         <source>Error: Your wallet is locked. Please enter the wallet passphrase first.</source>
@@ -2558,8 +2558,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Geen 'Betaal aan' adres verstrekt, lokale betaling wordt gemaakt</translation>
     </message>
     <message>
-        <source>Invalid Phore Address</source>
-        <translation>Ongeldig Phore addres</translation>
+        <source>Invalid DigitalRupees Address</source>
+        <translation>Ongeldig DigitalRupees addres</translation>
     </message>
     <message>
         <source>Invalid Send Amount</source>
@@ -2661,8 +2661,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Hoeveelheid</translation>
     </message>
     <message>
-        <source>Enter a Phore address (e.g. %1)</source>
-        <translation>Voer een Phore adres in (b.v. %1)</translation>
+        <source>Enter a DigitalRupees address (e.g. %1)</source>
+        <translation>Voer een DigitalRupees adres in (b.v. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2721,8 +2721,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Fout bij het lezen van het masternode configuratiebestand: %1</translation>
     </message>
     <message>
-        <source>Phore Core didn&apos;t yet exit safely...</source>
-        <translation>Phore Core is nog niet veilig afgesloten...</translation>
+        <source>DigitalRupees Core didn&apos;t yet exit safely...</source>
+        <translation>DigitalRupees Core is nog niet veilig afgesloten...</translation>
     </message>
 </context>
 <context>
@@ -2819,8 +2819,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Blockchain</translation>
     </message>
     <message>
-        <source>Open the Phore debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Open het Phore debug log bestand uit de huidige data directory. Dit kan enkele seconden duren voor grote logbestanden.</translation>
+        <source>Open the DigitalRupees debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Open het DigitalRupees debug log bestand uit de huidige data directory. Dit kan enkele seconden duren voor grote logbestanden.</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -2991,8 +2991,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Uit:</translation>
     </message>
     <message>
-        <source>Welcome to the Phore RPC console.</source>
-        <translation>Welkom bij de Phore RPC console.</translation>
+        <source>Welcome to the DigitalRupees RPC console.</source>
+        <translation>Welkom bij de DigitalRupees RPC console.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -3094,12 +3094,12 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Een optioneel label om te associëren met het nieuwe ontvangstadres.</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Phore network.</source>
-        <translation>Een optioneel bericht dat aan het betalingsverzoek wordt gehecht, dat wordt weergegeven wanneer het verzoek wordt geopend. Opmerking: het bericht wordt niet verzonden met de betaling via het Phore netwerk.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the DigitalRupees network.</source>
+        <translation>Een optioneel bericht dat aan het betalingsverzoek wordt gehecht, dat wordt weergegeven wanneer het verzoek wordt geopend. Opmerking: het bericht wordt niet verzonden met de betaling via het DigitalRupees netwerk.</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Phore network.</source>
-        <translation>Een optioneel bericht dat aan het betalingsverzoek wordt gehecht, dat wordt weergegeven wanneer het verzoek wordt geopend.&lt;br&gt;Opmerking: het bericht wordt niet verzonden met de betaling via het Phore netwerk.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the DigitalRupees network.</source>
+        <translation>Een optioneel bericht dat aan het betalingsverzoek wordt gehecht, dat wordt weergegeven wanneer het verzoek wordt geopend.&lt;br&gt;Opmerking: het bericht wordt niet verzonden met de betaling via het DigitalRupees netwerk.</translation>
     </message>
 	    <message>
         <source>An optional message to attach to the payment request.</source>
@@ -3403,8 +3403,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Als de aangepaste vergoeding is ingesteld op 1000 uPHRs en de transactie is slechts 250 bytes, dan betaalt per kilobyte alleen 250 uPHR's in vergoeding,&lt;br /&gt;terwijl &quot;totaal minstens&quot; 1000 uPHR's betaalt. Voor transacties die groter zijn dan een kilobyte, betalen beiden per kilobyte.</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Phore transactions than the network can process.</source>
-        <translation>Alleen de minimale vergoeding betalen is prima, zolang er minder transactie volume is dan ruimte in de blokken. &lt;br /&gt;Maar wees ervan bewust dat dit kan leiden tot een nooit bevestigende transactie wanneer er meer vraag is naar Phore transacties dan het netwerk kan verwerken.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for DigitalRupees transactions than the network can process.</source>
+        <translation>Alleen de minimale vergoeding betalen is prima, zolang er minder transactie volume is dan ruimte in de blokken. &lt;br /&gt;Maar wees ervan bewust dat dit kan leiden tot een nooit bevestigende transactie wanneer er meer vraag is naar DigitalRupees transacties dan het netwerk kan verwerken.</translation>
     </message>
     <message>
         <source>normal</source>
@@ -3511,8 +3511,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>anonieme financiën</translation>
     </message>
     <message>
-        <source>Warning: Invalid Phore address</source>
-        <translation>Waarschuwing: Ongeldig Phore adres</translation>
+        <source>Warning: Invalid DigitalRupees address</source>
+        <translation>Waarschuwing: Ongeldig DigitalRupees adres</translation>
     </message>
     <message>
         <source>any available funds (not recommended)</source>
@@ -3625,8 +3625,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Betaal &amp;Naar:</translation>
     </message>
     <message>
-        <source>The Phore address to send the payment to</source>
-        <translation>Het Phore adres om de betaling naar te verzenden</translation>
+        <source>The DigitalRupees address to send the payment to</source>
+        <translation>Het DigitalRupees adres om de betaling naar te verzenden</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3665,8 +3665,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Bericht:</translation>
     </message>
     <message>
-        <source>A message that was attached to the Phore: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Phore network.</source>
-        <translation>Een bericht dat is gehecht aan de Phore: URI die bij de transactie wordt opgeslagen voor uw referentie. Opmerking: dit bericht wordt niet verzonden via het Phore netwerk.</translation>
+        <source>A message that was attached to the DigitalRupees: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the DigitalRupees network.</source>
+        <translation>Een bericht dat is gehecht aan de DigitalRupees: URI die bij de transactie wordt opgeslagen voor uw referentie. Opmerking: dit bericht wordt niet verzonden via het DigitalRupees netwerk.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -3692,8 +3692,8 @@ Wees alsjeblieft geduldig...</translation>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Phore Core is shutting down...</source>
-        <translation>Phore Core is aan het afsluiten...</translation>
+        <source>DigitalRupees Core is shutting down...</source>
+        <translation>DigitalRupees Core is aan het afsluiten...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -3715,8 +3715,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Je kunt berichten met je adressen ondertekenen om te bewijzen dat je ze bezit. Wees voorzichtig om niets vaags te ondertekenen, omdat phishing aanvallen je misschien kunnen proberen om je identiteit over te geven. Teken alleen volledig gedetailleerde verklaringen aan waar je mee akkoord gaat.</translation>
     </message>
     <message>
-        <source>The Phore address to sign the message with</source>
-        <translation>Het Phore adres om het bericht met te ondertekenen</translation>
+        <source>The DigitalRupees address to sign the message with</source>
+        <translation>Het DigitalRupees adres om het bericht met te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3747,16 +3747,16 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Phore address</source>
-        <translation>Onderteken het bericht om te bewijzen dat u het Phore adres bezit</translation>
+        <source>Sign the message to prove you own this DigitalRupees address</source>
+        <translation>Onderteken het bericht om te bewijzen dat u het DigitalRupees adres bezit</translation>
     </message>
     <message>
-        <source>The Phore address the message was signed with</source>
-        <translation>Het Phore adres waarmee het bericht was ondertekend</translation>
+        <source>The DigitalRupees address the message was signed with</source>
+        <translation>Het DigitalRupees adres waarmee het bericht was ondertekend</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Phore address</source>
-        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde Phore adres</translation>
+        <source>Verify the message to ensure it was signed with the specified DigitalRupees address</source>
+        <translation>Controleer een bericht om te verifiëren dat het ondertekend is door het gespecificeerde DigitalRupees adres</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -3842,8 +3842,8 @@ Wees alsjeblieft geduldig...</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Phore Core</source>
-        <translation>Phore Kern</translation>
+        <source>DigitalRupees Core</source>
+        <translation>DigitalRupees Kern</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -3858,8 +3858,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>De Dash Kernontwikkelaars</translation>
     </message>
     <message>
-        <source>The Phore Core developers</source>
-        <translation>De Phore Kernontwikkelaars</translation>
+        <source>The DigitalRupees Core developers</source>
+        <translation>De DigitalRupees Kernontwikkelaars</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -4564,8 +4564,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Bind naar het opgegeven adres om te luisteren naar JSON-RPC verbindingen. Gebruik [host]:poort notatie voor IPv6. Deze optie kan meerdere keren worden opgegeven (standaard: bind aan alle interfaces)</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Phore Core is probably already running.</source>
-        <translation>Kan geen vergrendeling op data directory %s verkrijgen. Phore Core loopt waarschijnlijk al.</translation>
+        <source>Cannot obtain a lock on data directory %s. DigitalRupees Core is probably already running.</source>
+        <translation>Kan geen vergrendeling op data directory %s verkrijgen. DigitalRupees Core loopt waarschijnlijk al.</translation>
     </message>
     <message>
         <source>Change automatic finalized budget voting behavior. mode=auto: Vote for only exact finalized budget match to my generated budget. (string, default: auto)</source>
@@ -4732,8 +4732,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in de OpenSSL Toolkit &lt;https://www.openssl.org/&gt; en cryptografische software geschreven door Eric Young en UPnP software geschreven door Thomas Bernard.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Phore Core is probably already running.</source>
-        <translation>Niet mogelijk te binden aan %s op deze computer. Phore Core loopt waarschijnlijk al.</translation>
+        <source>Unable to bind to %s on this computer. DigitalRupees Core is probably already running.</source>
+        <translation>Niet mogelijk te binden aan %s op deze computer. DigitalRupees Core loopt waarschijnlijk al.</translation>
     </message>
     <message>
         <source>Unable to locate enough Obfuscation denominated funds for this transaction.</source>
@@ -4760,8 +4760,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Waarschuwing: -paytxfee is zeer hoog ingesteld! Dit zijn de transactie kosten die je betaalt als je een transactie verstuurt.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Phore Core will not work properly.</source>
-        <translation>Waarschuwing: Controleer of de datum en tijd van je computer juist zijn! Als je klok verkeerd staat, werkt Phore Core niet goed.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong DigitalRupees Core will not work properly.</source>
+        <translation>Waarschuwing: Controleer of de datum en tijd van je computer juist zijn! Als je klok verkeerd staat, werkt DigitalRupees Core niet goed.</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -4980,8 +4980,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Error tijdens het laden van wallet.dat: Portemonnee corrupt</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Phore Core</source>
-        <translation>Fout bij het laden van wallet.dat: Portemonnee vereist een nieuwere versie van Phore Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of DigitalRupees Core</source>
+        <translation>Fout bij het laden van wallet.dat: Portemonnee vereist een nieuwere versie van DigitalRupees Core</translation>
     </message>
     <message>
         <source>Error opening block database</source>
@@ -5092,8 +5092,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Informatie</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Phore Core is shutting down.</source>
-        <translation>Initialisatie saniteitscontrole mislukt. Phore Core wordt afgesloten.</translation>
+        <source>Initialization sanity check failed. DigitalRupees Core is shutting down.</source>
+        <translation>Initialisatie saniteitscontrole mislukt. DigitalRupees Core wordt afgesloten.</translation>
     </message>
     <message>
         <source>Input is not valid.</source>
@@ -5718,8 +5718,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Portemonnee is vergrendeld.</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Phore Core to complete</source>
-        <translation>Wallet moest worden herschreven: start Phore Core opnieuw om te voltooien</translation>
+        <source>Wallet needed to be rewritten: restart DigitalRupees Core to complete</source>
+        <translation>Wallet moest worden herschreven: start DigitalRupees Core opnieuw om te voltooien</translation>
     </message>
     <message>
         <source>Wallet options:</source>
@@ -5790,8 +5790,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Het berekende accumulatie controlepunt is niet wat wordt geregistreerd door de blokindex</translation>
     </message>
 	<message>
-        <source>Disable all Phore specific functionality (Masternodes, Obfuscation, SwiftTX, Budgeting) (0-1, default: %u)</source>
-        <translation>Schakel alle Phore specifieke functionaliteit uit (Masternodes, Verduistering, SwiftTX, Budgeting) (0-1, standaard: %u)</translation>
+        <source>Disable all DigitalRupees specific functionality (Masternodes, Obfuscation, SwiftTX, Budgeting) (0-1, default: %u)</source>
+        <translation>Schakel alle DigitalRupees specifieke functionaliteit uit (Masternodes, Verduistering, SwiftTX, Budgeting) (0-1, standaard: %u)</translation>
     </message>
 	<message>
         <source>Enable automatic wallet backups triggered after each zPhr minting (0-1, default: %u)</source>
@@ -5839,7 +5839,7 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Phore Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;DigitalRupees Alert&quot; admin@foo.com
 </source>
         <translation>Om digitalrupeesd of de -server optie om digitalrupees-qt te gebruiken, moet je een rpcpassword instellen in het configuratiebestand:
 %s
@@ -5850,7 +5850,7 @@ rpcpassword=%s
 De gebruikersnaam en het wachtwoord MOETEN NIET hetzelfde zijn.
 Als het bestand niet bestaat, creëer het dan met owner-readable-only bestandsrechten.
 Het is ook aan te raden om alertnotify in te stellen, zodat je van problemen op de hoogte wordt gebracht;
-bijvoorbeeld: alertnotify = echo %%s | mail -s &quot;Phore Alert&quot; admin@foo.com
+bijvoorbeeld: alertnotify = echo %%s | mail -s &quot;DigitalRupees Alert&quot; admin@foo.com
 </translation>
     </message>
 	    <message>
@@ -5866,8 +5866,8 @@ bijvoorbeeld: alertnotify = echo %%s | mail -s &quot;Phore Alert&quot; admin@foo
         <translation>Copyright (C) 2014-%i The Dash Kernontwikkelaars</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The Phore Core Developers</source>
-        <translation>Copyright (C) 2015-%i The Phore Kernontwikkelaars</translation>
+        <source>Copyright (C) 2015-%i The DigitalRupees Core Developers</source>
+        <translation>Copyright (C) 2015-%i The DigitalRupees Kernontwikkelaars</translation>
     </message>
 	   <message>
         <source>Delete blockchain folders and resync from scratch</source>
@@ -6020,8 +6020,8 @@ bijvoorbeeld: alertnotify = echo %%s | mail -s &quot;Phore Alert&quot; admin@foo
         <translation>Zerocoin Acties:</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Phore network after a connection is established, but this process has not completed yet.</source>
-        <translation>De weergegeven informatie kan verouderd zijn. Je portemonnee synchroniseert automatisch met het Phore netwerk nadat een verbinding is opgezet, maar dit proces is nog niet afgerond.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the DigitalRupees network after a connection is established, but this process has not completed yet.</source>
+        <translation>De weergegeven informatie kan verouderd zijn. Je portemonnee synchroniseert automatisch met het DigitalRupees netwerk nadat een verbinding is opgezet, maar dit proces is nog niet afgerond.</translation>
     </message>
     <message>
         <source>Enter an amount of Phr to convert to zPhr</source>
@@ -6120,16 +6120,16 @@ zPHR are mature when they have more than 20 confirmations AND more than 1 mint o
         <translation>Betaal &amp;Naar:</translation>
     </message>
     <message>
-        <source>The Phore address to send the payment to. Creates local payment to yourself when empty.</source>
-        <translation>Het Phore adres om de betaling naar te verzenden. Maakt lokale betaling aan jezelf als je leeg bent.</translation>
+        <source>The DigitalRupees address to send the payment to. Creates local payment to yourself when empty.</source>
+        <translation>Het DigitalRupees adres om de betaling naar te verzenden. Maakt lokale betaling aan jezelf als je leeg bent.</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
         <translation>Kies een eerder gebruikt adres</translation>
     </message>
     <message>
-        <source>Enter a Phore address (e.g. PCYiHgGJJ6xGHqivmdZrYjRnhaYf6AJ2Mp)</source>
-        <translation>Voer een Phore adres in (bv.: PCYiHgGJJ6xGHqivmdZrYjRnhaYf6AJ2Mp)</translation>
+        <source>Enter a DigitalRupees address (e.g. PCYiHgGJJ6xGHqivmdZrYjRnhaYf6AJ2Mp)</source>
+        <translation>Voer een DigitalRupees adres in (bv.: PCYiHgGJJ6xGHqivmdZrYjRnhaYf6AJ2Mp)</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -6399,8 +6399,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Geen 'Betaal aan' adres verstrekt, lokale betaling wordt gemaakt</translation>
     </message>
     <message>
-        <source>Invalid Phore Address</source>
-        <translation>Ongeldig Phore addres</translation>
+        <source>Invalid DigitalRupees Address</source>
+        <translation>Ongeldig DigitalRupees addres</translation>
     </message>
     <message>
         <source>Invalid Send Amount</source>

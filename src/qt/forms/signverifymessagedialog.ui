@@ -45,7 +45,7 @@
          <item>
           <widget class="QValidatedLineEdit" name="addressIn_SM">
            <property name="toolTip">
-            <string>The Phore address to sign the message with</string>
+            <string>The DigitalRupees address to sign the message with</string>
            </property>
           </widget>
          </item>
@@ -137,7 +137,7 @@
          <item>
           <widget class="QPushButton" name="signMessageButton_SM">
            <property name="toolTip">
-            <string>Sign the message to prove you own this Phore address</string>
+            <string>Sign the message to prove you own this DigitalRupees address</string>
            </property>
            <property name="text">
             <string>Sign &amp;Message</string>
@@ -232,7 +232,7 @@
          <item>
           <widget class="QValidatedLineEdit" name="addressIn_VM">
            <property name="toolTip">
-            <string>The Phore address the message was signed with</string>
+            <string>The DigitalRupees address the message was signed with</string>
            </property>
           </widget>
          </item>
@@ -270,7 +270,7 @@
          <item>
           <widget class="QPushButton" name="verifyMessageButton_VM">
            <property name="toolTip">
-            <string>Verify the message to ensure it was signed with the specified Phore address</string>
+            <string>Verify the message to ensure it was signed with the specified DigitalRupees address</string>
            </property>
            <property name="text">
             <string>Verify &amp;Message</string>

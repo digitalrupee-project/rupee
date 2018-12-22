@@ -62,12 +62,12 @@
         <translation>Adresy pro přijetí peněz</translation>
     </message>
     <message>
-        <source>These are your Phore addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Toto jsou Vaše Phore adresy pro poslání platby. Vždy si překontrolujte množství peněz a cílovou adresu než platbu odešlete.</translation>
+        <source>These are your DigitalRupees addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Toto jsou Vaše DigitalRupees adresy pro poslání platby. Vždy si překontrolujte množství peněz a cílovou adresu než platbu odešlete.</translation>
     </message>
     <message>
-        <source>These are your Phore addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Toto jsou Vaše Phore adresy pro přijetí plateb. Je doporučeno použít novou adresu pro každou novou transakci.</translation>
+        <source>These are your DigitalRupees addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Toto jsou Vaše DigitalRupees adresy pro přijetí plateb. Je doporučeno použít novou adresu pro každou novou transakci.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Potvrdit zašifrování peněženky</translation>
     </message>
     <message>
-        <source>Phore will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PHRs from being stolen by malware infecting your computer.</source>
-        <translation>Phore se teď zavře pro dokončení šifrovacího procesu. Prosím, vemte na vědomí, že zašifrování Vaší peněženky plně neochrání Vaše PHRy před krádží, pokud je Váš počítač infikován malwarem.</translation>
+        <source>DigitalRupees will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PHRs from being stolen by malware infecting your computer.</source>
+        <translation>DigitalRupees se teď zavře pro dokončení šifrovacího procesu. Prosím, vemte na vědomí, že zašifrování Vaší peněženky plně neochrání Vaše PHRy před krádží, pokud je Váš počítač infikován malwarem.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -239,16 +239,16 @@
         <translation>&amp;BIP 38 Šifrovat</translation>
     </message>
     <message>
-        <source>Enter a Phore Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Zadejte Phore adresu, kterou si přejete zašifrovat pomocí BIP38. Frázové heslo zadejte do prostředního boxu. Stiskněte šifrovat pro výpočet šifrovaného privátního klíče.</translation>
+        <source>Enter a DigitalRupees Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Zadejte DigitalRupees adresu, kterou si přejete zašifrovat pomocí BIP38. Frázové heslo zadejte do prostředního boxu. Stiskněte šifrovat pro výpočet šifrovaného privátního klíče.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adresa:</translation>
     </message>
     <message>
-        <source>The Phore address to sign the message with</source>
-        <translation>Phore adresa pro podepsání zprávy</translation>
+        <source>The DigitalRupees address to sign the message with</source>
+        <translation>DigitalRupees adresa pro podepsání zprávy</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -279,8 +279,8 @@
         <translation>Kopírovat aktuální podpis do systémové mezipaměti</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Phore address</source>
-        <translation>Podepsat zprávu k prokázání, že vlastníte tuto Phore adresu</translation>
+        <source>Sign the message to prove you own this DigitalRupees address</source>
+        <translation>Podepsat zprávu k prokázání, že vlastníte tuto DigitalRupees adresu</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -303,12 +303,12 @@
         <translation>Vložte BIP 38 šifrovaný privítní klíc. Frázové heslo vložte do prostředního boxu. Kliknětě na Dešifrovat Klíč pro výpočet privátního klíče. Poté co bude klíč dešifrován, kliknutím na 'Importovat Adresu' přidáte privátní klíč do Vaší peněženky.</translation>
     </message>
     <message>
-        <source>The Phore address the message was signed with</source>
-        <translation>Phore adresa zprávy byla podpsána</translation>
+        <source>The DigitalRupees address the message was signed with</source>
+        <translation>DigitalRupees adresa zprávy byla podpsána</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Phore address</source>
-        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou Phore adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified DigitalRupees address</source>
+        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou DigitalRupees adresou</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -598,12 +598,12 @@
         <translation>Nástrojová lišta záložek</translation>
     </message>
     <message>
-        <source>Phore Core</source>
-        <translation>Phore Core</translation>
+        <source>DigitalRupees Core</source>
+        <translation>DigitalRupees Core</translation>
     </message>
     <message>
-        <source>Send coins to a Phore address</source>
-        <translation>Odeslat platbuna Phore adresu</translation>
+        <source>Send coins to a DigitalRupees address</source>
+        <translation>Odeslat platbuna DigitalRupees adresu</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and digitalrupees: URIs)</source>
@@ -618,24 +618,24 @@
         <translation>Procházet masternody</translation>
     </message>
     <message>
-        <source>&amp;About Phore Core</source>
-        <translation>&amp;O Phore Core</translation>
+        <source>&amp;About DigitalRupees Core</source>
+        <translation>&amp;O DigitalRupees Core</translation>
     </message>
     <message>
-        <source>Show information about Phore Core</source>
-        <translation>Zobraz informace o Phore Core</translation>
+        <source>Show information about DigitalRupees Core</source>
+        <translation>Zobraz informace o DigitalRupees Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for Phore</source>
-        <translation>Upravit možnosti konfigurace pro Phore</translation>
+        <source>Modify configuration options for DigitalRupees</source>
+        <translation>Upravit možnosti konfigurace pro DigitalRupees</translation>
     </message>
     <message>
-        <source>Sign messages with your Phore addresses to prove you own them</source>
-        <translation>Podepsat zprávy Vaší Phore adresou pro prokázaní, že jste jejich vlastníkem</translation>
+        <source>Sign messages with your DigitalRupees addresses to prove you own them</source>
+        <translation>Podepsat zprávy Vaší DigitalRupees adresou pro prokázaní, že jste jejich vlastníkem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Phore addresses</source>
-        <translation>Ověřit zprávy k zajištění, že bylypodepsány vybranými Phore adresami</translation>
+        <source>Verify messages to ensure they were signed with specified DigitalRupees addresses</source>
+        <translation>Ověřit zprávy k zajištění, že bylypodepsány vybranými DigitalRupees adresami</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -666,8 +666,8 @@
         <translation>Otevřít Masternodový konfigurační soubor</translation>
     </message>
     <message>
-        <source>Open a Phore: URI or payment request</source>
-        <translation>Otevřít Phore: URI nebo platební žádost</translation>
+        <source>Open a DigitalRupees: URI or payment request</source>
+        <translation>Otevřít DigitalRupees: URI nebo platební žádost</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -678,12 +678,12 @@
         <translation>Okno blokového průzkumníka</translation>
     </message>
     <message>
-        <source>Show the Phore Core help message to get a list with possible Phore command-line options</source>
-        <translation>Zobrazit Phore Core pomocnou zpráv pro získání seznamu možných parametrů Phore pro příkazy do příkazové řádky</translation>
+        <source>Show the DigitalRupees Core help message to get a list with possible DigitalRupees command-line options</source>
+        <translation>Zobrazit DigitalRupees Core pomocnou zpráv pro získání seznamu možných parametrů DigitalRupees pro příkazy do příkazové řádky</translation>
     </message>
     <message>
-        <source>Phore Core client</source>
-        <translation>Phore Core klient</translation>
+        <source>DigitalRupees Core client</source>
+        <translation>DigitalRupees Core klient</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -1066,8 +1066,8 @@ MultiSend: %1</translation>
         <translation>Upravit adresu k odeslání platby</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Phore address.</source>
-        <translation>Zadaná adresa "%1" není validní Phore adresa.</translation>
+        <source>The entered address "%1" is not a valid DigitalRupees address.</source>
+        <translation>Zadaná adresa "%1" není validní DigitalRupees adresa.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1112,12 +1112,12 @@ MultiSend: %1</translation>
         <translation>verze</translation>
     </message>
     <message>
-        <source>Phore Core</source>
-        <translation>Phore Core</translation>
+        <source>DigitalRupees Core</source>
+        <translation>DigitalRupees Core</translation>
     </message>
     <message>
-        <source>About Phore Core</source>
-        <translation>O Phore Core</translation>
+        <source>About DigitalRupees Core</source>
+        <translation>O DigitalRupees Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1151,16 +1151,16 @@ MultiSend: %1</translation>
         <translation>Vítejte</translation>
     </message>
     <message>
-        <source>Welcome to Phore Core.</source>
-        <translation>Vítejte v Phore Core.</translation>
+        <source>Welcome to DigitalRupees Core.</source>
+        <translation>Vítejte v DigitalRupees Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Phore Core will store its data.</source>
-        <translation>Při prvním spuštění programu si můžete vybrat, kam bude Phore Core ukládat svá data.</translation>
+        <source>As this is the first time the program is launched, you can choose where DigitalRupees Core will store its data.</source>
+        <translation>Při prvním spuštění programu si můžete vybrat, kam bude DigitalRupees Core ukládat svá data.</translation>
     </message>
     <message>
-        <source>Phore Core will download and store a copy of the Phore block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Phore Core stáhne a uloží kopii Phore blockchainu. Nejméně %1GB dat bude do této složky uloženo a v průběhu času bude ukládat další data. Peněženka bude v této složce uložena také.</translation>
+        <source>DigitalRupees Core will download and store a copy of the DigitalRupees block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>DigitalRupees Core stáhne a uloží kopii DigitalRupees blockchainu. Nejméně %1GB dat bude do této složky uloženo a v průběhu času bude ukládat další data. Peněženka bude v této složce uložena také.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1171,8 +1171,8 @@ MultiSend: %1</translation>
         <translation>Použít vlastní složku pro data</translation>
     </message>
     <message>
-        <source>Phore Core</source>
-        <translation>Phore Core</translation>
+        <source>DigitalRupees Core</source>
+        <translation>DigitalRupees Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1520,12 +1520,12 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically start Phore after logging in to the system.</source>
-        <translation>Automaticky spustit Phore po přihlášení do systému</translation>
+        <source>Automatically start DigitalRupees after logging in to the system.</source>
+        <translation>Automaticky spustit DigitalRupees po přihlášení do systému</translation>
     </message>
     <message>
-        <source>&amp;Start Phore on system login</source>
-        <translation>&amp;Spusti Phore při přihlášení do systému</translation>
+        <source>&amp;Start DigitalRupees on system login</source>
+        <translation>&amp;Spusti DigitalRupees při přihlášení do systému</translation>
     </message>
     <message>
         <source>Show Masternodes Tab</source>
@@ -2186,8 +2186,8 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The Phore address to sign the message with</source>
-        <translation>Phore adresa pro podepsání zprávy</translation>
+        <source>The DigitalRupees address to sign the message with</source>
+        <translation>DigitalRupees adresa pro podepsání zprávy</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2214,16 +2214,16 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Kopírovat aktuální podpis do systémové mezipaměti</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Phore address</source>
-        <translation>Podepsat zprávu k prokázání, že vlastníte tuto Phore adresu</translation>
+        <source>Sign the message to prove you own this DigitalRupees address</source>
+        <translation>Podepsat zprávu k prokázání, že vlastníte tuto DigitalRupees adresu</translation>
     </message>
     <message>
-        <source>The Phore address the message was signed with</source>
-        <translation>Phore adresa zprávy byla podpsána</translation>
+        <source>The DigitalRupees address the message was signed with</source>
+        <translation>DigitalRupees adresa zprávy byla podpsána</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Phore address</source>
-        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou Phore adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified DigitalRupees address</source>
+        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou DigitalRupees adresou</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2265,8 +2265,8 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Phore Core</source>
-        <translation>Phore Core</translation>
+        <source>DigitalRupees Core</source>
+        <translation>DigitalRupees Core</translation>
     </message>
     </context>
 <context>

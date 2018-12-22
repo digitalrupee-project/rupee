@@ -62,12 +62,12 @@
         <translation>Indirizzi di ricezione</translation>
     </message>
     <message>
-        <source>These are your Phore addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Questi sono gli indirizzi Phore per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo di ricezione prima di inviare valuta.</translation>
+        <source>These are your DigitalRupees addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Questi sono gli indirizzi DigitalRupees per l'invio di pagamenti. Controlla sempre l'importo e l'indirizzo di ricezione prima di inviare valuta.</translation>
     </message>
     <message>
-        <source>These are your Phore addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Questi sono gli indirizzi Phore per la ricezione di pagamenti. Si raccomanda di utilizzare un indirizzo diverso per ogni transazione.</translation>
+        <source>These are your DigitalRupees addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Questi sono gli indirizzi DigitalRupees per la ricezione di pagamenti. Si raccomanda di utilizzare un indirizzo diverso per ogni transazione.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Conferma cifratura portafoglio</translation>
     </message>
     <message>
-        <source>Phore will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PHRs from being stolen by malware infecting your computer.</source>
-        <translation>Phore verrà ora chiuso per completare il processo di cifratura. Ricorda che crittografare il tuo portafoglio non protegge completamente i tuoi PHR dal furto da parte di software malevoli che potrebbero infettare il tuo computer.</translation>
+        <source>DigitalRupees will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PHRs from being stolen by malware infecting your computer.</source>
+        <translation>DigitalRupees verrà ora chiuso per completare il processo di cifratura. Ricorda che crittografare il tuo portafoglio non protegge completamente i tuoi PHR dal furto da parte di software malevoli che potrebbero infettare il tuo computer.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -239,16 +239,16 @@
         <translation>&amp;BIP 38 Criptato</translation>
     </message>
     <message>
-        <source>Enter a Phore Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Inserisci un indirizzo Phore che desideri crittografare utilizzando BIP 38. Inserisci una passphrase nella casella centrale. Premi Cripta per calcolare la chiave privata crittografata.</translation>
+        <source>Enter a DigitalRupees Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Inserisci un indirizzo DigitalRupees che desideri crittografare utilizzando BIP 38. Inserisci una passphrase nella casella centrale. Premi Cripta per calcolare la chiave privata crittografata.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Indirizzo:</translation>
     </message>
     <message>
-        <source>The Phore address to sign the message with</source>
-        <translation>L'indirizzo Phore per firmare il messaggio con</translation>
+        <source>The DigitalRupees address to sign the message with</source>
+        <translation>L'indirizzo DigitalRupees per firmare il messaggio con</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -279,8 +279,8 @@
         <translation>Copiare la firma corrente negli Appunti di sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Phore address</source>
-        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo Phore</translation>
+        <source>Sign the message to prove you own this DigitalRupees address</source>
+        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo DigitalRupees</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -303,12 +303,12 @@
         <translation>Immettere la chiave privata codificata BIP 38. Inserire la passphrase nella casella centrale. Fare clic su Decripta Chiave per calcolare la chiave privata. Dopo che la chiave viene decrittata, cliccando su "Importa indirizzo" verrà aggiunta questa chiave privata al portafoglio.</translation>
     </message>
     <message>
-        <source>The Phore address the message was signed with</source>
-        <translation>L'indirizzo Phore con cui è stato firmato il messaggio</translation>
+        <source>The DigitalRupees address the message was signed with</source>
+        <translation>L'indirizzo DigitalRupees con cui è stato firmato il messaggio</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Phore address</source>
-        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo Phore specificato </translation>
+        <source>Verify the message to ensure it was signed with the specified DigitalRupees address</source>
+        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo DigitalRupees specificato </translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -590,12 +590,12 @@
         <translation>Schede degli strumenti</translation>
     </message>
     <message>
-        <source>Phore Core</source>
-        <translation>Phore Core</translation>
+        <source>DigitalRupees Core</source>
+        <translation>DigitalRupees Core</translation>
     </message>
     <message>
-        <source>Send coins to a Phore address</source>
-        <translation>Invia monete all' indirizzo Phore</translation>
+        <source>Send coins to a DigitalRupees address</source>
+        <translation>Invia monete all' indirizzo DigitalRupees</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and digitalrupees: URIs)</source>
@@ -610,24 +610,24 @@
         <translation>Esplora i masternodes</translation>
     </message>
     <message>
-        <source>&amp;About Phore Core</source>
-        <translation>&amp;Informazioni Phore Core</translation>
+        <source>&amp;About DigitalRupees Core</source>
+        <translation>&amp;Informazioni DigitalRupees Core</translation>
     </message>
     <message>
-        <source>Show information about Phore Core</source>
-        <translation>Visualizza informazioni su Phore Core</translation>
+        <source>Show information about DigitalRupees Core</source>
+        <translation>Visualizza informazioni su DigitalRupees Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for Phore</source>
-        <translation>Modifica le opzioni di configurazione per Phore</translation>
+        <source>Modify configuration options for DigitalRupees</source>
+        <translation>Modifica le opzioni di configurazione per DigitalRupees</translation>
     </message>
     <message>
-        <source>Sign messages with your Phore addresses to prove you own them</source>
-        <translation>Firma i messaggi con i tuoi indirizzi Phore per dimostrare di essere il proprietario </translation>
+        <source>Sign messages with your DigitalRupees addresses to prove you own them</source>
+        <translation>Firma i messaggi con i tuoi indirizzi DigitalRupees per dimostrare di essere il proprietario </translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Phore addresses</source>
-        <translation>Verifica i messaggi per assicurarsi che siano stati firmati con indirizzi Phore specifici</translation>
+        <source>Verify messages to ensure they were signed with specified DigitalRupees addresses</source>
+        <translation>Verifica i messaggi per assicurarsi che siano stati firmati con indirizzi DigitalRupees specifici</translation>
     </message>
     <message>
         <source>Encrypt and decrypt private keys using a passphrase</source>
@@ -638,16 +638,16 @@
         <translation>Impostazioni MultiSend</translation>
     </message>
     <message>
-        <source>Open a Phore: URI or payment request</source>
-        <translation>Apri un Phore: URI o richiesta di pagamento</translation>
+        <source>Open a DigitalRupees: URI or payment request</source>
+        <translation>Apri un DigitalRupees: URI o richiesta di pagamento</translation>
     </message>
     <message>
         <source>Block explorer window</source>
         <translation>Finestra Block Explorer</translation>
     </message>
     <message>
-        <source>Show the Phore Core help message to get a list with possible Phore command-line options</source>
-        <translation>Mostra il messaggio di aiuto Phore Core per ottenere un elenco con le possibili opzioni di riga di comando Phore</translation>
+        <source>Show the DigitalRupees Core help message to get a list with possible DigitalRupees command-line options</source>
+        <translation>Mostra il messaggio di aiuto DigitalRupees Core per ottenere un elenco con le possibili opzioni di riga di comando DigitalRupees</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -888,8 +888,8 @@ MultiSend: %1</translation>
         <translation>versione</translation>
     </message>
     <message>
-        <source>Phore Core</source>
-        <translation>Phore Core</translation>
+        <source>DigitalRupees Core</source>
+        <translation>DigitalRupees Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
@@ -915,8 +915,8 @@ MultiSend: %1</translation>
         <translation>Benvenuto</translation>
     </message>
     <message>
-        <source>Phore Core</source>
-        <translation>Phore Core</translation>
+        <source>DigitalRupees Core</source>
+        <translation>DigitalRupees Core</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1144,8 +1144,8 @@ MultiSend: %1</translation>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The Phore address to sign the message with</source>
-        <translation>L'indirizzo Phore per firmare il messaggio con</translation>
+        <source>The DigitalRupees address to sign the message with</source>
+        <translation>L'indirizzo DigitalRupees per firmare il messaggio con</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1168,16 +1168,16 @@ MultiSend: %1</translation>
         <translation>Copiare la firma corrente negli Appunti di sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Phore address</source>
-        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo Phore</translation>
+        <source>Sign the message to prove you own this DigitalRupees address</source>
+        <translation>Firmare il messaggio per dimostrare di possedere questo indirizzo DigitalRupees</translation>
     </message>
     <message>
-        <source>The Phore address the message was signed with</source>
-        <translation>L'indirizzo Phore con cui è stato firmato il messaggio</translation>
+        <source>The DigitalRupees address the message was signed with</source>
+        <translation>L'indirizzo DigitalRupees con cui è stato firmato il messaggio</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Phore address</source>
-        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo Phore specificato </translation>
+        <source>Verify the message to ensure it was signed with the specified DigitalRupees address</source>
+        <translation>Verificare il messaggio per assicurarsi che sia stato firmato con l'indirizzo DigitalRupees specificato </translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -1215,8 +1215,8 @@ MultiSend: %1</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Phore Core</source>
-        <translation>Phore Core</translation>
+        <source>DigitalRupees Core</source>
+        <translation>DigitalRupees Core</translation>
     </message>
     </context>
 <context>
