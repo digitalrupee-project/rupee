@@ -207,8 +207,8 @@ public:
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 31);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 55);
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 125);
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x01),(0x79),(0x62),(0xb5).convert_to_container<std::vector<unsigned char> >();
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x03),(0xa9),(0xe2),(0xbd).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x01)(0x79)(0x62)(0xb5).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x03)(0xa9)(0xe2)(0xbd).convert_to_container<std::vector<unsigned char> >();
         // 	BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x07)(0xbd).convert_to_container<std::vector<unsigned char> >();
 
@@ -329,9 +329,9 @@ public:
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 15);  // Testnet rupees script addresses start with '8' or '9'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 239);     // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
         // Testnet digitalrupees BIP32 pubkeys start with 'DRKV'
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x01),(0x50),(0x34),(0x72).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x01)(0x50)(0x34)(0x72).convert_to_container<std::vector<unsigned char> >();
         // Testnet digitalrupees BIP32 prvkeys start with 'DRKP'
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x2e),(0x99),(0xe6),(0xd9).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x2e)(0x99)(0xe6)(0xd9).convert_to_container<std::vector<unsigned char> >();
         // Testnet digitalrupees BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x01)(0x00)(0x00)(0x80).convert_to_container<std::vector<unsigned char> >();
 
