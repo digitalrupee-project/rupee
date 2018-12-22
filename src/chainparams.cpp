@@ -29,7 +29,7 @@ struct SeedSpec6 {
 /**
  * Main network
  */
-static bool regenerate = true;
+static bool regenerate = false;
 
 //! Convert the pnSeeds6 array into usable address objects.
 static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data, unsigned int count)
@@ -163,7 +163,7 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1545485400;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 4009099;
+        genesis.nNonce = 126323;
         hashGenesisBlock = genesis.GetHash();
         if (regenerate) {
             hashGenesisBlock = uint256S("");
@@ -190,7 +190,7 @@ public:
             LogPrintf(" time: %u\n", genesis.nTime);
             LogPrintf(" hash: 0x%s\n", genesis.GetHash().ToString().c_str());
             LogPrintf(" merklehash: 0x%s\n", genesis.hashMerkleRoot.ToString().c_str());
-            assert(hashGenesisBlock == uint256("0x00000e13eaaddb97082083b066d45a6d3ba62741bd562c685178f895010978e5"));
+            assert(hashGenesisBlock == uint256("0x000003901c6a9d860bec1c1ce742acd94b6bffbbdedd9c6093e0772e9f9b12ae"));
             assert(genesis.hashMerkleRoot == uint256("0x808b70083cf4d3a4a998d61cb59858950f385f02a3ef8b4f3008dbb50651802a"));
         }
         
@@ -289,7 +289,7 @@ public:
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1546176600;
-        genesis.nNonce = 93086;
+        genesis.nNonce = 570226;
 
         hashGenesisBlock = genesis.GetHash();
         if (regenerate) {
@@ -318,7 +318,7 @@ public:
             LogPrintf(" time: %u\n", genesis.nTime);
             LogPrintf(" hash: 0x%s\n", genesis.GetHash().ToString().c_str());
             LogPrintf(" merklehash: 0x%s\n", genesis.hashMerkleRoot.ToString().c_str());
-            assert(hashGenesisBlock == uint256("0x00000bac81404d72eb1febf704f409035541f50579380c35abc60c602ff36908"));
+            assert(hashGenesisBlock == uint256("0x0000046e87c85041262d05929a49db322725e7e15617d19f17f19704e2512d1c"));
             assert(genesis.hashMerkleRoot == uint256("0x808b70083cf4d3a4a998d61cb59858950f385f02a3ef8b4f3008dbb50651802a"));
         }
         
@@ -391,7 +391,7 @@ public:
 
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 32000;
-        assert(hashGenesisBlock == uint256("0x2b1a0f66712aad59ad283662d5b919415a25921ce89511d73019107e380485bf"));
+        assert(hashGenesisBlock == uint256("0x000003901c6a9d860bec1c1ce742acd94b6bffbbdedd9c6093e0772e9f9b12ae"));
 
         bech32_hrp = "rst";
 
