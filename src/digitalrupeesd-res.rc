@@ -16,8 +16,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Phore"
-            VALUE "FileDescription",    "digitalrupeesd (OSS daemon/client for Phore)"
+            VALUE "CompanyName",        "DigitalRupees"
+            VALUE "FileDescription",    "digitalrupeesd (OSS daemon/client for DigitalRupees)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "digitalrupeesd"
             VALUE "LegalCopyright",     COPYRIGHT_STR

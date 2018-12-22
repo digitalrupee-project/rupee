@@ -16,8 +16,8 @@ BITCOIND_USER=${BITCOIND_USER:-digitalrupees}
 BITCOIND_GROUP=${BITCOIND_GROUP:-digitalrupees}
 BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/digitalrupeesd}
 
-name="Phore Core Daemon"
-description="Phore crypto-currency p2p network daemon"
+name="DigitalRupees Core Daemon"
+description="DigitalRupees crypto-currency p2p network daemon"
 
 command="/usr/bin/digitalrupeesd"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \
@@ -78,7 +78,7 @@ checkconfig()
 		eerror "It is also recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"Phore Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"DigitalRupees Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1

@@ -10,7 +10,7 @@
 
 /**
  * CBaseChainParams defines the base parameters (shared between digitalrupees-cli and digitalrupeesd)
- * of a given instance of the Phore system.
+ * of a given instance of the DigitalRupees system.
  */
 class CBaseChainParams
 {

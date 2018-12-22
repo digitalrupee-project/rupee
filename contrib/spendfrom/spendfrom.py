@@ -35,9 +35,9 @@ def check_json_precision():
 def determine_db_dir():
     """Return the default location of the digitalrupees data directory"""
     if platform.system() == "Darwin":
-        return os.path.expanduser("~/Library/Application Support/Phore/")
+        return os.path.expanduser("~/Library/Application Support/DigitalRupees/")
     elif platform.system() == "Windows":
-        return os.path.join(os.environ['APPDATA'], "Phore")
+        return os.path.join(os.environ['APPDATA'], "DigitalRupees")
     return os.path.expanduser("~/.digitalrupees")
 
 def read_bitcoin_config(dbdir):

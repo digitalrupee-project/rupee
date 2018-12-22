@@ -36,7 +36,7 @@ using namespace std;
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// PhoreMiner
+// DigitalRupeesMiner
 //
 
 //
@@ -574,7 +574,7 @@ bool ProcessBlockFound(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     {
         LOCK(cs_main);
         if (pblock->hashPrevBlock != chainActive.Tip()->GetBlockHash())
-            return error("PhoreMiner : generated block is stale");
+            return error("DigitalRupeesMiner : generated block is stale");
     }
 
     // Remove key from key pool
@@ -592,7 +592,7 @@ bool ProcessBlockFound(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     // Process this block the same as if we had received it from another node
     CValidationState state;
     if (!ProcessNewBlock(state, NULL, pblock))
-        return error("PhoreMiner : ProcessNewBlock, block not accepted");
+        return error("DigitalRupeesMiner : ProcessNewBlock, block not accepted");
 
     for (CNode* node : vNodes) {
         node->PushInventory(CInv(MSG_BLOCK, pblock->GetHash()));
@@ -613,7 +613,7 @@ int nMintableLastCheck = 0;
 
 void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
 {
-    LogPrintf("PhoreMiner started\n");
+    LogPrintf("DigitalRupeesMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
     RenameThread("digitalrupees-miner");
 
@@ -695,7 +695,7 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
             continue;
         }
 
-        LogPrintf("Running PhoreMiner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
+        LogPrintf("Running DigitalRupeesMiner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
             ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
         //

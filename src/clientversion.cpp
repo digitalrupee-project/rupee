@@ -13,7 +13,7 @@
  * for both digitalrupeesd and digitalrupees-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Phore Core");
+const std::string CLIENT_NAME("DigitalRupees Core");
 
 /**
  * Client version number

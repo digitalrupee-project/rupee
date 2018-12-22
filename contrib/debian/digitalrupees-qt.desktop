@@ -1,9 +1,9 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Phore
-Comment=Phore P2P Cryptocurrency
-Comment[fr]=Phore, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=Phore, eşten eşe kriptografik sanal para birimi
+Name=DigitalRupees
+Comment=DigitalRupees P2P Cryptocurrency
+Comment[fr]=DigitalRupees, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=DigitalRupees, eşten eşe kriptografik sanal para birimi
 Exec=digitalrupees-qt %u
 Terminal=false
 Type=Application

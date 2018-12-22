@@ -105,7 +105,7 @@ std::string to_internal(const std::string&);
 
 using namespace std;
 
-// Phore only features
+// DigitalRupees only features
 // Masternode
 bool fMasterNode = false;
 string strMasterNodePrivKey = "";
@@ -120,7 +120,7 @@ int nZeromintPercentage = 10;
 int nPreferredDenom = 0;
 const int64_t AUTOMINT_DELAY = (60 * 5); // Wait at least 5 minutes until Automint starts
 
-int nAnonymizePhoreAmount = 1000;
+int nAnonymizeDigitalRupeesAmount = 1000;
 int nLiquidityProvider = 0;
 /** Spork enforcement enabled time */
 int64_t enforceMasternodePaymentsTime = 4085657524;
@@ -237,7 +237,7 @@ bool LogAcceptCategory(const char* category)
             const vector<string>& categories = mapMultiArgs["-debug"];
             ptrCategory.reset(new set<string>(categories.begin(), categories.end()));
             // thread_specific_ptr automatically deletes the set when the thread ends.
-            // "digitalrupees" is a composite category enabling all Phore-related debug output
+            // "digitalrupees" is a composite category enabling all DigitalRupees-related debug output
             if (ptrCategory->count(string("digitalrupees"))) {
                 ptrCategory->insert(string("obfuscation"));
                 ptrCategory->insert(string("swiftx"));
@@ -544,13 +544,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-// Windows < Vista: C:\Documents and Settings\Username\Application Data\Phore
-// Windows >= Vista: C:\Users\Username\AppData\Roaming\Phore
-// Mac: ~/Library/Application Support/Phore
+// Windows < Vista: C:\Documents and Settings\Username\Application Data\DigitalRupees
+// Windows >= Vista: C:\Users\Username\AppData\Roaming\DigitalRupees
+// Mac: ~/Library/Application Support/DigitalRupees
 // Unix: ~/.digitalrupees
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Phore";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "DigitalRupees";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -562,7 +562,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     TryCreateDirectory(pathRet);
-    return pathRet / "Phore";
+    return pathRet / "DigitalRupees";
 #else
     // Unix
     return pathRet / ".digitalrupees";

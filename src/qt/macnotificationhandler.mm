@@ -15,7 +15,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"io.digitalrupees.Phore-Qt";
+        return @"io.digitalrupees.DigitalRupees-Qt";
     } else {
         return [self __bundleIdentifier];
     }

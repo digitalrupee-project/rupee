@@ -265,10 +265,10 @@ UniValue stop(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop Phore server.");
+            "\nStop DigitalRupees server.");
     // Shutdown will take long enough that the response should get back
     StartShutdown();
-    return "Phore server stopping";
+    return "DigitalRupees server stopping";
 }
 
 
@@ -352,7 +352,7 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "reconsiderblock", &reconsiderblock, true, true, false},
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
-        /* Phore features */
+        /* DigitalRupees features */
         {"digitalrupees", "masternode", &masternode, true, true, false},
         {"digitalrupees", "listmasternodes", &listmasternodes, true, true, false},
         {"digitalrupees", "createmasternodebroadcast", &createmasternodebroadcast, true, true, false},

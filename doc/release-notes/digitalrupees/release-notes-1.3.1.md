@@ -1,7 +1,7 @@
 1.3.1 Release notes
 ====================
 
-Phore Core version 1.3.1 is now available from:
+DigitalRupees Core version 1.3.1 is now available from:
 
   https://digitalrupees.io/
 
@@ -15,7 +15,7 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over /Applications/Phore-Qt (on Mac) or
+installer (on Windows) or just copy over /Applications/DigitalRupees-Qt (on Mac) or
 digitalrupeesd/digitalrupees-qt (on Linux).
 
 

@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Phore-Qt</string>
+  <string>DigitalRupees-Qt</string>
 
   <key>CFBundleName</key>
-  <string>Phore-Qt</string>
+  <string>DigitalRupees-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>io.digitalrupees.Phore-Qt</string>
+  <string>io.digitalrupees.DigitalRupees-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,7 +46,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.digitalrupees.PhorePayment</string>
+      <string>io.digitalrupees.DigitalRupeesPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>digitalrupees</string>
@@ -60,7 +60,7 @@
       <key>UTTypeIdentifier</key>
       <string>io.digitalrupees.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Phore payment request</string>
+      <string>DigitalRupees payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>

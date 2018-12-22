@@ -48,7 +48,7 @@ static bool AppInitRawTx(int argc, char* argv[])
 
     if (argc < 2 || mapArgs.count("-?") || mapArgs.count("-help")) {
         // First part of help message is specific to this utility
-        std::string strUsage = _("Phore Core digitalrupees-tx utility version") + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = _("DigitalRupees Core digitalrupees-tx utility version") + " " + FormatFullVersion() + "\n\n" +
                                _("Usage:") + "\n" +
                                "  digitalrupees-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded digitalrupees transaction") + "\n" +
                                "  digitalrupees-tx [options] -create [commands]   " + _("Create hex-encoded digitalrupees transaction") + "\n" +

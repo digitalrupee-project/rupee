@@ -89,7 +89,7 @@ use old versions of Upstart and do not supply the start-stop-daemon uitility.
 Copy digitalrupeesd.init to /etc/init.d/digitalrupeesd. Test by running "service digitalrupeesd start".
 
 Using this script, you can adjust the path and flags to the digitalrupeesd program by
-setting the PhoreD and FLAGS environment variables in the file
+setting the DigitalRupeesD and FLAGS environment variables in the file
 /etc/sysconfig/digitalrupeesd. You can also use the DAEMONOPTS environment variable here.
 
 5. Auto-respawn
