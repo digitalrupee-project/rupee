@@ -182,16 +182,16 @@
         <translation>ウォレットの再暗号化を行いました</translation>
     </message>
     <message>
-        <source>DigitalRupees will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PHRs from being stolen by malware infecting your computer.</source>
-        <translation>暗号化を完了するためウォレットを閉じます。暗号化されたため、パスワードがなければ攻撃者はPHRを送金できません。</translation>
+        <source>DigitalRupees will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your DRSs from being stolen by malware infecting your computer.</source>
+        <translation>暗号化を完了するためウォレットを閉じます。暗号化されたため、パスワードがなければ攻撃者はDRSを送金できません。</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>ウォレットを暗号化しますか？</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PHR&lt;/b&gt;!</source>
-        <translation>注意 : もし暗号化した後パスワードを忘れた場合 &lt;b&gt;すべてのPHRを失います&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DRS&lt;/b&gt;!</source>
+        <translation>注意 : もし暗号化した後パスワードを忘れた場合 &lt;b&gt;すべてのDRSを失います&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -848,8 +848,8 @@ Address: %4
         <translation>&amp;匿名化</translation>
     </message>
     <message>
-        <source>Privacy Actions for zPHR</source>
-        <translation>zPHRによる匿名化</translation>
+        <source>Privacy Actions for zDRS</source>
+        <translation>zDRSによる匿名化</translation>
     </message>
     <message>
         <source>&amp;Multisignature creation...</source>
@@ -1635,32 +1635,32 @@ Please check the address and try again.</source>
         <translation>Please select a privacy level.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 PHR</source>
-        <translation>Use 2 separate masternodes to mix funds up to 10000 PHR</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 DRS</source>
+        <translation>Use 2 separate masternodes to mix funds up to 10000 DRS</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 PHR</source>
-        <translation>Use 8 separate masternodes to mix funds up to 10000 PHR</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 DRS</source>
+        <translation>Use 8 separate masternodes to mix funds up to 10000 DRS</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Use 16 separate masternodes</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 PHR to anonymize 10000 PHR</source>
-        <translation>This option is the quickest and will cost about ~0.025 PHR to anonymize 10000 PHR</translation>
+        <source>This option is the quickest and will cost about ~0.025 DRS to anonymize 10000 DRS</source>
+        <translation>This option is the quickest and will cost about ~0.025 DRS to anonymize 10000 DRS</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 PHR to anonymize 10000 PHR</source>
-        <translation>This option is moderately fast and will cost about 0.05 PHR to anonymize 10000 PHR</translation>
+        <source>This option is moderately fast and will cost about 0.05 DRS to anonymize 10000 DRS</source>
+        <translation>This option is moderately fast and will cost about 0.05 DRS to anonymize 10000 DRS</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>This is the slowest and most secure option. Using maximum anonymity will cost</translation>
     </message>
     <message>
-        <source>0.1 PHR per 10000 PHR you anonymize.</source>
-        <translation>0.1 PHR per 10000 PHR you anonymize.</translation>
+        <source>0.1 DRS per 10000 DRS you anonymize.</source>
+        <translation>0.1 DRS per 10000 DRS you anonymize.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1729,8 +1729,8 @@ Please check the address and try again.</source>
         <translation>(0 = auto, &lt;0 = 必要なだけ利用)</translation>
     </message>
     <message>
-        <source>Enable zPHR Automint</source>
-        <translation>zPHRへの自動変換の有効化</translation>
+        <source>Enable zDRS Automint</source>
+        <translation>zDRSへの自動変換の有効化</translation>
     </message>
     <message>
         <source>W&amp;allet</source>
@@ -1943,20 +1943,20 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>入力されたプロキシアドレスは正しくありません。</translation>
     </message>
     <message>
-        <source>Percentage of incoming PHR which get automatically converted to zPHR via Zerocoin Protocol (min: 10%)</source>
-        <translation>受け取られるPHRをzPHR(ゼロコインプロトコル)へ変換する比率(最小: 10%)</translation>
+        <source>Percentage of incoming DRS which get automatically converted to zDRS via Zerocoin Protocol (min: 10%)</source>
+        <translation>受け取られるDRSをzDRS(ゼロコインプロトコル)へ変換する比率(最小: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zPHR</source>
-        <translation>zPHRの自動変換の比率</translation>
+        <source>Percentage of autominted zDRS</source>
+        <translation>zDRSの自動変換の比率</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough PHR for this denomination is available</source>
-        <translation>選択したdenominationへ変換できるまでPHRの自動変換を中断する</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough DRS for this denomination is available</source>
+        <translation>選択したdenominationへ変換できるまでDRSの自動変換を中断する</translation>
     </message>
     <message>
-        <source>Preferred Automint zPHR Denomination</source>
-        <translation>自動変換するzPHRのdenomination</translation>
+        <source>Preferred Automint zDRS Denomination</source>
+        <translation>自動変換するzDRSのdenomination</translation>
     </message>
     <message>
         <source>I don&apos;t care</source>
@@ -2010,8 +2010,8 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>利用不可能な通貨も含んだ、現在の合計の残高</translation>
     </message>
     <message>
-        <source>PHR Balance</source>
-        <translation>PHRの残高</translation>
+        <source>DRS Balance</source>
+        <translation>DRSの残高</translation>
     </message>
     <message>
         <source>Spendable:</source>
@@ -2050,8 +2050,8 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>watch-onlyアドレスへの未成熟なステーキング・マスターノード報酬</translation>
     </message>
     <message>
-        <source>Locked PHR or Masternode collaterals. These are excluded from zPHR minting.</source>
-        <translation>ロックされたPHR・マスターノードの担保。zPHRの変換対象から除外されます。</translation>
+        <source>Locked DRS or Masternode collaterals. These are excluded from zDRS minting.</source>
+        <translation>ロックされたDRS・マスターノードの担保。zDRSの変換対象から除外されます。</translation>
     </message>
     <message>
         <source>Locked:</source>
@@ -2074,14 +2074,14 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>未承認・未成熟の送金を含んだ現在のDigitalRupeesの残高</translation>
     </message>
     <message>
-        <source>zPHR Balance</source>
-        <translation>zPHRの残高</translation>
+        <source>zDRS Balance</source>
+        <translation>zDRSの残高</translation>
     </message>
     <message>
         <source>Mature: more than 20 confirmation and more than 3 mints of the same denomination after it was minted.
-These zPHR are spendable.</source>
+These zDRS are spendable.</source>
         <translation>成熟: 20確認と同じdenominationでの3変換が必要です。
-その後zPHRは使用可能になります。</translation>
+その後zDRSは使用可能になります。</translation>
     </message>
     <message>
         <source>Unconfirmed: less than 20 confirmations
@@ -2094,8 +2094,8 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
         <translation>未確認残高:</translation>
     </message>
     <message>
-        <source>Your current zPHR balance, unconfirmed and immature zPHR included.</source>
-        <translation>未承認・未成熟の送金を含んだ現在のzPHR残高</translation>
+        <source>Your current zDRS balance, unconfirmed and immature zDRS included.</source>
+        <translation>未承認・未成熟の送金を含んだ現在のzDRS残高</translation>
     </message>
     <message>
         <source>Recent transactions</source>
@@ -2916,8 +2916,8 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
         <translation>分割ごと枚数:</translation>
     </message>
     <message>
-        <source>0 PHR</source>
-        <translation>0 PHR</translation>
+        <source>0 DRS</source>
+        <translation>0 DRS</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2964,12 +2964,12 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
         <translation>確認時間:</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uPHRs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uPHRs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uPHRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>If the custom fee is set to 1000 uPHRs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uPHRs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uPHRs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uDRSs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uDRSs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uDRSs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>If the custom fee is set to 1000 uDRSs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uDRSs in fee,&lt;br /&gt;while &quot;at least&quot; pays 1000 uDRSs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uPHRs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uPHRs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uPHRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>If the custom fee is set to 1000 uPHRs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uPHRs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uPHRs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uDRSs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uDRSs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uDRSs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>If the custom fee is set to 1000 uDRSs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uDRSs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uDRSs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for DigitalRupees transactions than the network can process.</source>
@@ -3182,8 +3182,8 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
         <translation>コインは自動で選択されます</translation>
     </message>
     <message>
-        <source>Anonymized PHR</source>
-        <translation>匿名化されたPHR</translation>
+        <source>Anonymized DRS</source>
+        <translation>匿名化されたDRS</translation>
     </message>
     <message>
         <source>SwiftX</source>
@@ -3845,27 +3845,27 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
     </message>
     <message>
         <source>Converted Phr to zPhr</source>
-        <translation>PHRをzPHRへ変換</translation>
+        <translation>DRSをzDRSへ変換</translation>
     </message>
     <message>
         <source>Spent zPhr</source>
-        <translation>zPHRを送金</translation>
+        <translation>zDRSを送金</translation>
     </message>
     <message>
         <source>Received Phr from zPhr</source>
-        <translation>zPHRによる受け取り</translation>
+        <translation>zDRSによる受け取り</translation>
     </message>
     <message>
         <source>Minted Change as zPhr from zPhr Spend</source>
-        <translation>zPHRの送金のお釣りをzPHRに変換</translation>
+        <translation>zDRSの送金のお釣りをzDRSに変換</translation>
     </message>
     <message>
         <source>Converted zPhr to Phr</source>
-        <translation>zPHRからPHRへ変換</translation>
+        <translation>zDRSからDRSへ変換</translation>
     </message>
     <message>
         <source>zPhr Accumulator</source>
-        <translation>zPHRアキュムレータ</translation>
+        <translation>zDRSアキュムレータ</translation>
     </message>
 </context>
 <context>
@@ -4044,7 +4044,7 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
     </message>
     <message>
         <source>Received Phr from zPhr</source>
-        <translation>zPHRからPHRへの受け取り</translation>
+        <translation>zDRSからDRSへの受け取り</translation>
     </message>
     <message>
         <source>Zerocoin Mint</source>
@@ -4056,7 +4056,7 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
     </message>
     <message>
         <source>Zerocoin Spend, Change in zPhr</source>
-        <translation>ゼロコインの送金,お釣りをzPHRで受け取り</translation>
+        <translation>ゼロコインの送金,お釣りをzDRSで受け取り</translation>
     </message>
     <message>
         <source>Zerocoin Spend to Self</source>
@@ -4084,12 +4084,12 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
         <translation>コインの送金</translation>
     </message>
     <message>
-        <source>SwiftTX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 PHR.</source>
-        <translation>SwiftTXはあまり高額の送金は対応してません。%1 PHRが上限です。</translation>
+        <source>SwiftTX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 DRS.</source>
+        <translation>SwiftTXはあまり高額の送金は対応してません。%1 DRSが上限です。</translation>
     </message>
     <message>
-        <source>SwiftX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 PHR.</source>
-        <translation>SwiftTXはあまり高額の送金は対応してません。%1 PHRが上限です。</translation>
+        <source>SwiftX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 DRS.</source>
+        <translation>SwiftTXはあまり高額の送金は対応してません。%1 DRSが上限です。</translation>
     </message>
 </context>
 <context>
@@ -4226,12 +4226,12 @@ Immature: confirmed, but less than 3 mints of the same denomination after it was
         <translation>Best block に変更が起きた時に実行するコマンド (%s in cmd is replaced by block hash)</translation>
     </message>
     <message>
-        <source>Fees (in PHR/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>伝搬の0手数料としてみなす最小手数料 (in PHR/Kb) (デフォルト: %s)</translation>
+        <source>Fees (in DRS/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>伝搬の0手数料としてみなす最小手数料 (in DRS/Kb) (デフォルト: %s)</translation>
     </message>
     <message>
-        <source>Fees (in PHR/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>トランザクション生成時に0手数料としてみなす最小手数料 (in PHR/Kb) (デフォルト: %s)</translation>
+        <source>Fees (in DRS/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>トランザクション生成時に0手数料としてみなす最小手数料 (in DRS/Kb) (デフォルト: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -4368,12 +4368,12 @@ for example: alertnotify=echo %%s | mail -s &quot;DigitalRupees Alert&quot; admi
         <translation>このトランザクションに利用できる十分な難読化された資金を見つけることができませんでした。</translation>
     </message>
     <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 PHR.</source>
-        <translation>このトランザクションに利用できる 10000 PHRに満たない難読化されていない十分な資金を見つけることができませんでした。</translation>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 DRS.</source>
+        <translation>このトランザクションに利用できる 10000 DRSに満たない難読化されていない十分な資金を見つけることができませんでした。</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 PHR.</source>
-        <translation>このトランザクションに利用できる 10000 PHRに満たない十分な資金を見つけることができませんでした。</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 DRS.</source>
+        <translation>このトランザクションに利用できる 10000 DRSに満たない十分な資金を見つけることができませんでした。</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -4660,8 +4660,8 @@ for example: alertnotify=echo %%s | mail -s &quot;DigitalRupees Alert&quot; admi
         <translation>ブロックの読み込みに失敗</translation>
     </message>
     <message>
-        <source>Fee (in PHR/kB) to add to transactions you send (default: %s)</source>
-        <translation>トランザクションを送信する際の手数料 (PHR/kB) (デフォルト: %s)</translation>
+        <source>Fee (in DRS/kB) to add to transactions you send (default: %s)</source>
+        <translation>トランザクションを送信する際の手数料 (DRS/kB) (デフォルト: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -4828,8 +4828,8 @@ for example: alertnotify=echo %%s | mail -s &quot;DigitalRupees Alert&quot; admi
         <translation>ステーキングの有効化 (0-1, デフォルト: %u)</translation>
     </message>
     <message>
-        <source>Keep N PHR anonymized (default: %u)</source>
-        <translation>N PHR を匿名にしておく (default: %u)</translation>
+        <source>Keep N DRS anonymized (default: %u)</source>
+        <translation>N DRS を匿名にしておく (default: %u)</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
@@ -5419,7 +5419,7 @@ for example: alertnotify=echo %%s | mail -s &quot;DigitalRupees Alert&quot; admi
     </message>
     <message>
         <source>Enable automatic wallet backups triggered after each zPhr minting (0-1, default: %u)</source>
-        <translation>zPHRへの変換後自動でウォレットをバックアップする(0-1, デフォルト: %u)</translation>
+        <translation>zDRSへの変換後自動でウォレットをバックアップする(0-1, デフォルト: %u)</translation>
     </message>
     <message>
         <source>Enable SwiftX, show confirmations for locked transactions (bool, default: %s)</source>
@@ -5602,7 +5602,7 @@ for example: alertnotify=echo %%s | mail -s &quot;DigitalRupees Alert&quot; admi
     <name>zphrcontroldialog</name>
     <message>
         <source>Select zPhr to Spend</source>
-        <translation>送金したいzPHRを選択</translation>
+        <translation>送金したいzDRSを選択</translation>
     </message>
     <message>
         <source>Quantity</source>
@@ -5624,20 +5624,20 @@ for example: alertnotify=echo %%s | mail -s &quot;DigitalRupees Alert&quot; admi
         <translation>プライバシー</translation>
     </message>
     <message>
-        <source>zPHR Control</source>
-        <translation>zPHR コントロール</translation>
+        <source>zDRS Control</source>
+        <translation>zDRS コントロール</translation>
     </message>
     <message>
-        <source>zPHR Selected:</source>
-        <translation>選択された zPHR:</translation>
+        <source>zDRS Selected:</source>
+        <translation>選択された zDRS:</translation>
     </message>
     <message>
-        <source>PHR which were anonymized via Zerocin Protocol</source>
-        <translation>ゼロコインプロトコルにより匿名化されるPHR</translation>
+        <source>DRS which were anonymized via Zerocin Protocol</source>
+        <translation>ゼロコインプロトコルにより匿名化されるDRS</translation>
     </message>
     <message>
-        <source>Zerocoin PHR (zPHR)</source>
-        <translation>ゼロコイン PHR (zPHR)</translation>
+        <source>Zerocoin DRS (zDRS)</source>
+        <translation>ゼロコイン DRS (zDRS)</translation>
     </message>
     <message>
         <source>Zerocoin Actions:</source>
@@ -5649,7 +5649,7 @@ for example: alertnotify=echo %%s | mail -s &quot;DigitalRupees Alert&quot; admi
     </message>
     <message>
         <source>Enter an amount of Phr to convert to zPhr</source>
-        <translation>zPHRへ変換したいPHRの枚数を入力</translation>
+        <translation>zDRSへ変換したいDRSの枚数を入力</translation>
     </message>
     <message>
         <source>Mint Zerocoin</source>
@@ -5697,7 +5697,7 @@ for example: alertnotify=echo %%s | mail -s &quot;DigitalRupees Alert&quot; admi
     </message>
     <message>
         <source>zPhr Control</source>
-        <translation>zPHR コントロール</translation>
+        <translation>zDRS コントロール</translation>
     </message>
     <message>
         <source>Quantity Selected:</source>
@@ -5712,18 +5712,18 @@ for example: alertnotify=echo %%s | mail -s &quot;DigitalRupees Alert&quot; admi
         <translation>ゼロコインを送金</translation>
     </message>
     <message>
-        <source>Available (mature and spendable) zPHR for spending</source>
-        <translation>利用できるzPHR</translation>
+        <source>Available (mature and spendable) zDRS for spending</source>
+        <translation>利用できるzDRS</translation>
     </message>
     <message>
         <source>Available Balance:</source>
         <translation>利用可能な残高:</translation>
     </message>
     <message>
-        <source>Available (mature and spendable) zPHR for spending
+        <source>Available (mature and spendable) zDRS for spending
 
-zPHR are mature when they have more than 20 confirmations AND more than 1 mint of the same denomination after them were minted</source>
-        <translation>zPHRは20確認と同じdenominationでの3変換がされたのちに利用可能になります</translation>
+zDRS are mature when they have more than 20 confirmations AND more than 1 mint of the same denomination after them were minted</source>
+        <translation>zDRSは20確認と同じdenominationでの3変換がされたのちに利用可能になります</translation>
     </message>
     <message>
         <source>Security Level for Zerocoin Transactions. More is better, but needs more time and resources.</source>
@@ -5775,7 +5775,7 @@ zPHR are mature when they have more than 20 confirmations AND more than 1 mint o
     </message>
     <message>
         <source>Convert Change to Zerocoin (might cost additional fees)</source>
-        <translation>お釣りをzPHRへ変換(追加で手数料がかかります)</translation>
+        <translation>お釣りをzDRSへ変換(追加で手数料がかかります)</translation>
     </message>
     <message>
         <source>If checked, the wallet tries to minimize the returning change instead of minimizing the number of spent denominations.</source>
@@ -5798,8 +5798,8 @@ zPHR are mature when they have more than 20 confirmations AND more than 1 mint o
         <translation>利用できるゼロコイン残高の情報.</translation>
     </message>
     <message>
-        <source>Total Balance including unconfirmed and immature zPHR</source>
-        <translation>未確認・未成熟なzPHRも含んだ全残高</translation>
+        <source>Total Balance including unconfirmed and immature zDRS</source>
+        <translation>未確認・未成熟なzDRSも含んだ全残高</translation>
     </message>
     <message>
         <source>Total Zerocoin  Balance:</source>
@@ -5807,11 +5807,11 @@ zPHR are mature when they have more than 20 confirmations AND more than 1 mint o
     </message>
     <message>
         <source>Denominations with value 1:</source>
-        <translation>1 zPHRの塊(denomination):</translation>
+        <translation>1 zDRSの塊(denomination):</translation>
     </message>
     <message>
         <source>Denom. with value &lt;b&gt;1&lt;/b&gt;:</source>
-        <translation>1 zPHRのdenom.:</translation>
+        <translation>1 zDRSのdenom.:</translation>
     </message>
     <message>
         <source>Unconfirmed: less than 20 confirmations
@@ -5821,59 +5821,59 @@ Immature: confirmed, but less than 2 mints of the same denomination after it was
     </message>
     <message>
         <source>Denominations with value 5:</source>
-        <translation>5 zPHRの塊(denomination):</translation>
+        <translation>5 zDRSの塊(denomination):</translation>
     </message>
     <message>
         <source>Denom. with value &lt;b&gt;5&lt;/b&gt;:</source>
-        <translation>5 zPHRのdenom.:</translation>
+        <translation>5 zDRSのdenom.:</translation>
     </message>
     <message>
         <source>Denominations with value 10:</source>
-        <translation>10 zPHRの塊(denomination):</translation>
+        <translation>10 zDRSの塊(denomination):</translation>
     </message>
     <message>
         <source>Denom. with value &lt;b&gt;10&lt;/b&gt;:</source>
-        <translation>10 zPHRのdenom.:</translation>
+        <translation>10 zDRSのdenom.:</translation>
     </message>
     <message>
         <source>Denominations with value 50:</source>
-        <translation>50 zPHRの塊(denomination):</translation>
+        <translation>50 zDRSの塊(denomination):</translation>
     </message>
     <message>
         <source>Denom. with value &lt;b&gt;50&lt;/b&gt;:</source>
-        <translation>50 zPHRのdenom.:</translation>
+        <translation>50 zDRSのdenom.:</translation>
     </message>
     <message>
         <source>Denominations with value 100:</source>
-        <translation>100 zPHRの塊(denomination):</translation>
+        <translation>100 zDRSの塊(denomination):</translation>
     </message>
     <message>
         <source>Denom. with value &lt;b&gt;100&lt;/b&gt;:</source>
-        <translation>100 zPHRのdenom.:</translation>
+        <translation>100 zDRSのdenom.:</translation>
     </message>
     <message>
         <source>Denominations with value 500:</source>
-        <translation>500 zPHRの塊(denomination):</translation>
+        <translation>500 zDRSの塊(denomination):</translation>
     </message>
     <message>
         <source>Denom. with value &lt;b&gt;500&lt;/b&gt;:</source>
-        <translation>500 zPHRのdenom.:</translation>
+        <translation>500 zDRSのdenom.:</translation>
     </message>
     <message>
         <source>Denominations with value 1000:</source>
-        <translation>1000 zPHRの塊(denomination):</translation>
+        <translation>1000 zDRSの塊(denomination):</translation>
     </message>
     <message>
         <source>Denom. with value &lt;b&gt;1000&lt;/b&gt;:</source>
-        <translation>1000 zPHRのdenom.:</translation>
+        <translation>1000 zDRSのdenom.:</translation>
     </message>
     <message>
         <source>Denominations with value 5000:</source>
-        <translation>5000 zPHRの塊(denomination):</translation>
+        <translation>5000 zDRSの塊(denomination):</translation>
     </message>
     <message>
         <source>Denom. with value &lt;b&gt;5000&lt;/b&gt;:</source>
-        <translation>5000 zPHRのdenom.:</translation>
+        <translation>5000 zDRSのdenom.:</translation>
     </message>
     <message>
         <source>Priority:</source>
@@ -5928,22 +5928,22 @@ Immature: confirmed, but less than 2 mints of the same denomination after it was
         <translation>お釣り:</translation>
     </message>
     <message>
-        <source>Show the current status of automatic zPHR minting.
+        <source>Show the current status of automatic zDRS minting.
 
 To change the status (restart required):
 - enable: add &apos;enablezeromint=1&apos; to digitalrupees.conf
 - disable: add &apos;enablezeromint=0&apos; to digitalrupees.conf
 
 To change the percentage (no restart required):
-- menu Settings-&gt;Options-&gt;Percentage of autominted zPHR
+- menu Settings-&gt;Options-&gt;Percentage of autominted zDRS
 
 </source>
-        <translation>現在の自動zPHRミント設定について表しています。
+        <translation>現在の自動zDRSミント設定について表しています。
 再起動が必要ですが、設定を変更するには:
 - 有効化: &apos;enablezeromint=1&apos; を digitalrupees.conf へ追記
 - 無効化: &apos;enablezeromint=0&apos; を digitalrupees.conf へ追記
 変換する割合を変更するには(再起動は必要ありません):
-- メニューの設定-&gt;オプション-&gt;zPHRの自動ミントの割合 より変更</translation>
+- メニューの設定-&gt;オプション-&gt;zDRSの自動ミントの割合 より変更</translation>
     </message>
     <message>
         <source>out of sync</source>
@@ -5966,7 +5966,7 @@ To change the percentage (no restart required):
         <translation>自動ミント ステータス:</translation>
     </message>
     <message>
-        <source>zPHR is currently undergoing maintenance.</source>
+        <source>zDRS is currently undergoing maintenance.</source>
         <translation>ゼロコイン機能は現在メンテナンス中です。</translation>
     </message>
     <message>
@@ -5986,8 +5986,8 @@ To change the percentage (no restart required):
         <translation></translation>
     </message>
     <message>
-        <source> zPHR in </source>
-        <translation>zPHRを</translation>
+        <source> zDRS in </source>
+        <translation>zDRSを</translation>
     </message>
     <message>
         <source> sec. Used denominations:\n</source>
@@ -6046,12 +6046,12 @@ To change the percentage (no restart required):
         <translation>ゼロコインの送金中です。\nコンピューティングリソースを使用しますので、性能、選択したセキュリティレベルに応じ時間がかかります。\nしばらくお待ち下さい...</translation>
     </message>
     <message>
-        <source>Version 1 zPHR require a security level of 100 to successfully spend.</source>
+        <source>Version 1 zDRS require a security level of 100 to successfully spend.</source>
         <translation>バージョン1のゼロコインプロトコルは送金を行うのにセキュリティレベル100が必要です。</translation>
     </message>
     <message>
-        <source>Failed to spend zPHR</source>
-        <translation>zPHRの送金に失敗</translation>
+        <source>Failed to spend zDRS</source>
+        <translation>zDRSの送金に失敗</translation>
     </message>
     <message>
         <source>Failed to fetch mint associated with serial hash</source>
@@ -6059,7 +6059,7 @@ To change the percentage (no restart required):
     </message>
     <message>
         <source>Spend Zerocoin failed with status = </source>
-        <translation>zPHRの送金は失敗しました。ステータス = </translation>
+        <translation>zDRSの送金は失敗しました。ステータス = </translation>
     </message>
     <message>
         <source>Sending successful, return code: </source>
@@ -6070,8 +6070,8 @@ To change the percentage (no restart required):
         <translation>手数料: </translation>
     </message>
     <message>
-        <source>Enter an amount of PHR to convert to zPHR</source>
-        <translation>zPHRに変換したいPHRの枚数を入力</translation>
+        <source>Enter an amount of DRS to convert to zDRS</source>
+        <translation>zDRSに変換したいDRSの枚数を入力</translation>
     </message>
     <message>
         <source>\nEither mint higher denominations (so fewer inputs are needed) or reduce the amount to spend.</source>
@@ -6169,8 +6169,8 @@ Please be patient after clicking import.</source>
         <translation>アドレス / 枚数:</translation>
     </message>
     <message>
-        <source>Add destinations to send PHR to</source>
-        <translation>PHRを送る宛先を追加</translation>
+        <source>Add destinations to send DRS to</source>
+        <translation>DRSを送る宛先を追加</translation>
     </message>
     <message>
         <source>Add &amp;Destination</source>

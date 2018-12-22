@@ -535,8 +535,8 @@
         <translation>ne</translation>
     </message>
     <message>
-        <source>0 PHR</source>
-        <translation>0 PHR</translation>
+        <source>0 DRS</source>
+        <translation>0 DRS</translation>
     </message>
     <message>
         <source>Confirmation time:</source>

@@ -181,16 +181,16 @@
         <translation>Bevestig versleuteling van de portemonnee</translation>
     </message>
     <message>
-        <source>DigitalRupees will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PHRs from being stolen by malware infecting your computer.</source>
-        <translation>DigitalRupees zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw PHRs stelen.</translation>
+        <source>DigitalRupees will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your DRSs from being stolen by malware infecting your computer.</source>
+        <translation>DigitalRupees zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw DRSs stelen.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Weet u zeker dat u uw portemonnee wilt versleutelen?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PHR&lt;/b&gt;!</source>
-        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW PHR VERLIEZEN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DRS&lt;/b&gt;!</source>
+        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW DRS VERLIEZEN&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -623,8 +623,8 @@
         <translation>&amp;Privacy</translation>
     </message>
     <message>
-        <source>Privacy Action for zPHR and Obfuscation</source>
-        <translation>Privacy Actie voor zPHR en verduistering</translation>
+        <source>Privacy Action for zDRS and Obfuscation</source>
+        <translation>Privacy Actie voor zDRS en verduistering</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -847,8 +847,8 @@ MultiSend: %1</translation>
         <translation>&amp;Privacy</translation>
     </message>
     <message>
-        <source>Privacy Actions for zPHR</source>
-        <translation>Privacyacties voor zPHR</translation>
+        <source>Privacy Actions for zDRS</source>
+        <translation>Privacyacties voor zDRS</translation>
     </message>
     <message>
         <source>&amp;Multisignature creation...</source>
@@ -1636,32 +1636,32 @@ Controleer het adres alsjeblieft en probeer het opnieuw.</translation>
         <translation>Selecteer de privacy level.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 PHR</source>
-        <translation>Gebruik 2 aparte masternodes om fondsen te mixen tot 10000 PHR</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 DRS</source>
+        <translation>Gebruik 2 aparte masternodes om fondsen te mixen tot 10000 DRS</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 PHR</source>
-        <translation>Gebruik 8 aparte masternodes om fondsen te mixen tot 10000 PHR</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 DRS</source>
+        <translation>Gebruik 8 aparte masternodes om fondsen te mixen tot 10000 DRS</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Gebruik 16 aparte masternodes</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 PHR to anonymize 10000 PHR</source>
-        <translation>Deze optie is het snelst en kost ongeveer ~0,025 PHR om 10000 PHR te anonimiseren</translation>
+        <source>This option is the quickest and will cost about ~0.025 DRS to anonymize 10000 DRS</source>
+        <translation>Deze optie is het snelst en kost ongeveer ~0,025 DRS om 10000 DRS te anonimiseren</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 PHR to anonymize 10000 PHR</source>
-        <translation>Deze optie is gematigd snel en kost ongeveer 0,05 PHR om 10000 PHR te anonimiseren</translation>
+        <source>This option is moderately fast and will cost about 0.05 DRS to anonymize 10000 DRS</source>
+        <translation>Deze optie is gematigd snel en kost ongeveer 0,05 DRS om 10000 DRS te anonimiseren</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Dit is de langzaamste en veiligste optie. Het gebruik van maximale anonimiteit kost</translation>
     </message>
     <message>
-        <source>0.1 PHR per 10000 PHR you anonymize.</source>
-        <translation>je anonimiseert 0,1 PHR per 10000 PHR.</translation>
+        <source>0.1 DRS per 10000 DRS you anonymize.</source>
+        <translation>je anonimiseert 0,1 DRS per 10000 DRS.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1730,8 +1730,8 @@ Controleer het adres alsjeblieft en probeer het opnieuw.</translation>
         <translation>(0 = auto, &lt;0 = laat dat aantal cores vrij)</translation>
     </message>
 	<message>
-        <source>Enable zPHR Automint</source>
-        <translation>zPHR automunting inschakelen</translation>
+        <source>Enable zDRS Automint</source>
+        <translation>zDRS automunting inschakelen</translation>
     </message>
     <message>
         <source>W&amp;allet</source>
@@ -1944,20 +1944,20 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Het opgegeven proxyadres is ongeldig.</translation>
     </message>
 	<message>
-        <source>Percentage of incoming PHR which get automatically converted to zPHR via Zerocoin Protocol (min: 10%)</source>
-        <translation>Percentage inkomende PHR die automatisch wordt omgezet naar zPHR via Zerocoin Protocol (min: 10%)</translation>
+        <source>Percentage of incoming DRS which get automatically converted to zDRS via Zerocoin Protocol (min: 10%)</source>
+        <translation>Percentage inkomende DRS die automatisch wordt omgezet naar zDRS via Zerocoin Protocol (min: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zPHR</source>
-        <translation>Percentage autominted zPHR</translation>
+        <source>Percentage of autominted zDRS</source>
+        <translation>Percentage autominted zDRS</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough PHR for this denomination is available</source>
-        <translation>Wacht met automatische omzetting naar Zerocoin totdat er genoeg PHR voor deze denominatie beschikbaar is</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough DRS for this denomination is available</source>
+        <translation>Wacht met automatische omzetting naar Zerocoin totdat er genoeg DRS voor deze denominatie beschikbaar is</translation>
     </message>
     <message>
-        <source>Preferred Automint zPHR Denomination</source>
-        <translation>Gewenste Automint zPHR denominatie</translation>
+        <source>Preferred Automint zDRS Denomination</source>
+        <translation>Gewenste Automint zDRS denominatie</translation>
     </message>
 	    <message>
         <source>I don&apos;t care</source>
@@ -1983,8 +1983,8 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Overzicht</translation>
     </message>
     <message>
-        <source>PHR Balances</source>
-        <translation>PHR Saldi</translation>
+        <source>DRS Balances</source>
+        <translation>DRS Saldi</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -2055,12 +2055,12 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Gecombineerde Saldi (inclusief onvolwassen munten)</translation>
     </message>
     <message>
-        <source>PHR:</source>
-        <translation>PHR:</translation>
+        <source>DRS:</source>
+        <translation>DRS:</translation>
     </message>
     <message>
-        <source>zPHR:</source>
-        <translation>zPHR:</translation>
+        <source>zDRS:</source>
+        <translation>zDRS:</translation>
     </message>
     <message>
         <source>0 %</source>
@@ -2188,12 +2188,12 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
 <context>
     <name>PrivacyDialog</name>
     <message>
-        <source>PHR which were anonymized via Zerocin Protocol</source>
-        <translation>PHR die via het Zerocoin Protocol geanonimiseerd werden</translation>
+        <source>DRS which were anonymized via Zerocin Protocol</source>
+        <translation>DRS die via het Zerocoin Protocol geanonimiseerd werden</translation>
     </message>
     <message>
-        <source>Zerocoin PHR (zPHR)</source>
-        <translation>Zerocoin PHR (zPHR)</translation>
+        <source>Zerocoin DRS (zDRS)</source>
+        <translation>Zerocoin DRS (zDRS)</translation>
     </message>
     <message>
         <source>Zerocoin Actions:</source>
@@ -2216,16 +2216,16 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>0</translation>
     </message>
     <message>
-        <source>zPHR</source>
-        <translation>zPHR</translation>
+        <source>zDRS</source>
+        <translation>zDRS</translation>
     </message>
     <message>
         <source>Available for Minting:</source>
         <translation>Beschikbaar voor minting:</translation>
     </message>
     <message>
-        <source>0.000 000 00 PHR</source>
-        <translation>0.000 000 00 PHR</translation>
+        <source>0.000 000 00 DRS</source>
+        <translation>0.000 000 00 DRS</translation>
     </message>
     <message>
         <source>Reset Zerocoin Wallet DB. Deletes transactions that did not make it into the blockchain.</source>
@@ -2284,8 +2284,8 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Beschikbaar saldo:</translation>
     </message>
     <message>
-        <source>0 zPHR</source>
-        <translation>0 zPHR</translation>
+        <source>0 zDRS</source>
+        <translation>0 zDRS</translation>
     </message>
     <message>
         <source>Security Level for Zerocoin Transactions. More is better, but needs more time and resources.</source>
@@ -2524,8 +2524,8 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Succesvol gemint</translation>
     </message>
     <message>
-        <source> zPHR in </source>
-        <translation> zPHR in </translation>
+        <source> zDRS in </source>
+        <translation> zDRS in </translation>
     </message>
     <message>
         <source> sec. Used denominations:
@@ -3339,8 +3339,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>UTXO grootte:</translation>
     </message>
     <message>
-        <source>0 PHR</source>
-        <translation>0 PHR</translation>
+        <source>0 DRS</source>
+        <translation>0 DRS</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -3395,12 +3395,12 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Munten automatisch geselecteerd</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uPHRs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uPHRs in fee,&lt;br /&gt;while "at least" pays 1000 uPHRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Als de aangepaste vergoeding is ingesteld op 1000 uPHRs en de transactie is slechts 250 bytes, dan betaalt per kilobyte alleen 250 uPHR's in vergoeding,&lt;br /&gt;terwijl &quot;minstens&quot; 1000 uPHR's betaalt. Voor transacties die groter zijn dan een kilobyte, betalen beiden per kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uDRSs and the transaction is only 250 bytes, then &quot;per kilobyte&quot; only pays 250 uDRSs in fee,&lt;br /&gt;while "at least" pays 1000 uDRSs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Als de aangepaste vergoeding is ingesteld op 1000 uDRSs en de transactie is slechts 250 bytes, dan betaalt per kilobyte alleen 250 uDRS's in vergoeding,&lt;br /&gt;terwijl &quot;minstens&quot; 1000 uDRS's betaalt. Voor transacties die groter zijn dan een kilobyte, betalen beiden per kilobyte.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uPHRs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uPHRs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uPHRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Als de aangepaste vergoeding is ingesteld op 1000 uPHRs en de transactie is slechts 250 bytes, dan betaalt per kilobyte alleen 250 uPHR's in vergoeding,&lt;br /&gt;terwijl &quot;totaal minstens&quot; 1000 uPHR's betaalt. Voor transacties die groter zijn dan een kilobyte, betalen beiden per kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uDRSs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uDRSs in fee,&lt;br /&gt;while &quot;total at least&quot; pays 1000 uDRSs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Als de aangepaste vergoeding is ingesteld op 1000 uDRSs en de transactie is slechts 250 bytes, dan betaalt per kilobyte alleen 250 uDRS's in vergoeding,&lt;br /&gt;terwijl &quot;totaal minstens&quot; 1000 uDRS's betaalt. Voor transacties die groter zijn dan een kilobyte, betalen beiden per kilobyte.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for DigitalRupees transactions than the network can process.</source>
@@ -3451,8 +3451,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Voeg &amp;ontvanger toe</translation>
     </message>
     <message>
-        <source>Anonymized PHR</source>
-        <translation>Geanonimiseerde PHR</translation>
+        <source>Anonymized DRS</source>
+        <translation>Geanonimiseerde DRS</translation>
     </message>
     <message>
         <source>SwiftTX</source>
@@ -4463,8 +4463,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Verzend Munten</translation>
     </message>
     <message>
-        <source>SwiftTX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 PHR.</source>
-        <translation>SwiftTX ondersteunt geen verzendwaarden die zo hoog zijn. Transacties zijn momenteel beperkt tot %1 PHR.</translation>
+        <source>SwiftTX doesn&apos;t support sending values that high yet. Transactions are currently limited to %1 DRS.</source>
+        <translation>SwiftTX ondersteunt geen verzendwaarden die zo hoog zijn. Transacties zijn momenteel beperkt tot %1 DRS.</translation>
     </message>
 </context>
 <context>
@@ -4624,12 +4624,12 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Uitvoeren commando wanneer het beste blok verandert (%s in cmd is vervangen door block hash)</translation>
     </message>
     <message>
-        <source>Fees (in PHR/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Kosten (in PHR/Kb) kleiner dan dit worden beschouwd als zero fee voor heruitzending (standaard: %s)</translation>
+        <source>Fees (in DRS/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Kosten (in DRS/Kb) kleiner dan dit worden beschouwd als zero fee voor heruitzending (standaard: %s)</translation>
     </message>
     <message>
-        <source>Fees (in PHR/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Kosten (in PHR/Kb) kleiner dan dit worden beschouwd als zero fee voor transactie verrichting (standaard: %s)</translation>
+        <source>Fees (in DRS/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Kosten (in DRS/Kb) kleiner dan dit worden beschouwd als zero fee voor transactie verrichting (standaard: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -4740,12 +4740,12 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Kan niet genoeg verduistering gedenomineerde fondsen voor deze transactie vinden.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 PHR.</source>
-        <translation>Kan niet genoeg verduistering niet gedenomineerde fondsen voor deze transactie vinden die niet gelijk zijn aan 10000 PHR.</translation>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 DRS.</source>
+        <translation>Kan niet genoeg verduistering niet gedenomineerde fondsen voor deze transactie vinden die niet gelijk zijn aan 10000 DRS.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 PHR.</source>
-        <translation>Kan niet genoeg fondsen voor deze transactie vinden die niet gelijk zijn aan 10000 PHR.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 DRS.</source>
+        <translation>Kan niet genoeg fondsen voor deze transactie vinden die niet gelijk zijn aan 10000 DRS.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -5032,8 +5032,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Mislukt om block te lezen</translation>
     </message>
     <message>
-        <source>Fee (in PHR/kB) to add to transactions you send (default: %s)</source>
-        <translation>Fee (in PHR/kB) om toe te voegen aan transacties die je verzendt (standaard: %s)</translation>
+        <source>Fee (in DRS/kB) to add to transactions you send (default: %s)</source>
+        <translation>Fee (in DRS/kB) om toe te voegen aan transacties die je verzendt (standaard: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -5210,8 +5210,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Activeer staking functionaliteit (0-1, standaard: %u)</translation>
     </message>
 	<message>
-        <source>Keep N PHR anonymized (default: %u)</source>
-        <translation>Houd N PHR geanonimiseerd (standaard: %u)</translation>
+        <source>Keep N DRS anonymized (default: %u)</source>
+        <translation>Houd N DRS geanonimiseerd (standaard: %u)</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>
@@ -5795,7 +5795,7 @@ Wees alsjeblieft geduldig...</translation>
     </message>
 	<message>
         <source>Enable automatic wallet backups triggered after each zPhr minting (0-1, default: %u)</source>
-        <translation>Schakel automatische portemonnee-backups in die geactiveerd worden na elke zPHR-munting (0-1, standaard: %u)</translation>
+        <translation>Schakel automatische portemonnee-backups in die geactiveerd worden na elke zDRS-munting (0-1, standaard: %u)</translation>
     </message>
 	<message>
         <source>Enable SwiftX, show confirmations for locked transactions (bool, default: %s)</source>
@@ -6008,12 +6008,12 @@ bijvoorbeeld: alertnotify = echo %%s | mail -s &quot;DigitalRupees Alert&quot; a
         <translation>zPhr geselecteerd:</translation>
     </message>
     <message>
-        <source>PHR which were anonymized via Zerocin Protocol</source>
-        <translation>PHR die via het Zerocoin Protocol geanonimiseerd werden</translation>
+        <source>DRS which were anonymized via Zerocin Protocol</source>
+        <translation>DRS die via het Zerocoin Protocol geanonimiseerd werden</translation>
     </message>
     <message>
-        <source>Zerocoin PHR (zPHR)</source>
-        <translation>Zerocoin PHR (zPHR)</translation>
+        <source>Zerocoin DRS (zDRS)</source>
+        <translation>Zerocoin DRS (zDRS)</translation>
     </message>
     <message>
         <source>Zerocoin Actions:</source>
@@ -6088,20 +6088,20 @@ bijvoorbeeld: alertnotify = echo %%s | mail -s &quot;DigitalRupees Alert&quot; a
         <translation>Besteed Zerocoin</translation>
     </message>
     <message>
-        <source>Available (mature and spendable) zPHR for spending</source>
-        <translation>Beschikbare (mature en besteedbare) zPHR voor besteding</translation>
+        <source>Available (mature and spendable) zDRS for spending</source>
+        <translation>Beschikbare (mature en besteedbare) zDRS voor besteding</translation>
     </message>
     <message>
         <source>Available Balance:</source>
         <translation>Beschikbare saldo:</translation>
     </message>
     <message>
-        <source>Available (mature and spendable) zPHR for spending
+        <source>Available (mature and spendable) zDRS for spending
 
-zPHR are mature when they have more than 20 confirmations AND more than 1 mint of the same denomination after them were minted</source>
-        <translation>Beschikbare (mature en besteedbare) zPHR voor besteding
+zDRS are mature when they have more than 20 confirmations AND more than 1 mint of the same denomination after them were minted</source>
+        <translation>Beschikbare (mature en besteedbare) zDRS voor besteding
 		
-		zPHR zijn matuur wanner zij meer dan 20 bevestigingen hebben EN meer dan 1 munting van dezelfde denonminatie nadat ze gemunt geweest zijn</translation>
+		zDRS zijn matuur wanner zij meer dan 20 bevestigingen hebben EN meer dan 1 munting van dezelfde denonminatie nadat ze gemunt geweest zijn</translation>
     </message>
     <message>
         <source>Security Level for Zerocoin Transactions. More is better, but needs more time and resources.</source>
@@ -6176,8 +6176,8 @@ zPHR are mature when they have more than 20 confirmations AND more than 1 mint o
         <translation>Informatie over de beschikbare Zerocoin fondsen.</translation>
     </message>
     <message>
-        <source>Total Balance including unconfirmed and immature zPHR</source>
-        <translation>Totale Balans inclusief onbevestigde en immature zPHR</translation>
+        <source>Total Balance including unconfirmed and immature zDRS</source>
+        <translation>Totale Balans inclusief onbevestigde en immature zDRS</translation>
     </message>
     <message>
         <source>Total Zerocoin  Balance:</source>
@@ -6306,24 +6306,24 @@ Immature: confirmed, but less than 2 mints of the same denomination after it was
         <translation>Wisselgeld:</translation>
     </message>
     <message>
-        <source>Show the current status of automatic zPHR minting.
+        <source>Show the current status of automatic zDRS minting.
 
 To change the status (restart required):
 - enable: add &apos;enablezeromint=1&apos; to digitalrupees.conf
 - disable: add &apos;enablezeromint=0&apos; to digitalrupees.conf
 
 To change the percentage (no restart required):
-- menu Settings-&gt;Options-&gt;Percentage of autominted zPHR
+- menu Settings-&gt;Options-&gt;Percentage of autominted zDRS
 
 </source>
-        <translation>Toon de huidige status van automatische zPHR munting.
+        <translation>Toon de huidige status van automatische zDRS munting.
 
 Om de status te wijzigen (opnieuw starten vereist):
 - inschakelen: voeg &apos;enablezeromint=1&apos; toe aan digitalrupees.conf
 - uitschakelen: voeg &apos;enablezeromint=0&apos; toe aan digitalrupees.conf
 
 Om het percentage te wijzigen (geen herstart vereist):
-- menu Instellingen-&gt;Opties-&gt;Percentage van automatische munting zPHR
+- menu Instellingen-&gt;Opties-&gt;Percentage van automatische munting zDRS
 </translation>
     </message>
 	<message>
@@ -6347,8 +6347,8 @@ Om het percentage te wijzigen (geen herstart vereist):
         <translation>AutoMunting Status:</translation>
     </message>
     <message>
-        <source>zPHR is currently undergoing maintenance.</source>
-        <translation>zPHR wordt momenteel onderhouden.</translation>
+        <source>zDRS is currently undergoing maintenance.</source>
+        <translation>zDRS wordt momenteel onderhouden.</translation>
     </message>
     <message>
         <source>Error: Your wallet is locked. Please enter the wallet passphrase first.</source>
@@ -6367,8 +6367,8 @@ Om het percentage te wijzigen (geen herstart vereist):
         <translation>Succesvol gemunt</translation>
     </message>
     <message>
-        <source> zPHR in </source>
-        <translation> zPHR in </translation>
+        <source> zDRS in </source>
+        <translation> zDRS in </translation>
     </message>
     <message>
         <source> sec. Used denominations:
@@ -6431,12 +6431,12 @@ Wees alsjeblieft geduldig...</translation>
         <translation>Zerocoin besteden.\nComputationeel duur, zou mogelijk enkele minuten nodig hebben, afhankelijk van het geselecteerde beveiligingsniveau en je hardware. .\nWees alsjeblieft geduldig...</translation>
     </message>
     <message>
-        <source>Version 1 zPHR require a security level of 100 to successfully spend.</source>
-        <translation>Versie 1 zPHR vereist een beveiligingsniveau van 100 om succesvol te besteden.</translation>
+        <source>Version 1 zDRS require a security level of 100 to successfully spend.</source>
+        <translation>Versie 1 zDRS vereist een beveiligingsniveau van 100 om succesvol te besteden.</translation>
     </message>
     <message>
-        <source>Failed to spend zPHR</source>
-        <translation>Besteden van zPHR mislukt.</translation>
+        <source>Failed to spend zDRS</source>
+        <translation>Besteden van zDRS mislukt.</translation>
     </message>
     <message>
         <source>Failed to fetch mint associated with serial hash</source>
@@ -6455,8 +6455,8 @@ Wees alsjeblieft geduldig...</translation>
         <translation>kost: </translation>
     </message>
     <message>
-        <source>Enter an amount of PHR to convert to zPHR</source>
-        <translation>Voer de hoeveelheid van PHR in die geconverteerd moet worden naar zPHR</translation>
+        <source>Enter an amount of DRS to convert to zDRS</source>
+        <translation>Voer de hoeveelheid van DRS in die geconverteerd moet worden naar zDRS</translation>
     </message>
     <message>
         <source>\nEither mint higher denominations (so fewer inputs are needed) or reduce the amount to spend.</source>
@@ -6553,8 +6553,8 @@ Houd er rekening mee dat de portemonnee de blockchain opnieuw doorzoekt om trans
         <translation>Adres / Hoeveelheid:</translation>
     </message>
     <message>
-        <source>Add destinations to send PHR to</source>
-        <translation>Voeg bestemmingen toe om PHR naar te sturen</translation>
+        <source>Add destinations to send DRS to</source>
+        <translation>Voeg bestemmingen toe om DRS naar te sturen</translation>
     </message>
     <message>
         <source>Add &amp;Destination</source>

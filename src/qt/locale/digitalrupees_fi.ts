@@ -172,16 +172,16 @@
         <translation>Vahvista lompakon salaus</translation>
     </message>
     <message>
-        <source>DigitalRupees will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PHRs from being stolen by malware infecting your computer.</source>
-        <translation>DigitalRupees sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella PHRien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
+        <source>DigitalRupees will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your DRSs from being stolen by malware infecting your computer.</source>
+        <translation>DigitalRupees sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella DRSien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Oletko varma että tahdot salata lompakkosi?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PHR&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakkosi ja unohdat salausavaimesi, &lt;b&gt;menetät kaikki PHRisi&lt;/b&gt;</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DRS&lt;/b&gt;!</source>
+        <translation>Varoitus: Jos salaat lompakkosi ja unohdat salausavaimesi, &lt;b&gt;menetät kaikki DRSisi&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -1135,11 +1135,11 @@ Please check the address and try again.</source>
         <translation>Valitse yksityisyyden taso.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 PHR</source>
+        <source>Use 2 separate masternodes to mix funds up to 10000 DRS</source>
         <translation>Käytä 2 erillistä masternodea sekoittaaksesi enintään 10000 DigitalRupees</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 PHR</source>
+        <source>Use 8 separate masternodes to mix funds up to 10000 DRS</source>
         <translation>Käytä 8 erillistä masternodea sekoittaaksesi enintään 10000 DigitalRupees</translation>
     </message>
     <message>
@@ -1147,11 +1147,11 @@ Please check the address and try again.</source>
         <translation>Käytä 16 erillistä masternodea</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 PHR to anonymize 10000 PHR</source>
-        <translation>Tämä vaihtoehto on nopein ja maksaa noin ~0.025 PHR anonymoidaksesi 10000 DigitalRupees</translation>
+        <source>This option is the quickest and will cost about ~0.025 DRS to anonymize 10000 DRS</source>
+        <translation>Tämä vaihtoehto on nopein ja maksaa noin ~0.025 DRS anonymoidaksesi 10000 DigitalRupees</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 PHR to anonymize 10000 PHR</source>
+        <source>This option is moderately fast and will cost about 0.05 DRS to anonymize 10000 DRS</source>
         <translation>Tämä vaihtoehto on suhteellisen nopea ja maksaa 0.05 DigitalRupees anonymoidaksesi 10000 DigitalRupees</translation>
     </message>
     <message>
@@ -1159,7 +1159,7 @@ Please check the address and try again.</source>
         <translation>Tämä on hitain ja turvallisin vaihtoehto. Täydesti anonymisoiminen ei maksa mitään.</translation>
     </message>
     <message>
-        <source>0.1 PHR per 10000 PHR you anonymize.</source>
+        <source>0.1 DRS per 10000 DRS you anonymize.</source>
         <translation>0.1 per 10000 DigitalRupees, jotka anonymisoit.</translation>
     </message>
     <message>
@@ -1898,8 +1898,8 @@ Please check the address and try again.</source>
         <translation>Muutos:</translation>
     </message>
     <message>
-        <source>0 PHR</source>
-        <translation>0 PHR</translation>
+        <source>0 DRS</source>
+        <translation>0 DRS</translation>
     </message>
     <message>
         <source>Choose...</source>

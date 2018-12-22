@@ -25,7 +25,7 @@ digitalrupeesd/digitalrupees-qt (on Linux).
 ----------------
 
 - Updated chain parameters in response to [this governance proposal](https://forum.digitalrupees.io/t/block-reward-extension/81).
-  - Updated development rewards to a constant 1 PHR per block.
+  - Updated development rewards to a constant 1 DRS per block.
   - Updated block reward schedule
 - Fixed bug with mempoolnotify important for marketplace launch
 - Updated dns seeding system to be more decentralized.

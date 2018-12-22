@@ -432,9 +432,9 @@ libzerocoin::ZerocoinParams* GetZerocoinParams(int nHeight);
 bool IsTransactionInChain(const uint256& txId, int& nHeightTx, CTransaction& tx);
 bool IsTransactionInChain(const uint256& txId, int& nHeightTx);
 bool IsBlockHashInChain(const uint256& hashBlock);
-void RecalculateZPHRSpent();
-void RecalculateZPHRMinted();
-bool RecalculatePHRSupply(int nHeightStart);
+void RecalculateZDRSSpent();
+void RecalculateZDRSMinted();
+bool RecalculateDRSSupply(int nHeightStart);
 bool ReindexAccumulators(list<uint256>& listMissingCheckpoints, string& strError);
 
 

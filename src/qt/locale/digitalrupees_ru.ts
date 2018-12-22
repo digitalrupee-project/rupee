@@ -172,7 +172,7 @@
         <translation>Подтверждение шифрования кошелька</translation>
     </message>
     <message>
-        <source>DigitalRupees will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PHRs from being stolen by malware infecting your computer.</source>
+        <source>DigitalRupees will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your DRSs from being stolen by malware infecting your computer.</source>
         <translation>DigitalRupees сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши DigitalRupees от кражи с использованием вредоносного ПО.</translation>
     </message>
     <message>
@@ -180,8 +180,8 @@
         <translation>Вы действительно хотите зашифровать свой кошелек?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PHR&lt;/b&gt;!</source>
-        <translation>Внимание: если вы зашифруете свой кошелёк и потеряете от него пароль, то вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ СВОИ PHR&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DRS&lt;/b&gt;!</source>
+        <translation>Внимание: если вы зашифруете свой кошелёк и потеряете от него пароль, то вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ СВОИ DRS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -610,7 +610,7 @@
         <translation>&amp;Конфиденциальность</translation>
     </message>
     <message>
-        <source>Privacy Action for zPHR and Obfuscation</source>
+        <source>Privacy Action for zDRS and Obfuscation</source>
         <translation>Конфиденциальное действие и обфускация</translation>
     </message>
     <message>
@@ -1516,32 +1516,32 @@ Please check the address and try again.</source>
         <translation>Выберите уровень конфиденциальности.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 PHR</source>
-        <translation>Используйте 2 разные мастерноды для смешивания средств до 10000 PHR</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 DRS</source>
+        <translation>Используйте 2 разные мастерноды для смешивания средств до 10000 DRS</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 PHR</source>
-        <translation>Используйте 8 разных мастернод для смешивания средств до 10000 PHR</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 DRS</source>
+        <translation>Используйте 8 разных мастернод для смешивания средств до 10000 DRS</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Используйте 16 разных мастернод</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 PHR to anonymize 10000 PHR</source>
-        <translation>Этот вариант является самым быстрым и будет стоить порядка ~0.025 PHR для анонимизации 10000 PHR</translation>
+        <source>This option is the quickest and will cost about ~0.025 DRS to anonymize 10000 DRS</source>
+        <translation>Этот вариант является самым быстрым и будет стоить порядка ~0.025 DRS для анонимизации 10000 DRS</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 PHR to anonymize 10000 PHR</source>
-        <translation>Это средний по скорости вариант и он будет стоить около 0.05 PHR для анонимизации 10000 PHR</translation>
+        <source>This option is moderately fast and will cost about 0.05 DRS to anonymize 10000 DRS</source>
+        <translation>Это средний по скорости вариант и он будет стоить около 0.05 DRS для анонимизации 10000 DRS</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Это самый медленный и безопасный вариант. Максимальная анонимность стоит</translation>
     </message>
     <message>
-        <source>0.1 PHR per 10000 PHR you anonymize.</source>
-        <translation>0.1 PHR за 10000 PHR которые вы собираетесь анонимизировать.</translation>
+        <source>0.1 DRS per 10000 DRS you anonymize.</source>
+        <translation>0.1 DRS за 10000 DRS которые вы собираетесь анонимизировать.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1684,16 +1684,16 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Карта порта, использующего &amp;UPnP</translation>
     </message>
     <message>
-        <source>Percentage of incoming PHR which get automatically converted to zPHR via Zerocoin Protocol (min: 10%)</source>
-        <translation>Процент приходящих PHR, которые автоматически конвертируются в zPHR благодаря Zerocoin протоколу (min: 10%)</translation>
+        <source>Percentage of incoming DRS which get automatically converted to zDRS via Zerocoin Protocol (min: 10%)</source>
+        <translation>Процент приходящих DRS, которые автоматически конвертируются в zDRS благодаря Zerocoin протоколу (min: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zPHR</source>
-        <translation>Процент  авточеканненых zPHR</translation>
+        <source>Percentage of autominted zDRS</source>
+        <translation>Процент  авточеканненых zDRS</translation>
     </message>
     <message>
-        <source>Preferred Automint zPHR Denomination</source>
-        <translation>Предпочитаемый номинал авточеканной  монеты  zPHR</translation>
+        <source>Preferred Automint zDRS Denomination</source>
+        <translation>Предпочитаемый номинал авточеканной  монеты  zDRS</translation>
     </message>
     <message>
         <source>Connect to the DigitalRupees network through a SOCKS5 proxy.</source>
@@ -1827,8 +1827,8 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Вид</translation>
     </message>
     <message>
-        <source>PHR Balances</source>
-        <translation>Баланс PHR</translation>
+        <source>DRS Balances</source>
+        <translation>Баланс DRS</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1891,12 +1891,12 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Расходуемый:</translation>
     </message>
     <message>
-        <source>PHR:</source>
-        <translation>PHR:</translation>
+        <source>DRS:</source>
+        <translation>DRS:</translation>
     </message>
     <message>
-        <source>zPHR:</source>
-        <translation>zPHR:</translation>
+        <source>zDRS:</source>
+        <translation>zDRS:</translation>
     </message>
     <message>
         <source>0 %</source>
@@ -2020,8 +2020,8 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
 <context>
     <name>PrivacyDialog</name>
     <message>
-        <source>PHR which were anonymized via Zerocin Protocol</source>
-        <translation>PHR, который был анонимно использован через Zerocoin протокол</translation>
+        <source>DRS which were anonymized via Zerocin Protocol</source>
+        <translation>DRS, который был анонимно использован через Zerocoin протокол</translation>
     </message>
     <message>
         <source>Zerocoin Actions:</source>
@@ -2706,8 +2706,8 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Изменить:</translation>
     </message>
     <message>
-        <source>0 PHR</source>
-        <translation>0 PHR</translation>
+        <source>0 DRS</source>
+        <translation>0 DRS</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>

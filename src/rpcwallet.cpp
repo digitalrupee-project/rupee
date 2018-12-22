@@ -1805,7 +1805,7 @@ UniValue walletpassphrase(const UniValue& params, bool fHelp)
         throw runtime_error(
             "walletpassphrase \"passphrase\" timeout ( anonymizeonly )\n"
             "\nStores the wallet decryption key in memory for 'timeout' seconds.\n"
-            "This is needed prior to performing transactions related to private keys such as sending PHRs\n"
+            "This is needed prior to performing transactions related to private keys such as sending DRSs\n"
             "\nArguments:\n"
             "1. \"passphrase\"     (string, required) The wallet passphrase\n"
             "2. timeout            (numeric, required) The time to keep the decryption key in seconds.\n"
@@ -1842,7 +1842,7 @@ UniValue walletpassphrase(const UniValue& params, bool fHelp)
         throw JSONRPCError(RPC_WALLET_ALREADY_UNLOCKED, "Error: Wallet is already unlocked.");
 
     if (!pwalletMain->Unlock(strWalletPass, anonymizeOnly))
-        throw JSONRPCError(RPC_WALLET_PASSPHRASE_INCORRECT, "Error: The wallet passphrase entered was incorrect.");
+        throw JSONRPCError(RPC_WALLET_PASSDRSASE_INCORRECT, "Error: The wallet passphrase entered was incorrect.");
 
     pwalletMain->TopUpKeyPool();
 
@@ -1894,7 +1894,7 @@ UniValue walletpassphrasechange(const UniValue& params, bool fHelp)
             "Changes the wallet passphrase from <oldpassphrase> to <newpassphrase>.");
 
     if (!pwalletMain->ChangeWalletPassphrase(strOldWalletPass, strNewWalletPass))
-        throw JSONRPCError(RPC_WALLET_PASSPHRASE_INCORRECT, "Error: The wallet passphrase entered was incorrect.");
+        throw JSONRPCError(RPC_WALLET_PASSDRSASE_INCORRECT, "Error: The wallet passphrase entered was incorrect.");
 
     return NullUniValue;
 }
@@ -1948,7 +1948,7 @@ UniValue encryptwallet(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             "\nEncrypt you wallet\n" +
             HelpExampleCli("encryptwallet", "\"my pass phrase\"") +
-            "\nNow set the passphrase to use the wallet, such as for signing or sending PHRs\n" + HelpExampleCli("walletpassphrase", "\"my pass phrase\"") +
+            "\nNow set the passphrase to use the wallet, such as for signing or sending DRSs\n" + HelpExampleCli("walletpassphrase", "\"my pass phrase\"") +
             "\nNow we can so something like sign\n" + HelpExampleCli("signmessage", "\"digitalrupeesaddress\" \"test message\"") +
             "\nNow lock the wallet again by removing the passphrase\n" + HelpExampleCli("walletlock", "") +
             "\nAs a json rpc call\n" + HelpExampleRpc("encryptwallet", "\"my pass phrase\""));
@@ -1988,7 +1988,7 @@ UniValue lockunspent(const UniValue& params, bool fHelp)
             "lockunspent unlock [{\"txid\":\"txid\",\"vout\":n},...]\n"
             "\nUpdates list of temporarily unspendable outputs.\n"
             "Temporarily lock (unlock=false) or unlock (unlock=true) specified transaction outputs.\n"
-            "A locked transaction output will not be chosen by automatic coin selection, when spending PHRs.\n"
+            "A locked transaction output will not be chosen by automatic coin selection, when spending DRSs.\n"
             "Locks are stored in memory only. Nodes start with zero locked outputs, and the locked output list\n"
             "is always cleared (by virtue of process exit) when a node stops or fails.\n"
             "Also see the listunspent call\n"
@@ -2105,7 +2105,7 @@ UniValue settxfee(const UniValue& params, bool fHelp)
             "settxfee amount\n"
             "\nSet the transaction fee per kB.\n"
             "\nArguments:\n"
-            "1. amount         (numeric, required) The transaction fee in PHR/kB rounded to the nearest 0.00000001\n"
+            "1. amount         (numeric, required) The transaction fee in DRS/kB rounded to the nearest 0.00000001\n"
             "\nResult\n"
             "true|false        (boolean) Returns true if successful\n"
             "\nExamples:\n" +
@@ -2131,7 +2131,7 @@ UniValue getwalletinfo(const UniValue& params, bool fHelp)
             "\nResult:\n"
             "{\n"
             "  \"walletversion\": xxxxx,     (numeric) the wallet version\n"
-            "  \"balance\": xxxxxxx,         (numeric) the total PHR balance of the wallet\n"
+            "  \"balance\": xxxxxxx,         (numeric) the total DRS balance of the wallet\n"
             "  \"txcount\": xxxxxxx,         (numeric) the total number of transactions in the wallet\n"
             "  \"keypoololdest\": xxxxxx,    (numeric) the timestamp (seconds since GMT epoch) of the oldest pre-generated key in the key pool\n"
             "  \"keypoolsize\": xxxx,        (numeric) how many new keys are pre-generated\n"
@@ -2488,7 +2488,7 @@ UniValue multisend(const UniValue& params, bool fHelp)
     //if the user is entering a new MultiSend item
     string strAddress = params[0].get_str();
     if (!IsValidDestinationString(strAddress))
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid PHR address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid DRS address");
     if (boost::lexical_cast<int>(params[1].get_str()) < 0)
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, expected valid percentage");
     if (pwalletMain->IsLocked())
@@ -2532,11 +2532,11 @@ UniValue getzerocoinbalance(const UniValue& params, bool fHelp)
     if (fHelp || params.size() != 0)
         throw runtime_error(
             "getzerocoinbalance\n"
-            "\nReturn the wallet's total zPHR balance.\n" +
+            "\nReturn the wallet's total zDRS balance.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nResult:\n"
-            "amount         (numeric) Total zPHR balance.\n"
+            "amount         (numeric) Total zDRS balance.\n"
 
             "\nExamples:\n" +
             HelpExampleCli("getzerocoinbalance", "") + HelpExampleRpc("getzerocoinbalance", ""));
@@ -2555,7 +2555,7 @@ UniValue listmintedzerocoins(const UniValue& params, bool fHelp)
     if (fHelp || params.size() != 0)
         throw runtime_error(
             "listmintedzerocoins\n"
-            "\nList all zPHR mints in the wallet.\n" +
+            "\nList all zDRS mints in the wallet.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nResult:\n"
@@ -2633,7 +2633,7 @@ UniValue listspentzerocoins(const UniValue& params, bool fHelp)
     if (fHelp || params.size() != 0)
         throw runtime_error(
             "listspentzerocoins\n"
-            "\nList all the spent zPHR mints in the wallet.\n" +
+            "\nList all the spent zDRS mints in the wallet.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nResult:\n"
@@ -2665,11 +2665,11 @@ UniValue mintzerocoin(const UniValue& params, bool fHelp)
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
             "mintzerocoin amount ( utxos )\n"
-            "\nMint the specified zPHR amount\n" +
+            "\nMint the specified zDRS amount\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. amount      (numeric, required) Enter an amount of PHR to convert to zPHR\n"
+            "1. amount      (numeric, required) Enter an amount of DRS to convert to zDRS\n"
             "2. utxos       (string, optional) A json array of objects.\n"
             "                   Each object needs the txid (string) and vout (numeric)\n"
             "  [\n"
@@ -2713,7 +2713,7 @@ UniValue mintzerocoin(const UniValue& params, bool fHelp)
 
     int64_t nTime = GetTimeMillis();
     if(GetAdjustedTime() > GetSporkValue(SPORK_16_ZEROCOIN_MAINTENANCE_MODE))
-        throw JSONRPCError(RPC_WALLET_ERROR, "zPHR is currently disabled due to maintenance.");
+        throw JSONRPCError(RPC_WALLET_ERROR, "zDRS is currently disabled due to maintenance.");
 
     EnsureWalletIsUnlocked(true);
 
@@ -2776,7 +2776,7 @@ UniValue spendzerocoin(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 5 || params.size() < 4)
         throw runtime_error(
             "spendzerocoin amount mintchange minimizechange securitylevel ( \"address\" )\n"
-            "\nSpend zPHR to a PHR address.\n" +
+            "\nSpend zDRS to a DRS address.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
@@ -2807,8 +2807,8 @@ UniValue spendzerocoin(const UniValue& params, bool fHelp)
             "  ],\n"
             "  \"outputs\": [                 (array) JSON array of output objects.\n"
             "    {\n"
-            "      \"value\": amount,         (numeric) Value in PHR.\n"
-            "      \"address\": \"xxx\"         (string) PHR address or \"zerocoinmint\" for reminted change.\n"
+            "      \"value\": amount,         (numeric) Value in DRS.\n"
+            "      \"address\": \"xxx\"         (string) DRS address or \"zerocoinmint\" for reminted change.\n"
             "    }\n"
             "    ,...\n"
             "  ]\n"
@@ -2821,14 +2821,14 @@ UniValue spendzerocoin(const UniValue& params, bool fHelp)
     LOCK2(cs_main, pwalletMain->cs_wallet);
     
     if(GetAdjustedTime() > GetSporkValue(SPORK_16_ZEROCOIN_MAINTENANCE_MODE))
-        throw JSONRPCError(RPC_WALLET_ERROR, "zPHR is currently disabled due to maintenance.");
+        throw JSONRPCError(RPC_WALLET_ERROR, "zDRS is currently disabled due to maintenance.");
 
     int64_t nTimeStart = GetTimeMillis();
 
     EnsureWalletIsUnlocked();
 
     CAmount nAmount = AmountFromValue(params[0]);   // Spending amount
-    bool fMintChange = params[1].get_bool();        // Mint change to zPHR
+    bool fMintChange = params[1].get_bool();        // Mint change to zDRS
     bool fMinimizeChange = params[2].get_bool();    // Minimize change
     int nSecurityLevel = params[3].get_int();       // Security level
 
@@ -2927,7 +2927,7 @@ UniValue resetmintzerocoin(const UniValue& params, bool fHelp)
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    CzPHRTracker* zphrTracker = pwalletMain->zphrTracker.get();
+    CzDRSTracker* zphrTracker = pwalletMain->zphrTracker.get();
     set<CMintMeta> setMints = zphrTracker->ListMints(false, false, true);
     vector<CMintMeta> vMintsToFind(setMints.begin(), setMints.end());
     vector<CMintMeta> vMintsMissing;
@@ -2980,7 +2980,7 @@ UniValue resetspentzerocoin(const UniValue& params, bool fHelp)
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
     CWalletDB walletdb(pwalletMain->strWalletFile);
-    CzPHRTracker* zphrTracker = pwalletMain->zphrTracker.get();
+    CzDRSTracker* zphrTracker = pwalletMain->zphrTracker.get();
     set<CMintMeta> setMints = zphrTracker->ListMints(false, false, false);
     list<CZerocoinSpend> listSpends = walletdb.ListSpentCoins();
     list<CZerocoinSpend> listUnconfirmedSpends;
@@ -3086,7 +3086,7 @@ UniValue exportzerocoins(const UniValue& params, bool fHelp)
 
             "\nArguments:\n"
             "1. \"include_spent\"        (bool, required) Include mints that have already been spent\n"
-            "2. \"denomination\"         (integer, optional) Export a specific denomination of zPHR\n"
+            "2. \"denomination\"         (integer, optional) Export a specific denomination of zDRS\n"
 
             "\nResult:\n"
             "[                   (array of json object)\n"
@@ -3098,8 +3098,8 @@ UniValue exportzerocoins(const UniValue& params, bool fHelp)
             "    \"t\": \"txid\",    (string) The txid that the coin was minted in\n"
             "    \"h\": n,         (numeric) The height the tx was added to the blockchain\n"
             "    \"u\": used,      (boolean) Whether the mint has been spent\n"
-            "    \"v\": version,   (numeric) The version of the zPHR\n"
-            "    \"k\": \"privkey\"  (string) The zPHR private key (V2+ zPHR only)\n"
+            "    \"v\": version,   (numeric) The version of the zDRS\n"
+            "    \"k\": \"privkey\"  (string) The zDRS private key (V2+ zDRS only)\n"
             "  }\n"
             "  ,...\n"
             "]\n"
@@ -3118,7 +3118,7 @@ UniValue exportzerocoins(const UniValue& params, bool fHelp)
     if (params.size() == 2)
         denomination = libzerocoin::IntToZerocoinDenomination(params[1].get_int());
 
-    CzPHRTracker* zphrTracker = pwalletMain->zphrTracker.get();
+    CzDRSTracker* zphrTracker = pwalletMain->zphrTracker.get();
     set<CMintMeta> setMints = zphrTracker->ListMints(!fIncludeSpent, false, false);
 
     UniValue jsonList(UniValue::VARR);
@@ -3165,7 +3165,7 @@ UniValue importzerocoins(const UniValue& params, bool fHelp)
             "\nResult:\n"
             "{\n"
             "  \"added\": n,        (numeric) The quantity of zerocoin mints that were added\n"
-            "  \"value\": amount    (numeric) The total zPHR value of zerocoin mints that were added\n"
+            "  \"value\": amount    (numeric) The total zDRS value of zerocoin mints that were added\n"
             "}\n"
 
             "\nExamples\n" +
@@ -3244,7 +3244,7 @@ UniValue reconsiderzerocoins(const UniValue& params, bool fHelp)
     if(fHelp || !params.empty())
         throw runtime_error(
             "reconsiderzerocoins\n"
-            "\nCheck archived zPHR list to see if any mints were added to the blockchain.\n" +
+            "\nCheck archived zDRS list to see if any mints were added to the blockchain.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nResult:\n"
@@ -3336,7 +3336,7 @@ UniValue setzphrseed(const UniValue& params, bool fHelp)
     uint256 seed;
     seed.SetHex(params[0].get_str());
 
-    CzPHRWallet* zwallet = pwalletMain->getZWallet();
+    CzDRSWallet* zwallet = pwalletMain->getZWallet();
     bool fSuccess = zwallet->SetMasterSeed(seed, true);
     if (fSuccess)
         zwallet->SyncWithChain();
@@ -3352,18 +3352,18 @@ UniValue getzphrseed(const UniValue& params, bool fHelp)
     if(fHelp || !params.empty())
         throw runtime_error(
             "getzphrseed\n"
-            "\nCheck archived zPHR list to see if any mints were added to the blockchain.\n" +
+            "\nCheck archived zDRS list to see if any mints were added to the blockchain.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nResult\n"
-            "\"seed\" : s,  (string) The deterministic zPHR seed.\n"
+            "\"seed\" : s,  (string) The deterministic zDRS seed.\n"
 
             "\nExamples\n" +
             HelpExampleCli("getzphrseed", "") + HelpExampleRpc("getzphrseed", ""));
 
     EnsureWalletIsUnlocked();
 
-    CzPHRWallet* zwallet = pwalletMain->getZWallet();
+    CzDRSWallet* zwallet = pwalletMain->getZWallet();
     uint256 seed = zwallet->GetMasterSeed();
 
     UniValue ret(UniValue::VOBJ);
@@ -3377,12 +3377,12 @@ UniValue generatemintlist(const UniValue& params, bool fHelp)
     if(fHelp || params.size() != 2)
         throw runtime_error(
             "generatemintlist\n"
-            "\nShow mints that are derived from the deterministic zPHR seed.\n" +
+            "\nShow mints that are derived from the deterministic zDRS seed.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments\n"
-            "1. \"count\"  : n,  (numeric) Which sequential zPHR to start with.\n"
-            "2. \"range\"  : n,  (numeric) How many zPHR to generate.\n"
+            "1. \"count\"  : n,  (numeric) Which sequential zDRS to start with.\n"
+            "2. \"range\"  : n,  (numeric) How many zDRS to generate.\n"
 
             "\nResult:\n"
             "[\n"
@@ -3402,7 +3402,7 @@ UniValue generatemintlist(const UniValue& params, bool fHelp)
 
     int nCount = params[0].get_int();
     int nRange = params[1].get_int();
-    CzPHRWallet* zwallet = pwalletMain->zwalletMain;
+    CzDRSWallet* zwallet = pwalletMain->zwalletMain;
 
     UniValue arrRet(UniValue::VARR);
     for (int i = nCount; i < nCount + nRange; i++) {
@@ -3425,13 +3425,13 @@ UniValue dzphrstate(const UniValue& params, bool fHelp) {
     if (fHelp || params.size() != 0)
         throw runtime_error(
                 "dzphrstate\n"
-                        "\nThe current state of the mintpool of the deterministic zPHR wallet.\n" +
+                        "\nThe current state of the mintpool of the deterministic zDRS wallet.\n" +
                 HelpRequiringPassphrase() + "\n"
 
                         "\nExamples\n" +
                 HelpExampleCli("mintpoolstatus", "") + HelpExampleRpc("mintpoolstatus", ""));
 
-    CzPHRWallet* zwallet = pwalletMain->zwalletMain;
+    CzDRSWallet* zwallet = pwalletMain->zwalletMain;
     UniValue obj(UniValue::VOBJ);
     int nCount, nCountLastUsed;
     zwallet->GetState(nCount, nCountLastUsed);
@@ -3442,7 +3442,7 @@ UniValue dzphrstate(const UniValue& params, bool fHelp) {
 }
 
 
-void static SearchThread(CzPHRWallet* zwallet, int nCountStart, int nCountEnd)
+void static SearchThread(CzDRSWallet* zwallet, int nCountStart, int nCountEnd)
 {
     LogPrintf("%s: start=%d end=%d\n", __func__, nCountStart, nCountEnd);
     CWalletDB walletDB(pwalletMain->strWalletFile);
@@ -3459,7 +3459,7 @@ void static SearchThread(CzPHRWallet* zwallet, int nCountStart, int nCountEnd)
             CBigNum bnSerial;
             CBigNum bnRandomness;
             CKey key;
-            zwallet->SeedToZPHR(zerocoinSeed, bnValue, bnSerial, bnRandomness, key);
+            zwallet->SeedToZDRS(zerocoinSeed, bnValue, bnSerial, bnRandomness, key);
 
             uint256 hashPubcoin = GetPubCoinHash(bnValue);
             zwallet->AddToMintPool(make_pair(hashPubcoin, i), true);
@@ -3477,12 +3477,12 @@ UniValue searchdzphr(const UniValue& params, bool fHelp)
     if(fHelp || params.size() != 3)
         throw runtime_error(
             "searchdzphr\n"
-            "\nMake an extended search for deterministically generated zPHR that have not yet been recognized by the wallet.\n" +
+            "\nMake an extended search for deterministically generated zDRS that have not yet been recognized by the wallet.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments\n"
-            "1. \"count\"       (numeric) Which sequential zPHR to start with.\n"
-            "2. \"range\"       (numeric) How many zPHR to generate.\n"
+            "1. \"count\"       (numeric) Which sequential zDRS to start with.\n"
+            "2. \"range\"       (numeric) How many zDRS to generate.\n"
             "3. \"threads\"     (numeric) How many threads should this operation consume.\n"
 
             "\nExamples\n" +
@@ -3500,7 +3500,7 @@ UniValue searchdzphr(const UniValue& params, bool fHelp)
 
     int nThreads = params[2].get_int();
 
-    CzPHRWallet* zwallet = pwalletMain->zwalletMain;
+    CzDRSWallet* zwallet = pwalletMain->zwalletMain;
 
     boost::thread_group* dzphrThreads = new boost::thread_group();
     int nRangePerThread = nRange / nThreads;

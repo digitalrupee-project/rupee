@@ -176,7 +176,7 @@
         <translation>Потвърдете шифрирането на портфейла</translation>
     </message>
     <message>
-        <source>DigitalRupees will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PHRs from being stolen by malware infecting your computer.</source>
+        <source>DigitalRupees will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your DRSs from being stolen by malware infecting your computer.</source>
         <translation>DigitalRupees сега ще се затвори, за да довърши процеса по шифриране. Запомнете, че шифрирането на вашия портфейл не може напълно да защити вашия DigitalRupees от това, да бъде откраднат чрез злонамерен софутуер, инфектирал вашия компютър.</translation>
     </message>
     <message>
@@ -184,8 +184,8 @@
         <translation>Сигурни ли сте, че искате да шифрирате вашия портфейл?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PHR&lt;/b&gt;!</source>
-        <translation>&lt;b&gt;Внимание: Ако шифрирате вашия портфейл и загубите вашата парола, вие ще ЗАГУБИТЕ ВСИЧКИТЕ ВИ PHR&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DRS&lt;/b&gt;!</source>
+        <translation>&lt;b&gt;Внимание: Ако шифрирате вашия портфейл и загубите вашата парола, вие ще ЗАГУБИТЕ ВСИЧКИТЕ ВИ DRS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -618,8 +618,8 @@
         <translation>&amp;Поверителност</translation>
     </message>
     <message>
-        <source>Privacy Action for zPHR and Obfuscation</source>
-        <translation>Поверителни действия за zPHR и Обфускация</translation>
+        <source>Privacy Action for zDRS and Obfuscation</source>
+        <translation>Поверителни действия за zDRS и Обфускация</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -1548,32 +1548,32 @@ Please check the address and try again.</source>
         <translation>Изберете ниво на поверителност.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 PHR</source>
-        <translation>Използвай 2 различни мастърноуда за смесване на средства над 10000 PHR</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 DRS</source>
+        <translation>Използвай 2 различни мастърноуда за смесване на средства над 10000 DRS</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 PHR</source>
-        <translation>Използвай 8 различни мастърноуда за да смесите средства до 10000 PHR</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 DRS</source>
+        <translation>Използвай 8 различни мастърноуда за да смесите средства до 10000 DRS</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Използвай 16 различни мастърноуда</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 PHR to anonymize 10000 PHR</source>
-        <translation>Това е най-бързия метод и ще струва около 0.025 PHR за да скриете 10000 PHR</translation>
+        <source>This option is the quickest and will cost about ~0.025 DRS to anonymize 10000 DRS</source>
+        <translation>Това е най-бързия метод и ще струва около 0.025 DRS за да скриете 10000 DRS</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 PHR to anonymize 10000 PHR</source>
-        <translation>Тази опция е сравнително бърза и ще струва около 0.05 PHR за да скриете 10000 PHR</translation>
+        <source>This option is moderately fast and will cost about 0.05 DRS to anonymize 10000 DRS</source>
+        <translation>Тази опция е сравнително бърза и ще струва около 0.05 DRS за да скриете 10000 DRS</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
-        <translation>Това е най-бавния и най-сигурен вариант за скриване на PHR. Използването й ще струва</translation>
+        <translation>Това е най-бавния и най-сигурен вариант за скриване на DRS. Използването й ще струва</translation>
     </message>
     <message>
-        <source>0.1 PHR per 10000 PHR you anonymize.</source>
-        <translation>0.1 PHR за 10000 скрити PHR</translation>
+        <source>0.1 DRS per 10000 DRS you anonymize.</source>
+        <translation>0.1 DRS за 10000 скрити DRS</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1712,20 +1712,20 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
 https://www.transifex.com/digitalrupees-project/digitalrupees-project-translations</translation>
     </message>
     <message>
-        <source>Percentage of incoming PHR which get automatically converted to zPHR via Zerocoin Protocol (min: 10%)</source>
-        <translation>Процент от входящите PHR, който автоматично да се конвертира в zPHR посредтвом Zerocoin Протокола (мин: 10%)</translation>
+        <source>Percentage of incoming DRS which get automatically converted to zDRS via Zerocoin Protocol (min: 10%)</source>
+        <translation>Процент от входящите DRS, който автоматично да се конвертира в zDRS посредтвом Zerocoin Протокола (мин: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zPHR</source>
-        <translation>Процент автоматично сечени zPHR</translation>
+        <source>Percentage of autominted zDRS</source>
+        <translation>Процент автоматично сечени zDRS</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough PHR for this denomination is available</source>
-        <translation>Не бързай с автоматичното конвертиране в zPHR докато не се съберат достатъчно PHR за тази деноминация</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough DRS for this denomination is available</source>
+        <translation>Не бързай с автоматичното конвертиране в zDRS докато не се съберат достатъчно DRS за тази деноминация</translation>
     </message>
     <message>
-        <source>Preferred Automint zPHR Denomination</source>
-        <translation>Предпочитани деноминации, в които да се сече автоматичен zPHR</translation>
+        <source>Preferred Automint zDRS Denomination</source>
+        <translation>Предпочитани деноминации, в които да се сече автоматичен zDRS</translation>
     </message>
     <message>
         <source>Connect to the DigitalRupees network through a SOCKS5 proxy.</source>
@@ -1859,8 +1859,8 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>От</translation>
     </message>
     <message>
-        <source>PHR Balances</source>
-        <translation>PHR Баланс</translation>
+        <source>DRS Balances</source>
+        <translation>DRS Баланс</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1927,12 +1927,12 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Комбиниран общ баланс (само озрелите монети)</translation>
     </message>
     <message>
-        <source>PHR:</source>
-        <translation>PHR:</translation>
+        <source>DRS:</source>
+        <translation>DRS:</translation>
     </message>
     <message>
-        <source>zPHR:</source>
-        <translation>zPHR:</translation>
+        <source>zDRS:</source>
+        <translation>zDRS:</translation>
     </message>
     <message>
         <source>0 %</source>
@@ -2060,12 +2060,12 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
 <context>
     <name>PrivacyDialog</name>
     <message>
-        <source>PHR which were anonymized via Zerocin Protocol</source>
-        <translation>PHR скрити посредством Зерокойн протокола</translation>
+        <source>DRS which were anonymized via Zerocin Protocol</source>
+        <translation>DRS скрити посредством Зерокойн протокола</translation>
     </message>
     <message>
-        <source>Zerocoin PHR (zPHR)</source>
-        <translation>Zerocoin PHR (zPHR)</translation>
+        <source>Zerocoin DRS (zDRS)</source>
+        <translation>Zerocoin DRS (zDRS)</translation>
     </message>
     <message>
         <source>Zerocoin Actions:</source>
@@ -2077,7 +2077,7 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
     </message>
     <message>
         <source>Enter an amount of Phr to convert to zPhr</source>
-        <translation>Въведете колко PHR  да се конвертират в zPHR</translation>
+        <translation>Въведете колко DRS  да се конвертират в zDRS</translation>
     </message>
     <message>
         <source>Mint Zerocoin</source>
@@ -2088,16 +2088,16 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>0</translation>
     </message>
     <message>
-        <source>zPHR</source>
-        <translation>zPHR</translation>
+        <source>zDRS</source>
+        <translation>zDRS</translation>
     </message>
     <message>
         <source>Available for Minting:</source>
         <translation>Налични за сечене:</translation>
     </message>
     <message>
-        <source>0.000 000 00 PHR</source>
-        <translation>0.000 000 00 PHR</translation>
+        <source>0.000 000 00 DRS</source>
+        <translation>0.000 000 00 DRS</translation>
     </message>
     <message>
         <source>Reset Zerocoin Wallet DB. Deletes transactions that did not make it into the blockchain.</source>
@@ -2133,11 +2133,11 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
     </message>
     <message>
         <source>zPhr Control</source>
-        <translation>zPHR Контрол</translation>
+        <translation>zDRS Контрол</translation>
     </message>
     <message>
         <source>zPhr Selected:</source>
-        <translation>Избрани zPHR:</translation>
+        <translation>Избрани zDRS:</translation>
     </message>
     <message>
         <source>Quantity Selected:</source>
@@ -2156,8 +2156,8 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Налични:</translation>
     </message>
     <message>
-        <source>0 zPHR</source>
-        <translation>0 zPHR</translation>
+        <source>0 zDRS</source>
+        <translation>0 zDRS</translation>
     </message>
     <message>
         <source>Security Level for Zerocoin Transactions. More is better, but needs more time and resources.</source>
@@ -2209,7 +2209,7 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
     </message>
     <message>
         <source>Convert Change to Zerocoin (might cost additional fees)</source>
-        <translation>Изсечи zPHR от рестото (ще струва допълнително заради таксите)</translation>
+        <translation>Изсечи zDRS от рестото (ще струва допълнително заради таксите)</translation>
     </message>
     <message>
         <source>If checked, the wallet tries to minimize the returning change instead of minimizing the number of spent denominations.</source>
@@ -2396,8 +2396,8 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
         <translation>Успешно изсечени</translation>
     </message>
     <message>
-        <source> zPHR in </source>
-        <translation>zPHR в</translation>
+        <source> zDRS in </source>
+        <translation>zDRS в</translation>
     </message>
     <message>
         <source> sec. Used denominations:
@@ -2475,7 +2475,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>zPhr Spend #: </source>
-        <translation>zPHR Похарчени #:</translation>
+        <translation>zDRS Похарчени #:</translation>
     </message>
     <message>
         <source>denomination: </source>
@@ -2499,7 +2499,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>zPhr Mint</source>
-        <translation>Сечене на zPHR</translation>
+        <translation>Сечене на zDRS</translation>
     </message>
     <message>
         <source>Sending successful, return code: </source>
@@ -3127,8 +3127,8 @@ Please be patient...</source>
         <translation>Размер на UTXO:</translation>
     </message>
     <message>
-        <source>0 PHR</source>
-        <translation>0 PHR</translation>
+        <source>0 DRS</source>
+        <translation>0 DRS</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -3179,12 +3179,12 @@ Please be patient...</source>
         <translation>Автоматично избрани монети</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uPHRs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uPHRs in fee,&lt;br /&gt;while "at least" pays 1000 uPHRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Ако собствената такса е настроена на 1000 uPHR и превода е само 250 байта, то тогава "за килобайт" само плаща 250 uPHR входяща такса, &lt;br /&gt;докато "минимална сума" плаща 1000 uPHR. За транзакции по-големи от килобайт, и двете плащат за килобайт.</translation>
+        <source>If the custom fee is set to 1000 uDRSs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uDRSs in fee,&lt;br /&gt;while "at least" pays 1000 uDRSs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Ако собствената такса е настроена на 1000 uDRS и превода е само 250 байта, то тогава "за килобайт" само плаща 250 uDRS входяща такса, &lt;br /&gt;докато "минимална сума" плаща 1000 uDRS. За транзакции по-големи от килобайт, и двете плащат за килобайт.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uPHRs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uPHRs in fee,&lt;br /&gt;while "total at least" pays 1000 uPHRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Ако собствената такса е настроена на 1000 uPHR и превода е само 250 байта, то тогава "за килобайт" само плаща 250 uPHR входяща такса,&lt;br /&gt; докато "минимална сума" плаща 1000 uPHR. За транзакции по-големи от килобайт, и двете плащат за килобайт.</translation>
+        <source>If the custom fee is set to 1000 uDRSs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uDRSs in fee,&lt;br /&gt;while "total at least" pays 1000 uDRSs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Ако собствената такса е настроена на 1000 uDRS и превода е само 250 байта, то тогава "за килобайт" само плаща 250 uDRS входяща такса,&lt;br /&gt; докато "минимална сума" плаща 1000 uDRS. За транзакции по-големи от килобайт, и двете плащат за килобайт.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for DigitalRupees transactions than the network can process.</source>
@@ -3235,8 +3235,8 @@ Please be patient...</source>
         <translation>Добави Получател</translation>
     </message>
     <message>
-        <source>Anonymized PHR</source>
-        <translation>Анонимизиран PHR</translation>
+        <source>Anonymized DRS</source>
+        <translation>Анонимизиран DRS</translation>
     </message>
     <message>
         <source>SwiftTX</source>
@@ -3296,7 +3296,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>Warning: Invalid DigitalRupees address</source>
-        <translation>Предупреждение: Невалиден PHR адрес</translation>
+        <translation>Предупреждение: Невалиден DRS адрес</translation>
     </message>
     <message>
         <source>any available funds (not recommended)</source>
@@ -3956,23 +3956,23 @@ Please be patient...</source>
     </message>
     <message>
         <source>Converted Phr to zPhr</source>
-        <translation>Конвертиран PHR във zPHR</translation>
+        <translation>Конвертиран DRS във zDRS</translation>
     </message>
     <message>
         <source>Spent zPhr</source>
-        <translation>Похарчени zPHR</translation>
+        <translation>Похарчени zDRS</translation>
     </message>
     <message>
         <source>Received Phr from zPhr</source>
-        <translation>Получен PHR от zPHR</translation>
+        <translation>Получен DRS от zDRS</translation>
     </message>
     <message>
         <source>Minted Change as zPhr from zPhr Spend</source>
-        <translation>Исечено ресто като zPHR от похарчените zPHR</translation>
+        <translation>Исечено ресто като zDRS от похарчените zDRS</translation>
     </message>
     <message>
         <source>Converted zPhr to Phr</source>
-        <translation>Конвертирани zPHR в PHR</translation>
+        <translation>Конвертирани zDRS в DRS</translation>
     </message>
     <message>
         <source>watch-only</source>
@@ -3980,7 +3980,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>zPhr Accumulator</source>
-        <translation>zPHR Акумулатор</translation>
+        <translation>zDRS Акумулатор</translation>
     </message>
     <message>
         <source>(n/a)</source>
@@ -4087,7 +4087,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>Received Phr from zPhr</source>
-        <translation>Получен PHR от zPHR</translation>
+        <translation>Получен DRS от zDRS</translation>
     </message>
     <message>
         <source>Zerocoin Mint</source>
@@ -4099,7 +4099,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>Zerocoin Spend, Change in zPhr</source>
-        <translation>Харчене на Zerocoin, Ресто в zPHR</translation>
+        <translation>Харчене на Zerocoin, Ресто в zDRS</translation>
     </message>
     <message>
         <source>Zerocoin Spend to Self</source>
@@ -4215,8 +4215,8 @@ Please be patient...</source>
         <translation>Изпрати Монети</translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 PHR.</source>
-        <translation>SwiftTX не подържа изпращането на толкова големи суми. Превода е ограничен до %1 PHR.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 DRS.</source>
+        <translation>SwiftTX не подържа изпращането на толкова големи суми. Превода е ограничен до %1 DRS.</translation>
     </message>
 </context>
 <context>
@@ -4262,7 +4262,7 @@ Please be patient...</source>
     <name>ZPhrControlDialog</name>
     <message>
         <source>Select zPhr to Spend</source>
-        <translation>Изберете zPHR за Изпращане</translation>
+        <translation>Изберете zDRS за Изпращане</translation>
     </message>
     <message>
         <source>Quantity</source>
@@ -4274,7 +4274,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>zPhr</source>
-        <translation>zPHR</translation>
+        <translation>zDRS</translation>
     </message>
     <message>
         <source>Select/Deselect All</source>
@@ -4344,12 +4344,12 @@ Please be patient...</source>
         <translation>Командата влиза в сила, когато най-добрия блок се промени (%s в cmd се замества от хаш на блока)</translation>
     </message>
     <message>
-        <source>Fees (in PHR/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Такси (в PHR/Кб) по-малки от това се считат за нулеви при препращане (default: %s)</translation>
+        <source>Fees (in DRS/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Такси (в DRS/Кб) по-малки от това се считат за нулеви при препращане (default: %s)</translation>
     </message>
     <message>
-        <source>Fees (in PHR/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Такси (в PHR/Кб) по-малки от това се считат за нулеви при създаване на предовда (default: %s)</translation>
+        <source>Fees (in DRS/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Такси (в DRS/Кб) по-малки от това се считат за нулеви при създаване на предовда (default: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>

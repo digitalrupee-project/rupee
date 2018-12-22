@@ -90,10 +90,10 @@ QT_TRANSLATE_NOOP("digitalrupees-core", ""
 "Execute command when the best block changes (%s in cmd is replaced by block "
 "hash)"),
 QT_TRANSLATE_NOOP("digitalrupees-core", ""
-"Fees (in PHR/Kb) smaller than this are considered zero fee for relaying "
+"Fees (in DRS/Kb) smaller than this are considered zero fee for relaying "
 "(default: %s)"),
 QT_TRANSLATE_NOOP("digitalrupees-core", ""
-"Fees (in PHR/Kb) smaller than this are considered zero fee for transaction "
+"Fees (in DRS/Kb) smaller than this are considered zero fee for transaction "
 "creation (default: %s)"),
 QT_TRANSLATE_NOOP("digitalrupees-core", ""
 "Flush database activity from memory pool to disk log every <n> megabytes "
@@ -188,10 +188,10 @@ QT_TRANSLATE_NOOP("digitalrupees-core", ""
 "Unable to locate enough Obfuscation denominated funds for this transaction."),
 QT_TRANSLATE_NOOP("digitalrupees-core", ""
 "Unable to locate enough Obfuscation non-denominated funds for this "
-"transaction that are not equal 10000 PHR."),
+"transaction that are not equal 10000 DRS."),
 QT_TRANSLATE_NOOP("digitalrupees-core", ""
 "Unable to locate enough funds for this transaction that are not equal 10000 "
-"PHR."),
+"DRS."),
 QT_TRANSLATE_NOOP("digitalrupees-core", ""
 "Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: "
 "%s)"),
@@ -305,7 +305,7 @@ QT_TRANSLATE_NOOP("digitalrupees-core", "Failed to listen on any port. Use -list
 QT_TRANSLATE_NOOP("digitalrupees-core", "Failed to read block index"),
 QT_TRANSLATE_NOOP("digitalrupees-core", "Failed to read block"),
 QT_TRANSLATE_NOOP("digitalrupees-core", "Failed to write block index"),
-QT_TRANSLATE_NOOP("digitalrupees-core", "Fee (in PHR/kB) to add to transactions you send (default: %s)"),
+QT_TRANSLATE_NOOP("digitalrupees-core", "Fee (in DRS/kB) to add to transactions you send (default: %s)"),
 QT_TRANSLATE_NOOP("digitalrupees-core", "Finalizing transaction."),
 QT_TRANSLATE_NOOP("digitalrupees-core", "Force safe mode (default: %u)"),
 QT_TRANSLATE_NOOP("digitalrupees-core", "Found enough users, signing ( waiting %s )"),
