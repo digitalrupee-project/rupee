@@ -329,7 +329,7 @@ public:
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 15);  // Testnet rupees script addresses start with '8' or '9'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 239);     // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
         // Testnet digitalrupees BIP32 pubkeys start with 'DRKV'
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x01),(0x50), (0x34),(0x72).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x01),(0x50),(0x34),(0x72).convert_to_container<std::vector<unsigned char> >();
         // Testnet digitalrupees BIP32 prvkeys start with 'DRKP'
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x2e),(0x99),(0xe6),(0xd9).convert_to_container<std::vector<unsigned char> >();
         // Testnet digitalrupees BIP44 coin type is '1' (All coin's testnet default)
