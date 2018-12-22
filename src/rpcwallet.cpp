@@ -2573,7 +2573,7 @@ UniValue listmintedzerocoins(const UniValue& params, bool fHelp)
         throw JSONRPCError(RPC_WALLET_UNLOCK_NEEDED, "Error: Please enter the wallet passphrase with walletpassphrase first.");
 
     CWalletDB walletdb(pwalletMain->strWalletFile);
-    set<CMintMeta> setMints = pwalletMain->zphrTracker->ListMints(true, true, true);
+    set<CMintMeta> setMints = pwalletMain->zdrsTracker->ListMints(true, true, true);
 
     UniValue jsonList(UniValue::VARR);
     for (const CMintMeta& meta : setMints) {
@@ -2609,7 +2609,7 @@ UniValue listzerocoinamounts(const UniValue& params, bool fHelp)
     EnsureWalletIsUnlocked();
 
     CWalletDB walletdb(pwalletMain->strWalletFile);
-    set<CMintMeta> setMints = pwalletMain->zphrTracker->ListMints(true, true, true);
+    set<CMintMeta> setMints = pwalletMain->zdrsTracker->ListMints(true, true, true);
 
     std::map<libzerocoin::CoinDenomination, CAmount> spread;
     for (const auto& denom : libzerocoin::zerocoinDenomList)
@@ -2927,8 +2927,8 @@ UniValue resetmintzerocoin(const UniValue& params, bool fHelp)
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    CzDRSTracker* zphrTracker = pwalletMain->zphrTracker.get();
-    set<CMintMeta> setMints = zphrTracker->ListMints(false, false, true);
+    CzDRSTracker* zdrsTracker = pwalletMain->zdrsTracker.get();
+    set<CMintMeta> setMints = zdrsTracker->ListMints(false, false, true);
     vector<CMintMeta> vMintsToFind(setMints.begin(), setMints.end());
     vector<CMintMeta> vMintsMissing;
     vector<CMintMeta> vMintsToUpdate;
@@ -2939,14 +2939,14 @@ UniValue resetmintzerocoin(const UniValue& params, bool fHelp)
     // update the meta data of mints that were marked for updating
     UniValue arrUpdated(UniValue::VARR);
     for (CMintMeta meta : vMintsToUpdate) {
-        zphrTracker->UpdateState(meta);
+        zdrsTracker->UpdateState(meta);
         arrUpdated.push_back(meta.hashPubcoin.GetHex());
     }
 
     // delete any mints that were unable to be located on the blockchain
     UniValue arrDeleted(UniValue::VARR);
     for (CMintMeta meta : vMintsMissing) {
-        zphrTracker->Archive(meta);
+        zdrsTracker->Archive(meta);
         arrDeleted.push_back(meta.hashPubcoin.GetHex()); 
     }
 
@@ -2980,8 +2980,8 @@ UniValue resetspentzerocoin(const UniValue& params, bool fHelp)
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
     CWalletDB walletdb(pwalletMain->strWalletFile);
-    CzDRSTracker* zphrTracker = pwalletMain->zphrTracker.get();
-    set<CMintMeta> setMints = zphrTracker->ListMints(false, false, false);
+    CzDRSTracker* zdrsTracker = pwalletMain->zdrsTracker.get();
+    set<CMintMeta> setMints = zdrsTracker->ListMints(false, false, false);
     list<CZerocoinSpend> listSpends = walletdb.ListSpentCoins();
     list<CZerocoinSpend> listUnconfirmedSpends;
 
@@ -3003,7 +3003,7 @@ UniValue resetspentzerocoin(const UniValue& params, bool fHelp)
     for (CZerocoinSpend spend : listUnconfirmedSpends) {
         for (auto& meta : setMints) {
             if (meta.hashSerial == GetSerialHash(spend.GetSerial())) {
-                zphrTracker->SetPubcoinNotUsed(meta.hashPubcoin);
+                zdrsTracker->SetPubcoinNotUsed(meta.hashPubcoin);
                 walletdb.EraseZerocoinSpendSerialEntry(spend.GetSerial());
                 RemoveSerialFromDB(spend.GetSerial());
                 UniValue obj(UniValue::VOBJ);
@@ -3118,8 +3118,8 @@ UniValue exportzerocoins(const UniValue& params, bool fHelp)
     if (params.size() == 2)
         denomination = libzerocoin::IntToZerocoinDenomination(params[1].get_int());
 
-    CzDRSTracker* zphrTracker = pwalletMain->zphrTracker.get();
-    set<CMintMeta> setMints = zphrTracker->ListMints(!fIncludeSpent, false, false);
+    CzDRSTracker* zdrsTracker = pwalletMain->zdrsTracker.get();
+    set<CMintMeta> setMints = zdrsTracker->ListMints(!fIncludeSpent, false, false);
 
     UniValue jsonList(UniValue::VARR);
     for (const CMintMeta& meta : setMints) {
@@ -3228,7 +3228,7 @@ UniValue importzerocoins(const UniValue& params, bool fHelp)
         CZerocoinMint mint(denom, bnValue, bnRandom, bnSerial, fUsed, nVersion, &privkey);
         mint.SetTxHash(txid);
         mint.SetHeight(nHeight);
-        pwalletMain->zphrTracker->Add(mint, true);
+        pwalletMain->zdrsTracker->Add(mint, true);
         count++;
         nValue += libzerocoin::ZerocoinDenominationToAmount(denom);
     }
@@ -3313,23 +3313,23 @@ UniValue makekeypair(const UniValue& params, bool fHelp)
     return result;
 }
 
-UniValue setzphrseed(const UniValue& params, bool fHelp)
+UniValue setzdrsseed(const UniValue& params, bool fHelp)
 {
     if(fHelp || params.size() != 1)
         throw runtime_error(
-            "setzphrseed \"seed\"\n"
-            "\nSet the wallet's deterministic zphr seed to a specific value.\n" +
+            "setzdrsseed \"seed\"\n"
+            "\nSet the wallet's deterministic zdrs seed to a specific value.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. \"seed\"        (string, required) The deterministic zphr seed.\n"
+            "1. \"seed\"        (string, required) The deterministic zdrs seed.\n"
 
             "\nResult\n"
             "\"success\" : b,  (boolean) Whether the seed was successfully set.\n"
 
             "\nExamples\n" +
-            HelpExampleCli("setzphrseed", "63f793e7895dd30d99187b35fbfb314a5f91af0add9e0a4e5877036d1e392dd5") +
-            HelpExampleRpc("setzphrseed", "63f793e7895dd30d99187b35fbfb314a5f91af0add9e0a4e5877036d1e392dd5"));
+            HelpExampleCli("setzdrsseed", "63f793e7895dd30d99187b35fbfb314a5f91af0add9e0a4e5877036d1e392dd5") +
+            HelpExampleRpc("setzdrsseed", "63f793e7895dd30d99187b35fbfb314a5f91af0add9e0a4e5877036d1e392dd5"));
 
     EnsureWalletIsUnlocked();
 
@@ -3347,11 +3347,11 @@ UniValue setzphrseed(const UniValue& params, bool fHelp)
     return ret;
 }
 
-UniValue getzphrseed(const UniValue& params, bool fHelp)
+UniValue getzdrsseed(const UniValue& params, bool fHelp)
 {
     if(fHelp || !params.empty())
         throw runtime_error(
-            "getzphrseed\n"
+            "getzdrsseed\n"
             "\nCheck archived zDRS list to see if any mints were added to the blockchain.\n" +
             HelpRequiringPassphrase() + "\n"
 
@@ -3359,7 +3359,7 @@ UniValue getzphrseed(const UniValue& params, bool fHelp)
             "\"seed\" : s,  (string) The deterministic zDRS seed.\n"
 
             "\nExamples\n" +
-            HelpExampleCli("getzphrseed", "") + HelpExampleRpc("getzphrseed", ""));
+            HelpExampleCli("getzdrsseed", "") + HelpExampleRpc("getzdrsseed", ""));
 
     EnsureWalletIsUnlocked();
 
@@ -3421,10 +3421,10 @@ UniValue generatemintlist(const UniValue& params, bool fHelp)
     return arrRet;
 }
 
-UniValue dzphrstate(const UniValue& params, bool fHelp) {
+UniValue dzdrsstate(const UniValue& params, bool fHelp) {
     if (fHelp || params.size() != 0)
         throw runtime_error(
-                "dzphrstate\n"
+                "dzdrsstate\n"
                         "\nThe current state of the mintpool of the deterministic zDRS wallet.\n" +
                 HelpRequiringPassphrase() + "\n"
 
@@ -3435,7 +3435,7 @@ UniValue dzphrstate(const UniValue& params, bool fHelp) {
     UniValue obj(UniValue::VOBJ);
     int nCount, nCountLastUsed;
     zwallet->GetState(nCount, nCountLastUsed);
-    obj.push_back(Pair("dzphr_count", nCount));
+    obj.push_back(Pair("dzdrs_count", nCount));
     obj.push_back(Pair("mintpool_count", nCountLastUsed));
 
     return obj;
@@ -3472,11 +3472,11 @@ void static SearchThread(CzDRSWallet* zwallet, int nCountStart, int nCountEnd)
     }
 }
 
-UniValue searchdzphr(const UniValue& params, bool fHelp)
+UniValue searchdzdrs(const UniValue& params, bool fHelp)
 {
     if(fHelp || params.size() != 3)
         throw runtime_error(
-            "searchdzphr\n"
+            "searchdzdrs\n"
             "\nMake an extended search for deterministically generated zDRS that have not yet been recognized by the wallet.\n" +
             HelpRequiringPassphrase() + "\n"
 
@@ -3486,7 +3486,7 @@ UniValue searchdzphr(const UniValue& params, bool fHelp)
             "3. \"threads\"     (numeric) How many threads should this operation consume.\n"
 
             "\nExamples\n" +
-            HelpExampleCli("searchdzphr", "1, 100, 2") + HelpExampleRpc("searchdzphr", "1, 100, 2"));
+            HelpExampleCli("searchdzdrs", "1, 100, 2") + HelpExampleRpc("searchdzdrs", "1, 100, 2"));
 
     EnsureWalletIsUnlocked();
 
@@ -3502,7 +3502,7 @@ UniValue searchdzphr(const UniValue& params, bool fHelp)
 
     CzDRSWallet* zwallet = pwalletMain->zwalletMain;
 
-    boost::thread_group* dzphrThreads = new boost::thread_group();
+    boost::thread_group* dzdrsThreads = new boost::thread_group();
     int nRangePerThread = nRange / nThreads;
 
     int nPrevThreadEnd = nCount - 1;
@@ -3510,12 +3510,12 @@ UniValue searchdzphr(const UniValue& params, bool fHelp)
         int nStart = nPrevThreadEnd + 1;;
         int nEnd = nStart + nRangePerThread;
         nPrevThreadEnd = nEnd;
-        dzphrThreads->create_thread(boost::bind(&SearchThread, zwallet, nStart, nEnd));
+        dzdrsThreads->create_thread(boost::bind(&SearchThread, zwallet, nStart, nEnd));
     }
 
-    dzphrThreads->join_all();
+    dzdrsThreads->join_all();
 
-    zwallet->RemoveMintsFromPool(pwalletMain->zphrTracker->GetSerialHashes());
+    zwallet->RemoveMintsFromPool(pwalletMain->zdrsTracker->GetSerialHashes());
     zwallet->SyncWithChain(false);
 
     //todo: better response

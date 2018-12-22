@@ -1152,17 +1152,17 @@ bool CWalletDB::ReadZerocoinSpendSerialEntry(const CBigNum& bnSerial)
 bool CWalletDB::WriteDeterministicMint(const CDeterministicMint& dMint)
 {
     uint256 hash = dMint.GetPubcoinHash();
-    return Write(make_pair(string("dzphr"), hash), dMint, true);
+    return Write(make_pair(string("dzdrs"), hash), dMint, true);
 }
 
 bool CWalletDB::ReadDeterministicMint(const uint256& hashPubcoin, CDeterministicMint& dMint)
 {
-    return Read(make_pair(string("dzphr"), hashPubcoin), dMint);
+    return Read(make_pair(string("dzdrs"), hashPubcoin), dMint);
 }
 
 bool CWalletDB::EraseDeterministicMint(const uint256& hashPubcoin)
 {
-    return Erase(make_pair(string("dzphr"), hashPubcoin));
+    return Erase(make_pair(string("dzdrs"), hashPubcoin));
 }
 
 
@@ -1222,7 +1222,7 @@ bool CWalletDB::ArchiveDeterministicOrphan(const CDeterministicMint& dMint)
     if (!Write(make_pair(string("dzco"), dMint.GetPubcoinHash()), dMint))
         return error("%s: write failed", __func__);
 
-    if (!Erase(make_pair(string("dzphr"), dMint.GetPubcoinHash())))
+    if (!Erase(make_pair(string("dzdrs"), dMint.GetPubcoinHash())))
         return error("%s: failed to erase", __func__);
 
     return true;
@@ -1390,7 +1390,7 @@ std::list<CDeterministicMint> CWalletDB::ListDeterministicMints()
         // Read next record
         CDataStream ssKey(SER_DISK, CLIENT_VERSION);
         if (fFlags == DB_SET_RANGE)
-            ssKey << make_pair(string("dzphr"), uint256(0));
+            ssKey << make_pair(string("dzdrs"), uint256(0));
         CDataStream ssValue(SER_DISK, CLIENT_VERSION);
         int ret = ReadAtCursor(pcursor, ssKey, ssValue, fFlags);
         fFlags = DB_NEXT;
@@ -1405,7 +1405,7 @@ std::list<CDeterministicMint> CWalletDB::ListDeterministicMints()
         // Unserialize
         string strType;
         ssKey >> strType;
-        if (strType != "dzphr")
+        if (strType != "dzdrs")
             break;
 
         uint256 hashPubcoin;

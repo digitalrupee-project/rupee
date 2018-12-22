@@ -5599,7 +5599,7 @@ for example: alertnotify=echo %%s | mail -s &quot;DigitalRupees Alert&quot; admi
     </message>
 </context>
 <context>
-    <name>zphrcontroldialog</name>
+    <name>zdrscontroldialog</name>
     <message>
         <source>Select zDrs to Spend</source>
         <translation>送金したいzDRSを選択</translation>

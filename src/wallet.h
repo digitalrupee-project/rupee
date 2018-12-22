@@ -23,8 +23,8 @@
 #include "validationinterface.h"
 #include "wallet_ismine.h"
 #include "walletdb.h"
-#include "zphrtracker.h"
-#include "zphrwallet.h"
+#include "zdrstracker.h"
+#include "zdrswallet.h"
 
 #include <algorithm>
 #include <map>
@@ -234,7 +234,7 @@ public:
     bool DatabaseMint(CDeterministicMint& dMint);
     bool SetMintUnspent(const CBigNum& bnSerial);
     bool UpdateMint(const CBigNum& bnValue, const int& nHeight, const uint256& txid, const libzerocoin::CoinDenomination& denom);
-    string GetUniqueWalletBackupName(bool fzphrAuto) const;
+    string GetUniqueWalletBackupName(bool fzdrsAuto) const;
 
     /** Zerocin entry changed.
     * @note called with lock cs_wallet held.
@@ -255,7 +255,7 @@ public:
     bool fWalletUnlockAnonymizeOnly;
     std::string strWalletFile;
     bool fBackupMints;
-    std::unique_ptr<CzDRSTracker> zphrTracker;
+    std::unique_ptr<CzDRSTracker> zdrsTracker;
 
     std::set<int64_t> setKeyPool;
     std::map<CKeyID, CKeyMetadata> mapKeyMetadata;
@@ -343,7 +343,7 @@ public:
     void setZWallet(CzDRSWallet* zwallet)
     {
         zwalletMain = zwallet;
-        zphrTracker = std::unique_ptr<CzDRSTracker>(new CzDRSTracker(strWalletFile));
+        zdrsTracker = std::unique_ptr<CzDRSTracker>(new CzDRSTracker(strWalletFile));
     }
 
     CzDRSWallet* getZWallet() { return zwalletMain; }

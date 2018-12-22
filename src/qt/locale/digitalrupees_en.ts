@@ -5942,7 +5942,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
 <context>
     <name>ZDrsControlDialog</name>
     <message>
-        <location filename="../forms/zphrcontroldialog.ui" line="+20"/>
+        <location filename="../forms/zdrscontroldialog.ui" line="+20"/>
         <source>Select zDrs to Spend</source>
         <translation type="unfinished"></translation>
     </message>

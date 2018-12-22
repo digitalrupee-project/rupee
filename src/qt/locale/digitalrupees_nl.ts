@@ -5975,7 +5975,7 @@ bijvoorbeeld: alertnotify = echo %%s | mail -s &quot;DigitalRupees Alert&quot; a
     </message>
 </context>
 <context>
-    <name>zphrcontroldialog</name>
+    <name>zdrscontroldialog</name>
     <message>
         <source>Select zDrs to Spend</source>
         <translation>Selecteer zDrs om te spenderen</translation>

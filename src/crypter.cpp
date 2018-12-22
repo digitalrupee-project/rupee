@@ -399,7 +399,7 @@ bool CCryptoKeyStore::AddDeterministicSeed(const uint256& seed)
         if (db.WriteZDRSSeed(hashSeed, ToByteVector(seed))) {
             return true;
         }
-        strErr = "save zphrseed to wallet";
+        strErr = "save zdrsseed to wallet";
     }
                 //the use case for this is no password set seed, mint dzDRS,
 

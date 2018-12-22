@@ -535,8 +535,8 @@ std::string HelpMessage(HelpMessageMode mode)
     strUsage += HelpMessageOpt("-enablezeromint=<n>", strprintf(_("Enable automatic Zerocoin minting (0-1, default: %u)"), 0));
     strUsage += HelpMessageOpt("-zeromintpercentage=<n>", strprintf(_("Percentage of automatically minted Zerocoin  (1-100, default: %u)"), 10));
     strUsage += HelpMessageOpt("-preferredDenom=<n>", strprintf(_("Preferred Denomination for automatically minted Zerocoin  (1/5/10/50/100/500/1000/5000), 0 for no preference. default: %u)"), 0));
-    strUsage += HelpMessageOpt("-backupzphr=<n>", strprintf(_("Enable automatic wallet backups triggered after each zDrs minting (0-1, default: %u)"), 1));
-    strUsage += HelpMessageOpt("-zphrbackuppath=<dir|file>", _("Specify custom backup path to add a copy of any automatic zDRS backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup. If backuppath is set as well, 4 backups will happen"));
+    strUsage += HelpMessageOpt("-backupzdrs=<n>", strprintf(_("Enable automatic wallet backups triggered after each zDrs minting (0-1, default: %u)"), 1));
+    strUsage += HelpMessageOpt("-zdrsbackuppath=<dir|file>", _("Specify custom backup path to add a copy of any automatic zDRS backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup. If backuppath is set as well, 4 backups will happen"));
 #endif
 //    strUsage += "  -anonymizedigitalrupeesamount=<n>     " + strprintf(_("Keep N DRS anonymized (default: %u)"), 0) + "\n";
 //    strUsage += "  -liquidityprovider=<n>       " + strprintf(_("Provide liquidity to Obfuscation by infrequently mixing coins on a continual basis (0-100, default: %u, 1=very frequent, high fees, 100=very infrequent, low fees)"), 0) + "\n";
@@ -1731,7 +1731,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
 
         uiInterface.InitMessage(_("Syncing zDRS wallet..."));
 
-        bool fEnableZDrsBackups = GetBoolArg("-backupzphr", true);
+        bool fEnableZDrsBackups = GetBoolArg("-backupzdrs", true);
         pwalletMain->setZDrsAutoBackups(fEnableZDrsBackups);
 
         g_address_type = ParseOutputType(GetArg("-addresstype", ""));
@@ -1744,7 +1744,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
             return InitError(strprintf(_("Unknown change type '%s'"), GetArg("-changetype", "")));
         }
 
-        pwalletMain->zphrTracker->Init();
+        pwalletMain->zdrsTracker->Init();
         zwalletMain->LoadMintPoolFromDB();
         zwalletMain->SyncWithChain();
     }  // (!fDisableWallet)
