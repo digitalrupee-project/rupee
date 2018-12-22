@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/phore-config.h"
+#include "config/digitalrupees-config.h"
 #endif
 
 #include "optionsdialog.h"
@@ -223,6 +223,12 @@ void OptionsDialog::setMapper()
     mapper->addMapping(ui->zeromintPercentage, OptionsModel::ZeromintPercentage);
     // Zerocoin preferred denomination
     mapper->addMapping(ui->preferredDenom, OptionsModel::ZeromintPrefDenom);
+      
+      ui->checkBoxZeromintEnable->hide();
+      ui->zeromintPercentage->hide();
+      ui->preferredDenom->hide();
+      ui->labelPreferredDenom->hide();
+      ui->percentage_label->hide();
 
     /* Wallet */
     mapper->addMapping(ui->spendZeroConfChange, OptionsModel::SpendZeroConfChange);

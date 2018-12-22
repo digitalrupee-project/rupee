@@ -1,0 +1,26 @@
+# /etc/conf.d/digitalrupeesd: config file for /etc/init.d/digitalrupeesd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/digitalrupees/digitalrupees.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/digitalrupeesd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/digitalrupeesd.pid"
+
+# Where to write digitalrupeesd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/digitalrupeesd"
+
+# User and group to own digitalrupeesd process
+#BITCOIND_USER="digitalrupees"
+#BITCOIND_GROUP="digitalrupees"
+
+# Path to digitalrupeesd executable
+#BITCOIND_BIN="/usr/bin/digitalrupeesd"
+
+# Nice value to run digitalrupeesd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=DigitalRupees
+Comment=DigitalRupees P2P Cryptocurrency
+Comment[fr]=DigitalRupees, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=DigitalRupees, eşten eşe kriptografik sanal para birimi
+Exec=digitalrupees-qt %u
+Terminal=false
+Type=Application
+Icon=digitalrupees128
+MimeType=x-scheme-handler/digitalrupees;
+Categories=Office;Finance;
