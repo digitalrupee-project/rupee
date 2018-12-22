@@ -29,7 +29,7 @@ struct SeedSpec6 {
 /**
  * Main network
  */
-static bool regenerate = false;
+static bool regenerate = true;
 
 //! Convert the pnSeeds6 array into usable address objects.
 static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data, unsigned int count)
@@ -55,7 +55,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (     0, uint256("0x00000e13eaaddb97082083b066d45a6d3ba62741bd562c685178f895010978e5"));
+    (     0, uint256("0x"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -66,7 +66,7 @@ static const Checkpoints::CCheckpointData data = {
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
-    boost::assign::map_list_of(0, uint256("0x00000bac81404d72eb1febf704f409035541f50579380c35abc60c602ff36908"));
+    boost::assign::map_list_of(0, uint256("0x"));
 
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
@@ -115,10 +115,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x91;
-        pchMessageStart[1] = 0xc4;
-        pchMessageStart[2] = 0xfd;
-        pchMessageStart[3] = 0xe9;
+        pchMessageStart[0] = 0x52;
+        pchMessageStart[1] = 0x09;
+        pchMessageStart[2] = 0xb2;
+        pchMessageStart[3] = 0x8a;
         vAlertPubKey = ParseHex("04659d53bd8f7ad9d34a17281febedac754e5a6eb136142d3a9c6c0ea21b6ed7498ceb3d872eed00ae755f7aeadaeb1d9ab5e1a8f1e7efcd0ddcb39d4623c12790");
         nDefaultPort = 37025;
         bnProofOfWorkLimit = ~uint256(0) >> 1;
@@ -129,7 +129,7 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // DigitalRupees: 1 day
         nTargetSpacing = 1 * 60;  // DigitalRupees: 1 minute
-        nMaturity = 50;
+        nMaturity = 100;
         nMasternodeCountDrift = 20;
         nMaxMoneyOut = 8200000 * COIN;
 
@@ -161,7 +161,7 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1545406718;
+        genesis.nTime = 1545485400;
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 4009099;
         hashGenesisBlock = genesis.GetHash();
@@ -207,10 +207,10 @@ public:
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 31);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 55);
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 125);
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x02)(0x2D)(0x33)(0x25).convert_to_container<std::vector<unsigned char> >();
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x02)(0x21)(0x2B)(0x31).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x01),(0x79),(0x62),(0xb5).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x03),(0xa9),(0xe2),(0xbd).convert_to_container<std::vector<unsigned char> >();
         // 	BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
-        base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x07)(0xbc).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x07)(0xbd).convert_to_container<std::vector<unsigned char> >();
 
         bech32_hrp = "drs";
 
@@ -266,10 +266,10 @@ public:
     {
         networkID = CBaseChainParams::TESTNET;
         strNetworkID = "test";
-        pchMessageStart[0] = 0x47;
-        pchMessageStart[1] = 0x76;
-        pchMessageStart[2] = 0x65;
-        pchMessageStart[3] = 0xba;
+        pchMessageStart[0] = 0x1b;
+        pchMessageStart[1] = 0x55;
+        pchMessageStart[2] = 0xb0;
+        pchMessageStart[3] = 0xa0;
         vAlertPubKey = ParseHex("04d7e13bc896eb07e2db2d7272f5ddfaedfb64b8ed4caa4d917d6e0781b59ca44f8b5d40995622008e40707b47687eebee11cbe3bbaf2348622cc271c7f0d0bd0a");
         nDefaultPort = 32000;
         nEnforceBlockUpgradeMajority = 51;
@@ -288,7 +288,7 @@ public:
         nZerocoinLastOldParams = 50000;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1545498304;
+        genesis.nTime = 1546176600;
         genesis.nNonce = 93086;
 
         hashGenesisBlock = genesis.GetHash();
@@ -329,9 +329,9 @@ public:
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 15);  // Testnet rupees script addresses start with '8' or '9'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 239);     // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
         // Testnet digitalrupees BIP32 pubkeys start with 'DRKV'
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x3a)(0x80)(0x61)(0xa0).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x01),(0x50), (0x34),(0x72).convert_to_container<std::vector<unsigned char> >();
         // Testnet digitalrupees BIP32 prvkeys start with 'DRKP'
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x3a)(0x80)(0x58)(0x37).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x2e),(0x99),(0xe6),(0xd9).convert_to_container<std::vector<unsigned char> >();
         // Testnet digitalrupees BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x01)(0x00)(0x00)(0x80).convert_to_container<std::vector<unsigned char> >();
 
