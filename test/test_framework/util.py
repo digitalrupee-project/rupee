@@ -317,7 +317,7 @@ def start_node(i, dirname, extra_args=None, rpchost=None, timewait=None, binary=
     if extra_args is not None: args.extend(extra_args)
     digitalrupeesd_processes[i] = subprocess.Popen(args)
     if os.getenv("PYTHON_DEBUG", ""):
-        print("start_node: phroed started, waiting for RPC to come up")
+        print("start_node: digitalrupeesd started, waiting for RPC to come up")
     url = rpc_url(i, rpchost)
     wait_for_digitalrupeesd_start(digitalrupeesd_processes[i], url, i)
     if os.getenv("PYTHON_DEBUG", ""):
