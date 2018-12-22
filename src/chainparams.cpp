@@ -381,7 +381,7 @@ public:
         nTargetTimespan = 24 * 60 * 60; // DigitalRupees: 1 day
         nTargetSpacing = 1 * 60;        // DigitalRupees: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1505224800;
+        genesis.nTime = 1545485400;
         genesis.nBits = 0x207fffff;
         genesis.nNonce = 12345;
         nMaturity = 0;
