@@ -8,7 +8,7 @@ reset-files.bash
 
 *.exe
 src/phore
-src/phored
+src/digitalrupeesd
 src/phore-cli
 src/phore-tx
 src/test/test_phore

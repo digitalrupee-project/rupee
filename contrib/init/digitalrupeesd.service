@@ -7,13 +7,13 @@ User=phore
 Group=phore
 
 Type=forking
-PIDFile=/var/lib/phored/phored.pid
+PIDFile=/var/lib/digitalrupeesd/digitalrupeesd.pid
 
-ExecStart=/usr/bin/phored -daemon -pid=/var/lib/phored/phored.pid \
-          -conf=/etc/phore/phore.conf -datadir=/var/lib/phored
+ExecStart=/usr/bin/digitalrupeesd -daemon -pid=/var/lib/digitalrupeesd/digitalrupeesd.pid \
+          -conf=/etc/phore/phore.conf -datadir=/var/lib/digitalrupeesd
 
 ExecStop=-/usr/bin/phore-cli -conf=/etc/phore/phore.conf \
-         -datadir=/var/lib/phored stop
+         -datadir=/var/lib/digitalrupeesd stop
 
 Restart=always
 PrivateTmp=true

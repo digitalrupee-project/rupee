@@ -150,7 +150,7 @@ def sync_mempools(rpc_connections, wait=1, timeout=60):
         timeout -= wait
     raise AssertionError("Mempool sync failed")
 
-phored_processes = {}
+digitalrupeesd_processes = {}
 
 def initialize_datadir(dirname, n):
     datadir = os.path.join(dirname, "node"+str(n))
@@ -182,14 +182,14 @@ def rpc_url(i, rpchost=None):
             host = rpchost
     return "http://%s:%s@%s:%d" % (rpc_u, rpc_p, host, int(port))
 
-def wait_for_phored_start(process, url, i):
+def wait_for_digitalrupeesd_start(process, url, i):
     '''
-    Wait for phored to start. This means that RPC is accessible and fully initialized.
-    Raise an exception if phored exits during initialization.
+    Wait for digitalrupeesd to start. This means that RPC is accessible and fully initialized.
+    Raise an exception if digitalrupeesd exits during initialization.
     '''
     while True:
         if process.poll() is not None:
-            raise Exception('phored exited with status %i during initialization' % process.returncode)
+            raise Exception('digitalrupeesd exited with status %i during initialization' % process.returncode)
         try:
             rpc = get_rpc_proxy(url, i)
             blocks = rpc.getblockcount()
@@ -223,16 +223,16 @@ def initialize_chain(test_dir, num_nodes):
             if os.path.isdir(os.path.join("cache","node"+str(i))):
                 shutil.rmtree(os.path.join("cache","node"+str(i)))
 
-        # Create cache directories, run phoreds:
+        # Create cache directories, run digitalrupeesds:
         for i in range(MAX_NODES):
             datadir=initialize_datadir("cache", i)
-            args = [ os.getenv("DIGITALRUPEESD", "phored"), "-server", "-keypool=1", "-datadir="+datadir, "-discover=0" ]
+            args = [ os.getenv("DIGITALRUPEESD", "digitalrupeesd"), "-server", "-keypool=1", "-datadir="+datadir, "-discover=0" ]
             if i > 0:
                 args.append("-connect=127.0.0.1:"+str(p2p_port(0)))
-            phored_processes[i] = subprocess.Popen(args)
+            digitalrupeesd_processes[i] = subprocess.Popen(args)
             if os.getenv("PYTHON_DEBUG", ""):
-                print("initialize_chain: phored started, waiting for RPC to come up")
-            wait_for_phored_start(phored_processes[i], rpc_url(i), i)
+                print("initialize_chain: digitalrupeesd started, waiting for RPC to come up")
+            wait_for_digitalrupeesd_start(digitalrupeesd_processes[i], rpc_url(i), i)
             if os.getenv("PYTHON_DEBUG", ""):
                 print("initialize_chain: RPC succesfully started")
 
@@ -308,18 +308,18 @@ def _rpchost_to_args(rpchost):
 
 def start_node(i, dirname, extra_args=None, rpchost=None, timewait=None, binary=None):
     """
-    Start a phored and return RPC connection to it
+    Start a digitalrupeesd and return RPC connection to it
     """
     datadir = os.path.join(dirname, "node"+str(i))
     if binary is None:
-        binary = os.getenv("DIGITALRUPEESD", "phored")
+        binary = os.getenv("DIGITALRUPEESD", "digitalrupeesd")
     args = [ binary, "-datadir="+datadir, "-server", "-keypool=1", "-discover=0", "-rest", "-mocktime="+str(get_mocktime()), "-regtest", "-sporkkey=923EhWh2bJHynX6d4Tqt2Q75bhTDCT1b4kff3qzDKDZHZ6pkQs7"]
     if extra_args is not None: args.extend(extra_args)
-    phored_processes[i] = subprocess.Popen(args)
+    digitalrupeesd_processes[i] = subprocess.Popen(args)
     if os.getenv("PYTHON_DEBUG", ""):
         print("start_node: phroed started, waiting for RPC to come up")
     url = rpc_url(i, rpchost)
-    wait_for_phored_start(phored_processes[i], url, i)
+    wait_for_digitalrupeesd_start(digitalrupeesd_processes[i], url, i)
     if os.getenv("PYTHON_DEBUG", ""):
         print("start_node: RPC succesfully started")
     proxy = get_rpc_proxy(url, i, timeout=timewait)
@@ -331,7 +331,7 @@ def start_node(i, dirname, extra_args=None, rpchost=None, timewait=None, binary=
 
 def start_nodes(num_nodes, dirname, extra_args=None, rpchost=None, timewait=None, binary=None):
     """
-    Start multiple phoreds, return RPC connections to them
+    Start multiple digitalrupeesds, return RPC connections to them
     """
     if extra_args is None: extra_args = [ None for _ in range(num_nodes) ]
     if binary is None: binary = [ None for _ in range(num_nodes) ]
@@ -352,8 +352,8 @@ def stop_node(node, i):
         node.stop()
     except http.client.CannotSendRequest as e:
         print("WARN: Unable to stop node: " + repr(e))
-    phored_processes[i].wait(timeout=DIGITALRUPEESD_PROC_WAIT_TIMEOUT)
-    del phored_processes[i]
+    digitalrupeesd_processes[i].wait(timeout=DIGITALRUPEESD_PROC_WAIT_TIMEOUT)
+    del digitalrupeesd_processes[i]
 
 def stop_nodes(nodes):
     for node in nodes:
@@ -362,17 +362,17 @@ def stop_nodes(nodes):
         except http.client.CannotSendRequest as e:
             print("WARN: Unable to stop node: " + repr(e))
     del nodes[:] # Emptying array closes connections as a side effect
-    wait_phoreds()
+    wait_digitalrupeesds()
 
 def set_node_times(nodes, t):
     for node in nodes:
         node.setmocktime(t)
 
-def wait_phoreds():
-    # Wait for all phoreds to cleanly exit
-    for phored in phored_processes.values():
-        phored.wait(timeout=DIGITALRUPEESD_PROC_WAIT_TIMEOUT)
-    phored_processes.clear()
+def wait_digitalrupeesds():
+    # Wait for all digitalrupeesds to cleanly exit
+    for digitalrupeesd in digitalrupeesd_processes.values():
+        digitalrupeesd.wait(timeout=DIGITALRUPEESD_PROC_WAIT_TIMEOUT)
+    digitalrupeesd_processes.clear()
 
 def connect_nodes(from_connection, node_num):
     ip_port = "127.0.0.1:"+str(p2p_port(node_num))

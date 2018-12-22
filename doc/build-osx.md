@@ -1,6 +1,6 @@
 Mac OS X Build Instructions and Notes
 ====================================
-This guide will show you how to build phored (headless client) for OSX.
+This guide will show you how to build digitalrupeesd (headless client) for OSX.
 
 Notes
 -----
@@ -42,7 +42,7 @@ Instructions: Homebrew
         
         Note: On OSX versions lower than High Sierra, zeromq should be replaced with libzmq
 
-### Building `phored`
+### Building `digitalrupeesd`
 
 1. Clone the github tree to get the source code and go into the directory.
 
@@ -53,7 +53,7 @@ Instructions: Homebrew
          export LDFLAGS+=-L/usr/local/opt/openssl/lib
         export CPPFLAGS+=-I/usr/local/opt/openssl/include
         
-3.  Build phored:
+3.  Build digitalrupeesd:
         
         chmod +x share/genbuild.sh autogen.sh 
         ./autogen.sh
@@ -66,7 +66,7 @@ Instructions: Homebrew
 
         make check
 
-5.  (Optional) You can also install phored to your path:
+5.  (Optional) You can also install digitalrupeesd to your path:
 
         make install
 
@@ -88,11 +88,11 @@ Download Qt Creator from http://www.qt.io/download/. Download the "community edi
 
 Creating a release build
 ------------------------
-You can ignore this section if you are building `phored` for your own use.
+You can ignore this section if you are building `digitalrupeesd` for your own use.
 
-phored/phore-cli binaries are not included in the phore-Qt.app bundle.
+digitalrupeesd/phore-cli binaries are not included in the phore-Qt.app bundle.
 
-If you are building `phored` or `phore-qt` for others, your build machine should be set up
+If you are building `digitalrupeesd` or `phore-qt` for others, your build machine should be set up
 as follows for maximum compatibility:
 
 All dependencies should be compiled with these flags:
@@ -107,10 +107,10 @@ bundle is packaged and signed to create the .dmg disk image that is distributed.
 Running
 -------
 
-It's now available at `./phored`, provided that you are still in the `src`
+It's now available at `./digitalrupeesd`, provided that you are still in the `src`
 directory. We have to first create the RPC configuration file, though.
 
-Run `./phored` to get the filename where it should be put, or just try these
+Run `./digitalrupeesd` to get the filename where it should be put, or just try these
 commands:
 
     echo -e "rpcuser=phorerpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Phore/phore.conf"
@@ -125,7 +125,7 @@ you can monitor its process by looking at the debug.log file, like this:
 Other commands:
 -------
 
-    ./phored -daemon # to start the phore daemon.
+    ./digitalrupeesd -daemon # to start the phore daemon.
     ./phore-cli --help  # for a list of command-line options.
     ./phore-cli help    # When the daemon is running, to get a list of RPC commands
     

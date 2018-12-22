@@ -80,7 +80,7 @@ noinst_PROGRAMS =
 TESTS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += phored
+  bin_PROGRAMS += digitalrupeesd
 endif
 
 if BUILD_BITCOIN_UTILS
@@ -207,7 +207,7 @@ obj/build.h: FORCE
 	  "$(abs_top_srcdir)"
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between phored and phore-qt
+# server: shared between digitalrupeesd and phore-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -253,7 +253,7 @@ libbitcoin_zmq_a_SOURCES = \
   zmq/zmqpublishnotifier.cpp
 endif
 
-# wallet: shared between phored and phore-qt, but only linked
+# wallet: shared between digitalrupeesd and phore-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -347,7 +347,7 @@ libzerocoin_libbitcoin_zerocoin_a_SOURCES = \
   libzerocoin/Params.cpp \
   libzerocoin/SerialNumberSignatureOfKnowledge.cpp
 
-# common: shared between phored, and phore-qt and non-server tools
+# common: shared between digitalrupeesd, and phore-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -424,16 +424,16 @@ libbitcoin_cli_a_SOURCES = \
 nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# phored binary #
-phored_SOURCES = phored.cpp
-phored_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-phored_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-phored_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# digitalrupeesd binary #
+digitalrupeesd_SOURCES = digitalrupeesd.cpp
+digitalrupeesd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+digitalrupeesd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+digitalrupeesd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-phored_SOURCES += phored-res.rc
+digitalrupeesd_SOURCES += digitalrupeesd-res.rc
 endif
-phored_LDADD = \
+digitalrupeesd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -446,7 +446,7 @@ phored_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-phored_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+digitalrupeesd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
 # phore-cli binary #
 phore_cli_SOURCES = phore-cli.cpp

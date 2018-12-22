@@ -18,7 +18,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
 installer (on Windows) or just copy over /Applications/Phore-Qt (on Mac) or
-phored/phore-qt (on Linux).
+digitalrupeesd/phore-qt (on Linux).
 
 
 1.2.2 changelog

@@ -9,7 +9,7 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between phore-cli and phored)
+ * CBaseChainParams defines the base parameters (shared between phore-cli and digitalrupeesd)
  * of a given instance of the Phore system.
  */
 class CBaseChainParams
