@@ -1,16 +1,16 @@
 #!/bin/bash
 
 TMP_FOLDER=$(mktemp -d)
-CONFIG_FILE='rupees.conf'
-CONFIGFOLDER='/root/.rupees'
+CONFIG_FILE='digitalrupees.conf'
+CONFIGFOLDER='/root/.digitalrupees'
 COIN_PATH='/usr/local/bin/'
-COIN_DAEMON='rupeesd'
-COIN_CLI='rupees-cli'
-COIN_TGZ='https://rupeex.s3-us-west-2.amazonaws.com/43.3/linux-x64.tar.gz'
+COIN_DAEMON='digitalrupeesd'
+COIN_CLI='digitalrupees-cli'
+COIN_TGZ='https://digitalrupees.s3-us-west-2.amazonaws.com/15.1/linux-x64.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='Rupees'
-COIN_PORT=55555
-RPC_PORT=55556
+COIN_PORT=37025
+RPC_PORT=37026
 
 
 NODEIP=$(curl -s4 api.ipify.org)
