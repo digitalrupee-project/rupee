@@ -4275,7 +4275,7 @@ Por favor tenga paciencia...</translation>
     </message>
 </context>
 <context>
-    <name>ZPhrControlDialog</name>
+    <name>ZDrsControlDialog</name>
     <message>
         <source>Select zPhr to Spend</source>
         <translation>Seleccione zPhr a Gastar</translation>

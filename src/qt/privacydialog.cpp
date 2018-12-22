@@ -294,16 +294,16 @@ void PrivacyDialog::on_pushButtonSpendzDRS_clicked()
     sendzDRS();
 }
 
-void PrivacyDialog::on_pushButtonZPhrControl_clicked()
+void PrivacyDialog::on_pushButtonZDrsControl_clicked()
 {
     if (!walletModel || !walletModel->getOptionsModel())
         return;
-    ZPhrControlDialog* zPhrControl = new ZPhrControlDialog(this);
+    ZDrsControlDialog* zPhrControl = new ZDrsControlDialog(this);
     zPhrControl->setModel(walletModel);
     zPhrControl->exec();
 }
 
-void PrivacyDialog::setZPhrControlLabels(int64_t nAmount, int nQuantity)
+void PrivacyDialog::setZDrsControlLabels(int64_t nAmount, int nQuantity)
 {
     ui->labelzDRSSelected_int->setText(QString::number(nAmount));
     ui->labelQuantitySelected_int->setText(QString::number(nQuantity));
@@ -415,8 +415,8 @@ void PrivacyDialog::sendzDRS()
     // use mints from zDRS selector if applicable
     vector<CMintMeta> vMintsToFetch;
     vector<CZerocoinMint> vMintsSelected;
-    if (!ZPhrControlDialog::setSelectedMints.empty()) {
-        vMintsToFetch = ZPhrControlDialog::GetSelectedMints();
+    if (!ZDrsControlDialog::setSelectedMints.empty()) {
+        vMintsToFetch = ZDrsControlDialog::GetSelectedMints();
 
         for (auto& meta : vMintsToFetch) {
             if (meta.nVersion < libzerocoin::PrivateCoin::PUBKEY_VERSION) {
@@ -488,7 +488,7 @@ void PrivacyDialog::sendzDRS()
     }
 
     // Clear zphr selector in case it was used
-    ZPhrControlDialog::setSelectedMints.clear();
+    ZDrsControlDialog::setSelectedMints.clear();
     ui->labelzDRSSelected_int->setText(QString("0"));
     ui->labelQuantitySelected_int->setText(QString("0"));
 

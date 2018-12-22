@@ -5940,7 +5940,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
 </context>
 <context>
-    <name>ZPhrControlDialog</name>
+    <name>ZDrsControlDialog</name>
     <message>
         <location filename="../forms/zphrcontroldialog.ui" line="+20"/>
         <source>Select zPhr to Spend</source>

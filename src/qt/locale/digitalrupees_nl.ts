@@ -4511,7 +4511,7 @@ Wees alsjeblieft geduldig...</translation>
     </message>
 </context>
 <context>
-    <name>ZPhrControlDialog</name>
+    <name>ZDrsControlDialog</name>
     <message>
         <source>Select zPhr to Spend</source>
         <translation>Selecteer zPhr om te spenderen</translation>

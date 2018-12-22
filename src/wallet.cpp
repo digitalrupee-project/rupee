@@ -5146,7 +5146,7 @@ string CWallet::GetUniqueWalletBackupName(bool fzphrAuto) const
     return strprintf("wallet%s.dat%s", fzphrAuto ? "-autozphrbackup" : "", DateTimeStrFormat(".%Y-%m-%d-%H-%M", GetTime()));
 }
 
-void CWallet::ZPhrBackupWallet()
+void CWallet::ZDrsBackupWallet()
 {
     filesystem::path backupDir = GetDataDir() / "backups";
     filesystem::path backupPath;
@@ -5263,7 +5263,7 @@ string CWallet::MintZerocoin(CAmount nValue, CWalletTx& wtxNew, vector<CDetermin
 
     //Create a backup of the wallet
     if (fBackupMints)
-        ZPhrBackupWallet();
+        ZDrsBackupWallet();
 
     return "";
 }
@@ -5285,7 +5285,7 @@ bool CWallet::SpendZerocoin(CAmount nAmount, int nSecurityLevel, CWalletTx& wtxN
     }
 
     if (fMintChange && fBackupMints)
-        ZPhrBackupWallet();
+        ZDrsBackupWallet();
 
     CWalletDB walletdb(pwalletMain->strWalletFile);
     if (!CommitTransaction(wtxNew, reserveKey)) {

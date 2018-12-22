@@ -3761,7 +3761,7 @@ https://www.transifex.com/digitalrupees-project/digitalrupees-project-translatio
     </message>
 </context>
 <context>
-    <name>ZPhrControlDialog</name>
+    <name>ZDrsControlDialog</name>
     <message>
         <source>0</source>
         <translation>0</translation>

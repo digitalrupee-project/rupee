@@ -4277,7 +4277,7 @@ Please be patient...</source>
     </message>
 </context>
 <context>
-    <name>ZPhrControlDialog</name>
+    <name>ZDrsControlDialog</name>
     <message>
         <source>Select zPhr to Spend</source>
         <translation>전송할 zDRS 선택</translation>

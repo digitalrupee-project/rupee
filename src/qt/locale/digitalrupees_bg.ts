@@ -4259,7 +4259,7 @@ Please be patient...</source>
     </message>
 </context>
 <context>
-    <name>ZPhrControlDialog</name>
+    <name>ZDrsControlDialog</name>
     <message>
         <source>Select zPhr to Spend</source>
         <translation>Изберете zDRS за Изпращане</translation>

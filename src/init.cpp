@@ -1731,8 +1731,8 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
 
         uiInterface.InitMessage(_("Syncing zDRS wallet..."));
 
-        bool fEnableZPhrBackups = GetBoolArg("-backupzphr", true);
-        pwalletMain->setZPhrAutoBackups(fEnableZPhrBackups);
+        bool fEnableZDrsBackups = GetBoolArg("-backupzphr", true);
+        pwalletMain->setZDrsAutoBackups(fEnableZDrsBackups);
 
         g_address_type = ParseOutputType(GetArg("-addresstype", ""));
         if (g_address_type == OUTPUT_TYPE_NONE) {
