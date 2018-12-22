@@ -15,7 +15,7 @@ AC_CONFIG_MACRO_DIR([build-aux/m4])
 BITCOIN_DAEMON_NAME=digitalrupeesd
 BITCOIN_GUI_NAME=phore-qt
 BITCOIN_CLI_NAME=phore-cli
-BITCOIN_TX_NAME=phore-tx
+BITCOIN_TX_NAME=digitalrupees-tx
 
 dnl Unless the user specified ARFLAGS, force it to be cr
 AC_ARG_VAR(ARFLAGS, [Flags for the archiver, defaults to <cr> if not set])
@@ -237,7 +237,7 @@ CPPFLAGS="$CPPFLAGS -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS"
 
 AC_ARG_WITH([utils],
   [AS_HELP_STRING([--with-utils],
-  [build phore-cli phore-tx (default=yes)])],
+  [build phore-cli digitalrupees-tx (default=yes)])],
   [build_bitcoin_utils=$withval],
   [build_bitcoin_utils=yes])
 
@@ -955,7 +955,7 @@ AC_MSG_CHECKING([whether to build digitalrupeesd])
 AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_bitcoind = xyes])
 AC_MSG_RESULT($build_bitcoind)
 
-AC_MSG_CHECKING([whether to build utils (phore-cli phore-tx)])
+AC_MSG_CHECKING([whether to build utils (phore-cli digitalrupees-tx)])
 AM_CONDITIONAL([BUILD_BITCOIN_UTILS], [test x$build_bitcoin_utils = xyes])
 AC_MSG_RESULT($build_bitcoin_utils)
 

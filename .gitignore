@@ -10,7 +10,7 @@ reset-files.bash
 src/phore
 src/digitalrupeesd
 src/phore-cli
-src/phore-tx
+src/digitalrupees-tx
 src/test/test_phore
 src/qt/test/test_phore-qt
 

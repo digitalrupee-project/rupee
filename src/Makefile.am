@@ -84,7 +84,7 @@ if BUILD_BITCOIND
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += phore-cli phore-tx
+  bin_PROGRAMS += phore-cli digitalrupees-tx
 endif
 
 .PHONY: FORCE
@@ -467,14 +467,14 @@ phore_cli_LDADD = \
 phore_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# phore-tx binary #
-phore_tx_SOURCES = phore-tx.cpp
+# digitalrupees-tx binary #
+phore_tx_SOURCES = digitalrupees-tx.cpp
 phore_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 phore_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 phore_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-phore_tx_SOURCES += phore-tx-res.rc
+phore_tx_SOURCES += digitalrupees-tx-res.rc
 endif
 
 phore_tx_LDADD = \
