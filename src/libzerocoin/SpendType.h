@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef PHORE_SPENDTYPE_H
-#define PHORE_SPENDTYPE_H
+#ifndef DIGITALRUPEES_SPENDTYPE_H
+#define DIGITALRUPEES_SPENDTYPE_H
 
 #include <cstdint>
 

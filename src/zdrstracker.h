@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef PHORE_ZPHRTRACKER_H
-#define PHORE_ZPHRTRACKER_H
+#ifndef DIGITALRUPEES_ZPHRTRACKER_H
+#define DIGITALRUPEES_ZPHRTRACKER_H
 
 #include "primitives/zerocoin.h"
 #include <list>
@@ -48,5 +48,5 @@ public:
     void Clear();
 };
 
-#endif //PHORE_ZPHRTRACKER_H
+#endif //DIGITALRUPEES_ZPHRTRACKER_H
 

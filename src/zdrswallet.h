@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef PHORE_ZPHRWALLET_H
-#define PHORE_ZPHRWALLET_H
+#ifndef DIGITALRUPEES_ZPHRWALLET_H
+#define DIGITALRUPEES_ZPHRWALLET_H
 
 #include <map>
 #include "libzerocoin/Coin.h"
@@ -45,5 +45,5 @@ private:
     uint512 GetZerocoinSeed(uint32_t n);
 };
 
-#endif //PHORE_ZPHRWALLET_H
+#endif //DIGITALRUPEES_ZPHRWALLET_H
 
