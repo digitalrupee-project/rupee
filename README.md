@@ -41,7 +41,7 @@ SWAP from DigitalRupees(OLD) [DRS] to DigitalRupees [DRS]
 <tr><td>Algo</td><td>Quark</td></tr>
 <tr><td>Block Time</td><td>60 Seconds</td></tr>
 <tr><td>Difficulty Retargeting</td><td>Every Block</td></tr>
-<tr><td>Max Coin Supply (PoS Phase)</td><td>Infinite</td></tr>
+<tr><td>Max Coin Supply (PoS Phase)</td><td>8.2M</td></tr>
 </table>
 
 ## PoS Rewards Breakdown ##
