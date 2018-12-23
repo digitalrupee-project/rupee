@@ -1,7 +1,7 @@
 DigitalRupees Core integration/staging repository
 =====================================
 
-[![Build Status](https://travis-ci.org/digitalrupeesproject/DigitalRupees.svg?branch=master)](https://travis-ci.org/digitalrupeesproject/DigitalRupees)
+[![Build Status](https://travis-ci.org/digitalrupee-project/rupee.svg?branch=master)](https://github.com/digitalrupee-project/rupee)
 
 DigitalRupees is a cutting edge cryptocurrency, with many features not available in most other cryptocurrencies.
 - Anonymized transactions using zerocoin technology
@@ -9,16 +9,32 @@ DigitalRupees is a cutting edge cryptocurrency, with many features not available
 - Masternode technology used to secure the network and provide the above features, each Masternode is secured
   with collateral of 10K DRS
 - Decentralized blockchain voting utilizing Masternode technology to form a DAO. The blockchain will distribute monthly treasury funds based on successful proposals submitted by the community and voted on by the DAO.
+- Segwit
 
-17.6M digitalrupees was produced for swapping. 500k were mined 1-200 blocks to bring that amount to 18.1M DRS, the amount needed for the swap.
+
+## Port Details ##
+
+- Mainnet P2P : 37025 / RPC : 37026
+- Testnet P2P : 32000 / RPC : 32001
+
+
+52K digitalrupees was produced for swapping. 50k were mined 1-200 blocks to bring that amount to 102K DRS, the amount needed for the swap and team fund.
 
 Since then, the DigitalRupees repository has been rebaselined to show the fork relationship properly.
 
 ## BCT Thread ##
 
-https://bitcointalk.org/index.php?topic=2307909.0
+https://bitcointalk.org/index.php?topic=5081799.0
 
-Rebrand from KryptKoin [KTK] to DigitalRupees [DRS]
+## Discord Server ##
+
+https://discord.gg/m9Ts8U4
+
+## Website ##
+
+https://www.rupee.sh
+
+SWAP from DigitalRupees(OLD) [DRS] to DigitalRupees [DRS]
 
 ## Coin Specs ##
 <table>
@@ -30,12 +46,4 @@ Rebrand from KryptKoin [KTK] to DigitalRupees [DRS]
 
 ## PoS Rewards Breakdown ##
 
-<table>
-<th>Block Height</th><th>Reward</th><th>Masternodes</th><th>Stakers</th>
-<tr><td><= 755,600</td><td>7.7 DRS</td><td>4.2 DRS</td><td>2.8 DRS</td></tr>
-<tr><td>755,601-1,043,999</td><td>5 DRS</td><td>2.7 DRS</td><td>1.8 DRS</td></tr>
-<tr><td>1,044,000-1,562,398</td><td>4 DRS</td><td>2.16 DRS</td><td>1.44 DRS</td></tr>
-<tr><td>> 1,562,399</td><td>3 DRS</td><td>1.62 DRS</td><td>1.08 DRS</td></tr>
-</table>
-
-The DigitalRupees development budget is up to a maximum of 1 DRS per block, paid out based on approved proposals as voted on by the DigitalRupees masternode owners through the community governance process.
+- The reward is set at 0.25DRS per block to infinity
