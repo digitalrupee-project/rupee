@@ -55,14 +55,17 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (     0, uint256("0x00000148c035bc6d865b70f94b05bf8cec6872b2f319a94c0035912f800aae94"));
+    (     0, uint256("0x00000148c035bc6d865b70f94b05bf8cec6872b2f319a94c0035912f800aae94"))
+    (   400, uint256("0x0000001d28b245931d87a353fc1691594674e5a5636507318b2ebbbe799c28b5")) //  Last Pow Block
+    (  1515, uint256("0x8b2eff4f3b779329fe44a53bd8998e725a72a60e5b53f97d36020ab992d59f1d"));
+
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1545497468, // * UNIX timestamp of last checkpoint block
     0,     // * total number of transactions between genesis and last checkpoint
-                //   (the tx=... number in the SetBestChain debug.log lines)
-    1500        // * estimated number of transactions per day after checkpoint
+    2635,  //   (the tx=... number in the SetBestChain debug.log lines)
+    1440}; // * estimated number of transactions per day after checkpoint
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
@@ -119,7 +122,7 @@ public:
         pchMessageStart[1] = 0x09;
         pchMessageStart[2] = 0xb2;
         pchMessageStart[3] = 0x8a;
-        vAlertPubKey = ParseHex("04659d53bd8f7ad9d34a17281febedac754e5a6eb136142d3a9c6c0ea21b6ed7498ceb3d872eed00ae755f7aeadaeb1d9ab5e1a8f1e7efcd0ddcb39d4623c12790");
+        vAlertPubKey = ParseHex("04d513ff00e676c18567bacae88f78513da07a8f9f7938bb5c5f8fda4b2c46cb4ec87c9f1cf10ed884b853a1b6ce4c804d4c4003b56d2309efbcc5f595c12c5a32");
         nDefaultPort = 37025;
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         nMaxReorganizationDepth = 100;
@@ -193,8 +196,7 @@ public:
             assert(hashGenesisBlock == uint256("0x00000148c035bc6d865b70f94b05bf8cec6872b2f319a94c0035912f800aae94"));
             assert(genesis.hashMerkleRoot == uint256("0x808b70083cf4d3a4a998d61cb59858950f385f02a3ef8b4f3008dbb50651802a"));
         }
-        
-        vSeeds.push_back(CDNSSeedData("0", "dns0.rupee.sh")); 
+        vSeeds.push_back(CDNSSeedData("0", "dns0.rupee.sh"));
         vSeeds.push_back(CDNSSeedData("1", "dns1.rupee.sh"));
         vSeeds.push_back(CDNSSeedData("2", "dns2.rupee.sh"));
         vSeeds.push_back(CDNSSeedData("3", "dns3.rupee.sh"));
@@ -202,7 +204,8 @@ public:
         vSeeds.push_back(CDNSSeedData("5", "dns5.rupee.sh"));
         vSeeds.push_back(CDNSSeedData("6", "dns6.rupee.sh"));
         vSeeds.push_back(CDNSSeedData("7", "dns7.rupee.sh"));
-        vSeeds.push_back(CDNSSeedData("8", "dns8.rupee.sh")); 
+        vSeeds.push_back(CDNSSeedData("8", "dns8.rupee.sh"));
+        vSeeds.push_back(CDNSSeedData("10", "seeder.rupee.sh"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 31);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 55);
@@ -270,7 +273,7 @@ public:
         pchMessageStart[1] = 0x55;
         pchMessageStart[2] = 0xb0;
         pchMessageStart[3] = 0xa0;
-        vAlertPubKey = ParseHex("04d7e13bc896eb07e2db2d7272f5ddfaedfb64b8ed4caa4d917d6e0781b59ca44f8b5d40995622008e40707b47687eebee11cbe3bbaf2348622cc271c7f0d0bd0a");
+        vAlertPubKey = ParseHex("04e7dacdc6553489ea8803d589b90fe3d755ec350616c525fd4f00308bfb195233136238892f403cf0cdcf51e142453144b02e5506d0bd52cdac09ef6aaa48a022");
         nDefaultPort = 32000;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
@@ -348,7 +351,7 @@ public:
 
         nPoolMaxTransactions = 2;
         strSporkKey = "044fcbcc1c95aa228dc7e580d86b7371a0f51dc84ef3a2a2b13d4d17ada1aa8c91c67bdb370fe6f951c7489e13a534e105551e68aa4f4add46bddfae7fd2529de3"; 
-        strObfuscationPoolDummyAddress = "PCYiHgGJJ6xGHqivmdZrYjRnhaYf6AJ2Mp";
+        strObfuscationPoolDummyAddress = "RBYiHgGJJ6xGHqivmdZrYjRnhaYf6AJ2Mp";
         nBudgetFeeConfirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
                                      // here because we only have a 8 block finalization window on testnet
     }
