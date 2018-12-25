@@ -4659,7 +4659,7 @@ bool CWallet::CreateZerocoinMintTransaction(const CAmount nValue, CMutableTransa
     return true;
 }
 
-bool CWallet::MintToTxIn(CZerocoinMint zerocoinSelected, int nSecurityLevel, const uint256& hashTxOut, CTxIn& newTxIn, CZerocoinSpendReceipt& receipt, libzerocoin::SpendType spendType, CBlockIndex* pindexCheckpoint)
+bool CWallet::MintToTxIn(CZerocoinMint zerocoinSelected, int nSecurityLevel, const uint256& hashTxOut, CTxIn& newTxIn, CZerocoinSpendReceipt& receipt)
 {
     // Default error status if not changed below
     receipt.SetStatus(_("Transaction Mint Started"), ZDRS_TXMINT_GENERAL);
@@ -4695,25 +4695,13 @@ bool CWallet::MintToTxIn(CZerocoinMint zerocoinSelected, int nSecurityLevel, con
     privateCoin.setPublicCoin(pubCoinSelected);
     privateCoin.setRandomness(zerocoinSelected.GetRandomness());
     privateCoin.setSerialNumber(zerocoinSelected.GetSerialNumber());
-
-    //Version 2 zerocoins have a privkey associated with them
-    uint8_t nVersion = zerocoinSelected.GetVersion();
-    privateCoin.setVersion(zerocoinSelected.GetVersion());
-    LogPrintf("%s: privatecoin version=%d\n", __func__, privateCoin.getVersion());
-    if (nVersion >= libzerocoin::PrivateCoin::PUBKEY_VERSION) {
-        CKey key;
-        if (!zerocoinSelected.GetKeyPair(key))
-            return error("%s: failed to set zDRS privkey mint version=%d", __func__, nVersion);
-
-        privateCoin.setPrivKey(key.GetPrivKey());
-    }
     uint32_t nChecksum = GetChecksum(accumulator.getValue());
     CBigNum bnValue;
     if (!GetAccumulatorValueFromChecksum(nChecksum, false, bnValue) || bnValue == 0)
         return error("%s: could not find checksum used for spend\n", __func__);
 
     try {
-        libzerocoin::CoinSpend spend(paramsCoin, paramsAccumulator, privateCoin, accumulator, nChecksum, witness, hashTxOut, spendType);
+        libzerocoin::CoinSpend spend(paramsAccumulator, paramsCoin, privateCoin, accumulator, nChecksum, witness, hashTxOut);
 
         if (!spend.Verify(accumulator)) {
             receipt.SetStatus(_("The new spend coin transaction did not verify"), ZDRS_INVALID_WITNESS);
@@ -4741,11 +4729,11 @@ bool CWallet::MintToTxIn(CZerocoinMint zerocoinSelected, int nSecurityLevel, con
         } catch (...) {
             receipt.SetStatus(_("Failed to deserialize"), ZDRS_BAD_SERIALIZATION);
             return false;
-        }
-
-        libzerocoin::CoinSpend newSpendChecking(paramsCoin, paramsAccumulator, serializedCoinSpendChecking);
         if (!newSpendChecking.Verify(accumulator)) {
             receipt.SetStatus(_("The transaction did not verify"), ZDRS_BAD_SERIALIZATION);
+=======
+            receipt.SetStatus(_("The transaction did not verify"), ZPHR_BAD_SERIALIZATION);
+>>>>>>> parent of 6613bb9be... Begin transitioning to deterministic Zerocoin
             return false;
         }
 
@@ -4967,7 +4955,7 @@ bool CWallet::CreateZerocoinSpendTransaction(CAmount nValue, int nSecurityLevel,
             //add all of the mints to the transaction as inputs
             for (CZerocoinMint mint : vSelectedMints) {
                 CTxIn newTxIn;
-                if (!MintToTxIn(mint, nSecurityLevel, hashTxOut, newTxIn, receipt, libzerocoin::SpendType::SPEND)) {
+                if (!MintToTxIn(mint, nSecurityLevel, hashTxOut, newTxIn, receipt)) {
                     return false;
                 }
                 txNew.vin.push_back(newTxIn);

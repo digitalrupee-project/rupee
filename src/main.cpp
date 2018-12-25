@@ -1026,7 +1026,29 @@ void FindMints(vector<CMintMeta> vMintsToFind, vector<CMintMeta>& vMintsToUpdate
         meta.isUsed = fSpent;
         LogPrintf("%s: found updates for pubcoinhash = %s\n", __func__, meta.hashPubcoin.GetHex());
 
-        vMintsToUpdate.push_back(meta);
+            if(chainActive[i]->vMintDenominationsInBlock.empty())
+                continue;
+
+            CBlock block;
+            if(!ReadBlockFromDisk(block, chainActive[i]))
+                continue;
+
+            list<CZerocoinMint> vMints;
+            if(!BlockToZerocoinMintList(block, vMints, i))
+                continue;
+
+            // search the blocks mints to see if it contains the mint that is requesting meta data updates
+            for (CZerocoinMint mintBlockChain : vMints) {
+                for (CZerocoinMint mintMissing : vMissingMints) {
+                    if (mintMissing.GetValue() == mintBlockChain.GetValue()) {
+                        LogPrintf("%s FOUND %s in block %d\n", __func__, mintMissing.GetValue().GetHex(), i);
+                        mintMissing.SetHeight(i);
+                        mintMissing.SetTxHash(mintBlockChain.GetTxHash());
+                        vMintsToUpdate.push_back(mintMissing);
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -1099,7 +1121,7 @@ bool RecordMintToDB(PublicCoin publicZerocoin, const uint256& txHash)
     return true;
 }
 
-bool TxOutToPublicCoin(const CTxOut txout, PublicCoin& pubCoin, CValidationState& state)
+bool TxOutToPublicCoin(const CTxOut txout, PublicCoin& pubCoin, CValidationState& state, libzerocoin::ZerocoinParams* zerocoinParams)
 {
     CBigNum publicZerocoin;
     vector<unsigned char> vchZeroMint;
@@ -1112,13 +1134,13 @@ bool TxOutToPublicCoin(const CTxOut txout, PublicCoin& pubCoin, CValidationState
     if (denomination == ZQ_ERROR)
         return state.DoS(100, error("TxOutToPublicCoin : txout.nValue is not correct"));
 
-    PublicCoin checkPubCoin(Params().Zerocoin_Params(), publicZerocoin, denomination);
+    PublicCoin checkPubCoin(zerocoinParams, publicZerocoin, denomination);
     pubCoin = checkPubCoin;
 
     return true;
 }
 
-bool BlockToPubcoinList(const CBlock& block, list<PublicCoin>& listPubcoins)
+bool BlockToPubcoinList(const CBlock& block, list<PublicCoin>& listPubcoins, int nHeight)
 {
     for (const CTransaction tx : block.vtx) {
         if(!tx.IsZerocoinMint())
@@ -1131,8 +1153,9 @@ bool BlockToPubcoinList(const CBlock& block, list<PublicCoin>& listPubcoins)
                 continue;
 
             CValidationState state;
-            PublicCoin pubCoin(Params().Zerocoin_Params());
-            if(!TxOutToPublicCoin(txOut, pubCoin, state))
+            libzerocoin::ZerocoinParams *params = GetZerocoinParams(nHeight);
+            PublicCoin pubCoin(params);
+            if(!TxOutToPublicCoin(txOut, pubCoin, state, params))
                 return false;
 
             listPubcoins.emplace_back(pubCoin);
@@ -1143,7 +1166,7 @@ bool BlockToPubcoinList(const CBlock& block, list<PublicCoin>& listPubcoins)
 }
 
 //return a list of zerocoin mints contained in a specific block
-bool BlockToZerocoinMintList(const CBlock& block, std::list<CZerocoinMint>& vMints)
+bool BlockToZerocoinMintList(const CBlock& block, std::list<CZerocoinMint>& vMints, int nHeight)
 {
     for (const CTransaction tx : block.vtx) {
         if(!tx.IsZerocoinMint())
@@ -1155,11 +1178,12 @@ bool BlockToZerocoinMintList(const CBlock& block, std::list<CZerocoinMint>& vMin
                 continue;
 
             CValidationState state;
-            PublicCoin pubCoin(Params().Zerocoin_Params());
-            if(!TxOutToPublicCoin(txOut, pubCoin, state))
+            libzerocoin::ZerocoinParams *params = GetZerocoinParams(nHeight);
+            PublicCoin pubCoin(params);
+            if(!TxOutToPublicCoin(txOut, pubCoin, state, params))
                 return false;
 
-            CZerocoinMint mint = CZerocoinMint(pubCoin.getDenomination(), pubCoin.getValue(), 0, 0, false, 1, nullptr);
+            CZerocoinMint mint = CZerocoinMint(pubCoin.getDenomination(), pubCoin.getValue(), 0, 0, false);
             mint.SetTxHash(tx.GetHash());
             vMints.push_back(mint);
         }
@@ -1168,7 +1192,7 @@ bool BlockToZerocoinMintList(const CBlock& block, std::list<CZerocoinMint>& vMin
     return true;
 }
 
-bool BlockToMintValueVector(const CBlock& block, const CoinDenomination denom, vector<CBigNum>& vValues)
+bool BlockToMintValueVector(const CBlock& block, const CoinDenomination denom, vector<CBigNum>& vValues, int nHeight)
 {
     for (const CTransaction tx : block.vtx) {
         if(!tx.IsZerocoinMint())
@@ -1179,8 +1203,9 @@ bool BlockToMintValueVector(const CBlock& block, const CoinDenomination denom, v
                 continue;
 
             CValidationState state;
-            PublicCoin coin(Params().Zerocoin_Params());
-            if(!TxOutToPublicCoin(txOut, coin, state))
+            libzerocoin::ZerocoinParams *params = GetZerocoinParams(nHeight);
+            PublicCoin coin(params);
+            if(!TxOutToPublicCoin(txOut, coin, state, params))
                 return false;
 
             if (coin.getDenomination() != denom)
@@ -1214,8 +1239,8 @@ std::list<libzerocoin::CoinDenomination> ZerocoinSpendListFromBlock(const CBlock
 
 bool CheckZerocoinMint(const uint256& txHash, const CTxOut& txout, CValidationState& state, bool fCheckOnly)
 {
-    PublicCoin pubCoin(Params().Zerocoin_Params());
-    if(!TxOutToPublicCoin(txout, pubCoin, state))
+    PublicCoin pubCoin(params);
+    if(!TxOutToPublicCoin(txout, pubCoin, state, params))
         return state.DoS(100, error("CheckZerocoinMint(): TxOutToPublicCoin() failed"));
 
     if (!pubCoin.validate())
@@ -1224,48 +1249,25 @@ bool CheckZerocoinMint(const uint256& txHash, const CTxOut& txout, CValidationSt
     return true;
 }
 
-CoinSpend TxInToZerocoinSpend(const CTxIn& txin)
+CoinSpend TxInToZerocoinSpend(const CTxIn& txin, int nHeight)
 {
-    // extract the spend from the txin
+    // Deserialize the CoinSpend intro a fresh object
     std::vector<char, zero_after_free_allocator<char> > dataTxIn;
     dataTxIn.insert(dataTxIn.end(), txin.scriptSig.begin() + BIGNUM_SIZE, txin.scriptSig.end());
 
     CDataStream serializedCoinSpend(dataTxIn, SER_NETWORK, PROTOCOL_VERSION);
-    return CoinSpend(Params().Zerocoin_Params(), GetZerocoinParams(chainActive.Height()), serializedCoinSpend);
+    return CoinSpend(GetZerocoinParams(nHeight), GetZerocoinParams(chainActive.Height()), serializedCoinSpend);
 }
 
-bool ContextualCheckZerocoinMint(const CTransaction& tx, const PublicCoin& coin, const CBlockIndex* pindex) {
-   if (pindex->nHeight > Params().Zerocoin_LastOldParams() && Params().NetworkID() != CBaseChainParams::TESTNET) {
-        //See if this coin has already been added to the blockchain
-        uint256 txid;
-        if(zerocoinDB->ReadCoinMint(coin.getValue(), txid))
-            return error("%s: pubcoin %s was already accumulated in tx %s", __func__,
-                         coin.getValue().GetHex().substr(0, 10),
-                         txid.GetHex());
+//Check a zerocoinspend considering external context such as blockchain data, height, etc.
+bool ContextualCheckCoinSpend(const CoinSpend& spend, CBlockIndex* pindex, const uint256& txid)
+{
+    // Make sure that the serial number is in valid range
+    if (pindex->nHeight >= Params().Zerocoin_Block_EnforceSerialRange()) {
+        if (!spend.HasValidSerial(GetZerocoinParams(pindex->nHeight)))
+            return error("%s : txid=%s in block %d contains invalid serial %s\n", __func__, txid.GetHex(),
+                         pindex->nHeight, spend.getCoinSerialNumber());
     }
-    return true;
-}
-
-bool ContextualCheckZerocoinSpend(const CTransaction& tx, const CoinSpend& spend, CBlockIndex* pindex, const uint256& hashBlock) {
-    //Check to see if the zDRS is properly signed
-    if (pindex->nHeight > Params().Zerocoin_LastOldParams()) {
-        if (!spend.HasValidSignature())
-            return error("%s: V2 zDRS spend does not have a valid signature", __func__);
-
-        libzerocoin::SpendType expectedType = libzerocoin::SpendType::SPEND;
-        if (tx.IsCoinStake())
-            expectedType = libzerocoin::SpendType::STAKE;
-        if (spend.getSpendType() != expectedType) {
-            return error("%s: trying to spend zDRS without the correct spend type. txid=%s", __func__,
-                         tx.GetHash().GetHex());
-        }
-    }
-
-    //Reject serial's that are already in the blockchain
-    int nHeightTx = 0;
-    if (IsSerialInBlockchain(spend.getCoinSerialNumber(), nHeightTx))
-        return error("%s : zDRS spend with serial %s is already in block %d\n", __func__,
-                     spend.getCoinSerialNumber().GetHex(), nHeightTx);
 
     //Reject serial's that are not in the acceptable value range
     libzerocoin::ZerocoinParams* paramsToUse = spend.getVersion() < libzerocoin::PrivateCoin::PUBKEY_VERSION ? Params().OldZerocoin_Params() : Params().Zerocoin_Params();
@@ -1326,14 +1328,12 @@ bool CheckZerocoinSpend(const CTransaction tx, bool fVerifySignature, CValidatio
         if (fVerifySignature) {
             //see if we have record of the accumulator used in the spend tx
             CBigNum bnAccumulatorValue = 0;
-            if (!zerocoinDB->ReadAccumulatorValue(newSpend.getAccumulatorChecksum(), bnAccumulatorValue)) {
-                uint32_t nChecksum = newSpend.getAccumulatorChecksum();
-                return state.DoS(100, error("%s: Zerocoinspend could not find accumulator associated with checksum %s", __func__, HexStr(BEGIN(nChecksum), END(nChecksum))));
-            }
+            if(!zerocoinDB->ReadAccumulatorValue(newSpend.getAccumulatorChecksum(), bnAccumulatorValue))
+                return state.DoS(100, error("Zerocoinspend could not find accumulator associated with checksum"));
 
             Accumulator accumulator(GetZerocoinParams(nHeight), newSpend.getDenomination(), bnAccumulatorValue);
 
-            //Check that the coin has been accumulated
+            //Check that the coin is on the accumulator
             if(!newSpend.Verify(accumulator))
                 return state.DoS(100, error("CheckZerocoinSpend(): zerocoin spend did not verify"));
         }
@@ -1384,7 +1384,7 @@ bool CheckTransaction(const CTransaction& tx, bool fZerocoinActive, bool fReject
             return state.DoS(100, error("CheckTransaction() : txout total out of range"),
                 REJECT_INVALID, "bad-txns-txouttotal-toolarge");
         if (fZerocoinActive && txout.IsZerocoinMint()) {
-            if(!CheckZerocoinMint(tx.GetHash(), txout, state, true))
+            if(!CheckZerocoinMint(tx.GetHash(), txout, state, params, false))
                 return state.DoS(100, error("CheckTransaction() : invalid zerocoin mint"));
         }
         if (fZerocoinActive && txout.scriptPubKey.IsZerocoinSpend())
@@ -1520,7 +1520,7 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState& state, const CTransa
 
     //Coinstake is also only valid in a block, not as a loose transaction
     if (tx.IsCoinStake())
-        return state.DoS(100, error("AcceptToMemoryPool: coinstake as individual tx. txid=%s", tx.GetHash().GetHex()),
+        return state.DoS(100, error("AcceptToMemoryPool: coinstake as individual tx"),
             REJECT_INVALID, "coinstake");
 
     // is it already in the memory pool?
@@ -1872,21 +1872,6 @@ bool AcceptableInputs(CTxMemPool& pool, CValidationState& state, const CTransact
                     if (pfMissingInputs)
                         *pfMissingInputs = true;
                     return false;
-                }
-            }
-
-            // Check that zDRS mints are not already known
-            if (tx.IsZerocoinMint()) {
-                for (auto& out : tx.vout) {
-                    if (!out.IsZerocoinMint())
-                        continue;
-
-                    PublicCoin coin(Params().Zerocoin_Params());
-                    if (!TxOutToPublicCoin(out, coin, state))
-                        return state.Invalid(error("%s: failed final check of zerocoinmint for tx %s", __func__, tx.GetHash().GetHex()));
-
-                    if (!ContextualCheckZerocoinMint(tx, coin, chainActive.Tip()))
-                        return state.Invalid(error("%s: zerocoin mint failed contextual check", __func__));
                 }
             }
 
@@ -2484,8 +2469,9 @@ bool DisconnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex
                         continue;
 
 
-                    PublicCoin pubCoin(Params().Zerocoin_Params());
-                    if (!TxOutToPublicCoin(txout, pubCoin, state))
+                    libzerocoin::ZerocoinParams* params = GetZerocoinParams(pindex->nHeight); 
+                    PublicCoin pubCoin(params);
+                    if (!TxOutToPublicCoin(txout, pubCoin, state, params))
                         return error("DisconnectBlock(): TxOutToPublicCoin() failed");
 
                     if(!zerocoinDB->EraseCoinMint(pubCoin.getValue()))
@@ -2614,7 +2600,7 @@ void RecalculateZDRSMinted()
         assert(ReadBlockFromDisk(block, pindex));
 
         std::list<CZerocoinMint> listMints;
-        BlockToZerocoinMintList(block, listMints);
+        BlockToZerocoinMintList(block, listMints, pindex->nHeight);
 
         vector<libzerocoin::CoinDenomination> vDenomsBefore = pindex->vMintDenominationsInBlock;
         pindex->vMintDenominationsInBlock.clear();
@@ -2774,7 +2760,7 @@ bool ReindexAccumulators(list<uint256>& listMissingCheckpoints, string& strError
 bool UpdateZDRSSupply(const CBlock& block, CBlockIndex* pindex)
 {
     std::list<CZerocoinMint> listMints;
-    BlockToZerocoinMintList(block, listMints);
+    BlockToZerocoinMintList(block, listMints, pindex->nHeight);
     std::list<libzerocoin::CoinDenomination> listSpends = ZerocoinSpendListFromBlock(block);
 
     // Initialize zerocoin supply to the supply from previous block
@@ -5749,7 +5735,6 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         // Each connection can only send one version message
         if (pfrom->nVersion != 0) {
             pfrom->PushMessage(NetMsgType::REJECT, strCommand, REJECT_DUPLICATE, string("Duplicate version message"));
-            LOCK(cs_main);
             Misbehaving(pfrom->GetId(), 1);
             return false;
         }
@@ -5889,7 +5874,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 
     else if (pfrom->nVersion == 0) {
         // Must have a version message before anything else
-        LOCK(cs_main);
+        LogPrintf("received message before version number\n");
         Misbehaving(pfrom->GetId(), 1);
         return false;
     }
@@ -5976,7 +5961,6 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         vector<CInv> vInv;
         vRecv >> vInv;
         if (vInv.size() > MAX_INV_SZ) {
-            LOCK(cs_main);
             Misbehaving(pfrom->GetId(), 20);
             return error("message inv size() = %u", vInv.size());
         }
@@ -6026,7 +6010,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
             GetMainSignals().Inventory(inv.hash);
 
             if (pfrom->nSendSize > (SendBufferSize() * 2)) {
-                LOCK(cs_main);
+                Misbehaving(pfrom->GetId(), 50);
                 return error("send buffer size() = %u", pfrom->nSendSize);
             }
         }
@@ -6040,7 +6024,6 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         vector<CInv> vInv;
         vRecv >> vInv;
         if (vInv.size() > MAX_INV_SZ) {
-            LOCK(cs_main);
             Misbehaving(pfrom->GetId(), 20);
             return error("message getdata size() = %u", vInv.size());
         }
@@ -6307,7 +6290,6 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         // Bypass the normal CBlock deserialization, as we don't want to risk deserializing 2000 full blocks.
         unsigned int nCount = ReadCompactSize(vRecv);
         if (nCount > MAX_HEADERS_RESULTS) {
-            LOCK(cs_main);
             Misbehaving(pfrom->GetId(), 20);
             return error("headers message size = %u", nCount);
         }
@@ -6327,7 +6309,6 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         BOOST_FOREACH (const CBlockHeader& header, headers) {
             CValidationState state;
             if (pindexLast != NULL && header.hashPrevBlock != pindexLast->GetBlockHash()) {
-                LOCK(cs_main);
                 Misbehaving(pfrom->GetId(), 20);
                 return error("non-continuous headers sequence");
             }
@@ -6536,7 +6517,6 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
                 // This isn't a Misbehaving(100) (immediate ban) because the
                 // peer might be an older or different implementation with
                 // a different signature key, etc.
-                LOCK(cs_main);
                 Misbehaving(pfrom->GetId(), 10);
             }
         }
@@ -6547,7 +6527,6 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
                     strCommand == NetMsgType::FILTERADD ||
                     strCommand == NetMsgType::FILTERCLEAR)) {
         LogPrintf("bloom message=%s\n", strCommand);
-        LOCK(cs_main);
         Misbehaving(pfrom->GetId(), 100);
     }
 
@@ -6555,11 +6534,10 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         CBloomFilter filter;
         vRecv >> filter;
 
-        if (!filter.IsWithinSizeConstraints()) {
+        if (!filter.IsWithinSizeConstraints())
             // There is no excuse for sending a too-large filter
-            LOCK(cs_main);
             Misbehaving(pfrom->GetId(), 100);
-        } else {
+        else {
             LOCK(pfrom->cs_filter);
             delete pfrom->pfilter;
             pfrom->pfilter = new CBloomFilter(filter);
@@ -6576,16 +6554,13 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         // Nodes must NEVER send a data item > 520 bytes (the max size for a script data object,
         // and thus, the maximum size any matched object can have) in a filteradd message
         if (vData.size() > MAX_SCRIPT_ELEMENT_SIZE) {
-            LOCK(cs_main);
             Misbehaving(pfrom->GetId(), 100);
         } else {
             LOCK(pfrom->cs_filter);
             if (pfrom->pfilter)
                 pfrom->pfilter->insert(vData);
-            else {
-                LOCK(cs_main);
+            else
                 Misbehaving(pfrom->GetId(), 100);
-            }
         }
     }
 
