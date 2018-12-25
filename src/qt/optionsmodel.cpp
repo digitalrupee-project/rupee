@@ -161,8 +161,7 @@ void OptionsModel::Init()
         addOverriddenOption("-lang");
 
     if (settings.contains("fZeromintEnable"))
-        SoftSetBoolArg("-enablezeromint", settings.value("fZeromintEnable").toBool());
-    if (settings.contains("nZeromintPercentage"))
+        SoftSetBoolArg("-enablezeromint", false); //settings.value("fZeromintEnable").toBool());    if (settings.contains("nZeromintPercentage"))
         SoftSetArg("-zeromintpercentage", settings.value("nZeromintPercentage").toString().toStdString());
     if (settings.contains("nPreferredDenom"))
         SoftSetArg("-preferredDenom", settings.value("nPreferredDenom").toString().toStdString());
