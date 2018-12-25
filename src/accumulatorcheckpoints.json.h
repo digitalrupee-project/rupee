@@ -8,6 +8,7 @@
 #include <string>
 std::string GetMainCheckpoints() {
     std::string strMainCheckpoints = "[\n"
+
                 "  {\n"
             "    \"height\": 0,\n"
             "    \"1\": \"0\",\n"
@@ -20,6 +21,7 @@ std::string GetMainCheckpoints() {
             "    \"5000\": \"0\"\n"
             "  }\n"
             "]";
+  
     return strMainCheckpoints;
 }
 
@@ -57,4 +59,6 @@ std::string GetRegTestCheckpoints() {
     return strRegTestCheckpoints;
 }
 
+
 #endif //DIGITALRUPEES_ACCUMULATORCHECKPOINTS_JSON_H
+
