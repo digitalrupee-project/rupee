@@ -5,8 +5,8 @@
 #ifndef DIGITALRUPEES_ZEROCOIN_H
 #define DIGITALRUPEES_ZEROCOIN_H
 
-#include "amount.h"
-#include "limits.h"
+#include <amount.h>
+#include <limits.h>
 #include "libzerocoin/bignum.h"
 #include "libzerocoin/Denominations.h"
 #include "serialize.h"

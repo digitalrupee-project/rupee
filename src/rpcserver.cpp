@@ -352,12 +352,9 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "reconsiderblock", &reconsiderblock, true, true, false},
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
-        /* DigitalRupees features */
+        /* Phore features */
         {"digitalrupees", "masternode", &masternode, true, true, false},
         {"digitalrupees", "listmasternodes", &listmasternodes, true, true, false},
-        {"digitalrupees", "createmasternodebroadcast", &createmasternodebroadcast, true, true, false},
-        {"digitalrupees", "decodemasternodebroadcast", &decodemasternodebroadcast, true, true, false},
-        {"digitalrupees", "relaymasternodebroadcast", &relaymasternodebroadcast, true, true, false},
         {"digitalrupees", "getmasternodecount", &getmasternodecount, true, true, false},
         {"digitalrupees", "masternodeconnect", &masternodeconnect, true, true, false},
         {"digitalrupees", "masternodecurrent", &masternodecurrent, true, true, false},
@@ -385,6 +382,8 @@ static const CRPCCommand vRPCCommands[] =
         {"digitalrupees", "getpoolinfo", &getpoolinfo, true, true, false},
         {"digitalrupees", "makekeypair", &makekeypair, true, true, false},
 #ifdef ENABLE_WALLET
+        {"digitalrupees", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
+
         /* Wallet */
         {"wallet", "addmultisigaddress", &addmultisigaddress, true, false, true},
         {"wallet", "addwitnessaddress", &addwitnessaddress, true, false, true},
@@ -449,9 +448,7 @@ static const CRPCCommand vRPCCommands[] =
         {"zerocoin", "importzerocoins", &importzerocoins, false, false, true},
         {"zerocoin", "exportzerocoins", &exportzerocoins, false, false, true},
         {"zerocoin", "reconsiderzerocoins", &reconsiderzerocoins, false, false, true},
-        {"zerocoin", "getspentzerocoinamount", &getspentzerocoinamount, false, false, false},
-        {"zerocoin", "getzdrsseed", &getzdrsseed, false, false, true},
-        {"zerocoin", "setzdrsseed", &setzdrsseed, false, false, true}
+        {"zerocoin", "getspentzerocoinamount", &getspentzerocoinamount, false, false, false}
 
 #endif // ENABLE_WALLET
 };
@@ -480,13 +477,7 @@ bool StartRPC()
     LogPrint("rpc", "Starting RPC\n");
     fRPCRunning = true;
     g_rpcSignals.Started();
-    return true;
-}
-
-void InterruptRPC()
-{
     LogPrint("rpc", "Interrupting RPC\n");
-    // Interrupt e.g. running longpolls
     fRPCRunning = false;
 }
 

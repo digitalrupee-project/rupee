@@ -542,12 +542,7 @@ UniValue verifychain(const UniValue& params, bool fHelp)
     if (params.size() > 0)
         nCheckDepth = params[1].get_int();
 
-
-    fVerifyingBlocks = true;
-    bool fVerified = CVerifyDB().VerifyDB(pcoinsTip, nCheckLevel, nCheckDepth);
-    fVerifyingBlocks = false;
-
-    return fVerified;
+    return CVerifyDB().VerifyDB(pcoinsTip, nCheckLevel, nCheckDepth);
 }
 
 UniValue getblockchaininfo(const UniValue& params, bool fHelp)
@@ -880,10 +875,7 @@ UniValue findserial(const UniValue& params, bool fHelp)
             HelpExampleCli("findserial", "\"serial\"") + HelpExampleRpc("findserial", "\"serial\""));
 
     std::string strSerial = params[0].get_str();
-    CBigNum bnSerial = 0;
-    bnSerial.SetHex(strSerial);
-    if (!bnSerial)
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid serial");
+    CBigNum bnSerial(strSerial);
 
     uint256 txid = 0;
     bool fSuccess = zerocoinDB->ReadCoinSpend(bnSerial, txid);

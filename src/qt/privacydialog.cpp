@@ -415,7 +415,7 @@ void PrivacyDialog::sendzDRS()
     // use mints from zDRS selector if applicable
     vector<CMintMeta> vMintsToFetch;
     vector<CZerocoinMint> vMintsSelected;
-    if (!ZDrsControlDialog::setSelectedMints.empty()) {
+    if (!ZPivControlDialog::setSelectedMints.empty()) {
         vMintsToFetch = ZDrsControlDialog::GetSelectedMints();
 
         for (auto& meta : vMintsToFetch) {
@@ -423,7 +423,7 @@ void PrivacyDialog::sendzDRS()
                 //version 1 coins have to use full security level to successfully spend.
                 if (nSecurityLevel < 100) {
                     QMessageBox::warning(this, tr("Spend Zerocoin"), tr("Version 1 zDRS require a security level of 100 to successfully spend."), QMessageBox::Ok, QMessageBox::Ok);
-                    ui->TEMintStatus->setPlainText(tr("Failed to spend zDRS"));
+                    ui->TEMintStatus->setPlainText(tr("Failed to spend zDrs"));
                     ui->TEMintStatus->repaint();
                     return;
                 }
@@ -454,8 +454,8 @@ void PrivacyDialog::sendzDRS()
     // Display errors during spend
     if (!fSuccess) {
         if (receipt.GetStatus() == ZDRS_SPEND_V1_SEC_LEVEL) {
-            QMessageBox::warning(this, tr("Spend Zerocoin"), tr("Version 1 zDRS require a security level of 100 to successfully spend."), QMessageBox::Ok, QMessageBox::Ok);
-            ui->TEMintStatus->setPlainText(tr("Failed to spend zDRS"));
+            QMessageBox::warning(this, tr("Spend Zerocoin"), tr("Version 1 zPHR require a security level of 100 to successfully spend."), QMessageBox::Ok, QMessageBox::Ok);
+            ui->TEMintStatus->setPlainText(tr("Failed to spend zPHR"));
             ui->TEMintStatus->repaint();
             return;
         }
@@ -612,6 +612,9 @@ void PrivacyDialog::setBalance(const CAmount& balance, const CAmount& unconfirme
     currentWatchUnconfBalance = watchUnconfBalance;
     currentWatchImmatureBalance = watchImmatureBalance;
 
+    CWalletDB walletdb(pwalletMain->strWalletFile);
+    list<CZerocoinMint> listMints = walletdb.ListMintedCoins(true, false, true);
+
     std::map<libzerocoin::CoinDenomination, CAmount> mapDenomBalances;
     std::map<libzerocoin::CoinDenomination, int> mapUnconfirmed;
     std::map<libzerocoin::CoinDenomination, int> mapImmature;
@@ -621,19 +624,29 @@ void PrivacyDialog::setBalance(const CAmount& balance, const CAmount& unconfirme
         mapImmature.insert(make_pair(denom, 0));
     }
 
-    std::vector<CMintMeta> vMints = pwalletMain->zdrsTracker->GetMints(false);
-    map<libzerocoin::CoinDenomination, int> mapMaturityHeights = GetMintMaturityHeight();
-    for (CMintMeta& meta : vMints){
+    int nBestHeight = chainActive.Height();
+    for (auto& mint : listMints){
         // All denominations
-        mapUnconfirmed.at(meta.denom)++;
-        if (!meta.nHeight || chainActive.Height() - meta.nHeight <= Params().Zerocoin_MintRequiredConfirmations()) {
+        mapDenomBalances.at(mint.GetDenomination())++;
+
+        if (!mint.GetHeight() || chainActive.Height() - mint.GetHeight() <= Params().Zerocoin_MintRequiredConfirmations()) {
             // All unconfirmed denominations
-            mapUnconfirmed.at(meta.denom)++;
-        } else {
-            if (meta.denom == libzerocoin::CoinDenomination::ZQ_ERROR) {
-                mapImmature.at(meta.denom)++;
-            } else if (meta.nHeight >= mapMaturityHeights.at(meta.denom)) {
-                mapImmature.at(meta.denom)++;
+            mapUnconfirmed.at(mint.GetDenomination())++;
+        }
+        else {
+            // After a denomination is confirmed it might still be immature because < 3 of the same denomination were minted after it
+            CBlockIndex *pindex = chainActive[mint.GetHeight() + 1];
+            int nHeight2CheckpointsDeep = nBestHeight - (nBestHeight % 10) - 20;
+            int nMintsAdded = 0;
+            while (pindex->nHeight < nHeight2CheckpointsDeep) { //at least 2 checkpoints from the top block
+                nMintsAdded += count(pindex->vMintDenominationsInBlock.begin(), pindex->vMintDenominationsInBlock.end(), mint.GetDenomination());
+                if (nMintsAdded >= Params().Zerocoin_RequiredAccumulation())
+                    break;
+                pindex = chainActive[pindex->nHeight + 1];
+            }
+            if (nMintsAdded < Params().Zerocoin_RequiredAccumulation()){
+                // Immature denominations
+                mapImmature.at(mint.GetDenomination())++;
             }
         }
     }
@@ -643,9 +656,6 @@ void PrivacyDialog::setBalance(const CAmount& balance, const CAmount& unconfirme
     int64_t nUnconfirmed = 0;
     int64_t nImmature = 0;
     QString strDenomStats, strUnconfirmed = "";
-
-    // Update/enable labels and buttons depending on the current SPORK_16 status
-    updateSPORK16Status();
 
     for (const auto& denom : libzerocoin::zerocoinDenomList) {
         nCoins = libzerocoin::ZerocoinDenominationToInt(denom);
@@ -698,7 +708,7 @@ void PrivacyDialog::setBalance(const CAmount& balance, const CAmount& unconfirme
                 break;
         }
     }
-    CAmount matureZerocoinBalance = zerocoinBalance - immatureZerocoinBalance - unconfirmedZerocoinBalance;
+    CAmount matureZerocoinBalance = zerocoinBalance - immatureZerocoinBalance;
     CAmount nLockedBalance = 0;
     if (walletModel) {
         nLockedBalance = walletModel->getLockedBalance();
@@ -732,29 +742,5 @@ void PrivacyDialog::keyPressEvent(QKeyEvent* event)
         this->QDialog::keyPressEvent(event);
     } else {
         event->ignore();
-    }
-}
-
-void PrivacyDialog::updateSPORK16Status()
-{
-    // Update/enable labels, buttons and tooltips depending on the current SPORK_16 status
-    bool fButtonsEnabled =  ui->pushButtonMintzDRS->isEnabled();
-    bool fMaintenanceMode = GetAdjustedTime() > GetSporkValue(SPORK_16_ZEROCOIN_MAINTENANCE_MODE);
-    if (fMaintenanceMode && fButtonsEnabled) {
-        // Mint zDRS
-        ui->pushButtonMintzDRS->setEnabled(false);
-        ui->pushButtonMintzDRS->setToolTip(tr("zDRS is currently disabled due to maintenance."));
-
-        // Spend zDRS
-        ui->pushButtonSpendzDRS->setEnabled(false);
-        ui->pushButtonSpendzDRS->setToolTip(tr("zDRS is currently disabled due to maintenance."));
-    } else if (!fMaintenanceMode && !fButtonsEnabled) {
-        // Mint zDRS
-        ui->pushButtonMintzDRS->setEnabled(true);
-        ui->pushButtonMintzDRS->setToolTip(tr("PrivacyDialog", "Enter an amount of DRS to convert to zDRS", 0));
-
-        // Spend zDRS
-        ui->pushButtonSpendzDRS->setEnabled(true);
-        ui->pushButtonSpendzDRS->setToolTip(tr("Spend Zerocoin. Without 'Pay To:' address creates payments to yourself."));
     }
 }

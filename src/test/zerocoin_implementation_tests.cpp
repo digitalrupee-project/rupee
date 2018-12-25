@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2018 The PIVX developers
+s// Copyright (c) 2017-2018 The PIVX developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -138,14 +138,7 @@ bool CheckZerocoinSpendNoDB(const CTransaction tx, string& strError)
         if (!txin.scriptSig.IsZerocoinSpend())
             continue;
 
-        // extract the CoinSpend from the txin
-        std::vector<char, zero_after_free_allocator<char> > dataTxIn;
-        dataTxIn.insert(dataTxIn.end(), txin.scriptSig.begin() + 4, txin.scriptSig.end());
-        CDataStream serializedCoinSpend(dataTxIn, SER_NETWORK, PROTOCOL_VERSION);
-
-        libzerocoin::ZerocoinParams* paramsAccumulator = Params().Zerocoin_Params();
-        CoinSpend newSpend(Params().OldZerocoin_Params(), paramsAccumulator, serializedCoinSpend);
-
+        CoinSpend newSpend = TxInToZerocoinSpend(txin, Params().Zerocoin_LastOldParams());
         vSpends.push_back(newSpend);
 
         //check that the denomination is valid
