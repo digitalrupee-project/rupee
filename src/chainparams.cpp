@@ -141,7 +141,7 @@ public:
 
         nModifierUpdateBlock = 500;
 
-        nZerocoinStartHeight = 999999; // Need to revisit this
+        nZerocoinStartHeight = 600; // Need to revisit this
 
         /**
          * Build the genesis block. Note that the output of the genesis coinbase cannot
